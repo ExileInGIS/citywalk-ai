@@ -10,9 +10,12 @@
 
 ## 一、如何打开
 
+- **在线体验**：https://ExileInGIS.github.io/citywalk-ai/  （GitHub Pages，多文件版，所有资源同源部署）
+- **仓库地址**：https://github.com/ExileInGIS/citywalk-ai
+
 | 版本 | 文件 | 用途 |
 | --- | --- | --- |
-| **单文件版（推荐直接打开）** | `CityWalk-AI.html` | CSS / JS / 12 张图片全部内联，双击即可运行，无需服务器、不依赖任何网络资源 |
+| **单文件版（推荐离线分发）** | `CityWalk-AI.html` | CSS / JS / 12 张图片全部内联，双击即可运行，无需服务器 |
 | 多文件版（便于二次开发） | `index.html` + `css/` + `js/` | 结构清晰、按模块拆分，需与同级目录一起打开 |
 
 ```bash
