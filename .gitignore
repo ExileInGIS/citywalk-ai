@@ -1,0 +1,10 @@
+# 打包产物（由 index.html + build.js 重建）
+CityWalk-AI.html
+CityWalk-AI.html.backup
+
+# 测试依赖
+node_modules/
+
+# 系统
+.DS_Store
+Thumbs.db
