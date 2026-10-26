@@ -306,6 +306,7 @@ function baselineRoute(conditions) {
       refinePass: refinePassed,
       refineChanged: refineResults.filter(r => r.changed).length,
       refineExplainedNoop: refineResults.filter(r => r.explainedNoop).length,
+      refineUnknownNoop: refineResults.filter(r => !r.changed && !r.explainedNoop).length,
       p50Ms: Number(p50.toFixed(2)),
       p90Ms: Number(p90.toFixed(2)),
       poiVerified: D.PLACES.filter(p => p.geoVerified).length,
@@ -334,7 +335,7 @@ function baselineRoute(conditions) {
   md.push('| 规划用例通过 | ' + passed + '/' + attempted.length + ' | 所有断言通过；跳过 ' + report.summary.caseSkipped + ' 条 |');
   md.push('| Schema 有效 | ' + schemaValid + '/' + withSchema + ' | validateRoute 通过 |');
   md.push('| 硬约束满足率 | ' + (hardRate == null ? '—' : (hardRate * 100).toFixed(1) + '%') + ' | met/(met+violated+partial×0.5)；unknown 不计；含按需求返回冲突的用例（其 violated 属预期） |');
-  md.push('| 调整指令处理正确 | ' + refinePassed + '/' + refineResults.length + ' | Schema 通过且结果符合预期；其中 changed=true ' + report.summary.refineChanged + ' 条、解释性 no-op ' + report.summary.refineExplainedNoop + ' 条 |');
+  md.push('| 调整指令处理正确 | ' + refinePassed + '/' + refineResults.length + ' | Schema 通过且结果符合预期；其中 changed=true ' + report.summary.refineChanged + ' 条、解释性 no-op ' + report.summary.refineExplainedNoop + ' 条、未识别 no-op ' + report.summary.refineUnknownNoop + ' 条 |');
   md.push('| Mock 规划耗时 P50/P90 | ' + p50.toFixed(1) + ' ms / ' + p90.toFixed(1) + ' ms | 50 次 C01 规划 |');
   md.push('| 地点坐标可验证率 | ' + report.summary.poiVerified + '/' + report.summary.poiTotal + ' | 有 OSM 来源坐标 |');
   md.push('');
@@ -396,7 +397,7 @@ function baselineRoute(conditions) {
 
   console.log('用例通过 ' + passed + '/' + attempted.length + '（跳过 ' + report.summary.caseSkipped + '）');
   console.log('Schema 有效 ' + schemaValid + '/' + withSchema + '；硬约束满足率 ' + (hardRate == null ? '—' : (hardRate * 100).toFixed(1) + '%'));
-  console.log('调整处理正确 ' + refinePassed + '/' + refineResults.length + '（changed=true ' + report.summary.refineChanged + '，解释性 no-op ' + report.summary.refineExplainedNoop + '）；P50 ' + p50.toFixed(1) + 'ms / P90 ' + p90.toFixed(1) + 'ms');
+  console.log('调整处理正确 ' + refinePassed + '/' + refineResults.length + '（changed=true ' + report.summary.refineChanged + '，解释性 no-op ' + report.summary.refineExplainedNoop + '，未识别 no-op ' + report.summary.refineUnknownNoop + '）；P50 ' + p50.toFixed(1) + 'ms / P90 ' + p90.toFixed(1) + 'ms');
   console.log('报告已写入 docs/EVALUATION-REPORT.md，原始数据 qa/eval/last-run.json');
   const failed = attempted.filter(r => !r.pass);
   if (failed.length) {
