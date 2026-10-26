@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "generatedAt": "2026-10-26",
+    "city": "nanjing",
+    "purpose": "供真实地图 Provider 使用的可追溯坐标；不含任何第三方百科正文。",
+    "coordinateSource": "OpenStreetMap objects resolved via Photon geocoder (photon.komoot.io); WGS84",
+    "license": "ODbL 1.0 © OpenStreetMap contributors",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "policy": "Only coordinates returned by an identifiable OSM object are included. Generic/example places have null coordinates and must not be rendered on a real map.",
+    "verifiedCount": 8,
+    "nullCount": 4,
+    "notes": [
+      "Some coordinates are area/object centres (lake, park polygon, road way), not a specific entrance or door; the UI must say so.",
+      "p_book_xf: sources differ by about 500 m; the OSM node carrying 广州路173号 is used. Verify with a commercial POI provider before launch.",
+      "4 generic places (p_cafe_sh, p_book_tg, p_food_ld, p_market) have no single entity and no coordinates."
+    ]
+  },
+  "places": [
+    {
+      "id": "p_yihe",
+      "name": "颐和路民国公馆区",
+      "lat": 32.0652918,
+      "lon": 118.7614006,
+      "osmType": "way",
+      "osmId": 89567586,
+      "confidence": "high",
+      "status": "verified",
+      "note": "OSM way 为颐和路道路中心点，代表街区位置；不是任何公馆门牌。"
+    },
+    {
+      "id": "p_cafe_sh",
+      "name": "上海路街角咖啡馆",
+      "lat": null,
+      "lon": null,
+      "osmType": null,
+      "osmId": null,
+      "confidence": null,
+      "status": "generic-no-entity",
+      "note": "示例/泛化地点，无单一实体；不得在真实地图上定位，也不得显示真实距离。"
+    },
+    {
+      "id": "p_book_xf",
+      "name": "先锋书店（五台山店）",
+      "lat": 32.0527745,
+      "lon": 118.7682621,
+      "osmType": "node",
+      "osmId": 6331495101,
+      "confidence": "medium",
+      "status": "verified",
+      "note": "OSM 节点带门牌“广州路173号”；另一个来源相差约 500 m，上线前需用商业 POI 复核。"
+    },
+    {
+      "id": "p_book_tg",
+      "name": "陶谷新村旧书店",
+      "lat": null,
+      "lon": null,
+      "osmType": null,
+      "osmId": null,
+      "confidence": null,
+      "status": "generic-no-entity",
+      "note": "示例/泛化地点，代表陶谷新村一带的街区形态，不是可定位门店。"
+    },
+    {
+      "id": "p_xinjiekou",
+      "name": "新街口商圈",
+      "lat": 32.0438303,
+      "lon": 118.7788612,
+      "osmType": "way",
+      "osmId": 155883034,
+      "confidence": "high",
+      "status": "verified",
+      "note": "OSM way 为新街口广场，代表商圈中心；不是某栋商场或地铁站出入口。"
+    },
+    {
+      "id": "p_changjiang",
+      "name": "长江路 · 1912 街区",
+      "lat": 32.0467613,
+      "lon": 118.7905898,
+      "osmType": "way",
+      "osmId": 857492847,
+      "confidence": "high",
+      "status": "verified",
+      "note": "OSM way 为 1912 街区面要素中心；长江路本身是街区南侧道路，不是另一个独立地点。"
+    },
+    {
+      "id": "p_xuanwu",
+      "name": "玄武湖环湖步道",
+      "lat": 32.0744113,
+      "lon": 118.795514,
+      "osmType": "relation",
+      "osmId": 2138994,
+      "confidence": "medium",
+      "status": "verified",
+      "note": "OSM relation 为玄武湖湖面中心点，只代表景区中心；环湖步道周长约 15 km，导航应按入口另取点。"
+    },
+    {
+      "id": "p_qinhuai",
+      "name": "夫子庙 · 秦淮河",
+      "lat": 32.0204106,
+      "lon": 118.7827931,
+      "osmType": "way",
+      "osmId": 590937998,
+      "confidence": "medium",
+      "status": "verified",
+      "note": "OSM way 为夫子庙 leisure=park 面要素中心；不是大成殿门牌，也不代表整条秦淮河。"
+    },
+    {
+      "id": "p_laomendong",
+      "name": "老门东历史文化街区",
+      "lat": 32.013464,
+      "lon": 118.7822575,
+      "osmType": "way",
+      "osmId": 948332291,
+      "confidence": "high",
+      "status": "verified",
+      "note": "OSM way 为老门东历史文化街区面要素中心；街区内部巷弄需现场导航。"
+    },
+    {
+      "id": "p_food_ld",
+      "name": "老门东本地小馆",
+      "lat": null,
+      "lon": null,
+      "osmType": null,
+      "osmId": null,
+      "confidence": null,
+      "status": "generic-no-entity",
+      "note": "示例/泛化餐饮类型，不是可定位餐厅；不得伪造具体门店。"
+    },
+    {
+      "id": "p_bailuzhou",
+      "name": "白鹭洲公园",
+      "lat": 32.0194287,
+      "lon": 118.7897433,
+      "osmType": "way",
+      "osmId": 88807020,
+      "confidence": "high",
+      "status": "verified-coordinate-only",
+      "note": "仅坐标与类别经过核验；没有取得可引用的中文介绍原文，产品文案需自写或后续补采。"
+    },
+    {
+      "id": "p_market",
+      "name": "城市露台市集",
+      "lat": null,
+      "lon": null,
+      "osmType": null,
+      "osmId": null,
+      "confidence": null,
+      "status": "generic-no-entity",
+      "note": "市集是不定期活动，不是固定地理对象；如需接入应改为“活动 + 场地”模型。"
+    }
+  ]
+}
