@@ -548,7 +548,7 @@
 | 后端 | Node 内置 `http`，**零运行时依赖** | 无供应链风险；部署简单 |
 | 数据库/存储 | 无服务端数据库；浏览器 `localStorage` | MVP 无需账号；隐私边界清晰 |
 | 测试框架 | `node:test` + `assert`；UI 用 `jsdom`（唯一 **devDependency**） | 内置、无额外运行时；DOM 测试可复现 |
-| 测试命令 | `pnpm test` → `node --test tests/unit tests/api tests/integration`；`pnpm test:ui` | 单一入口 |
+| 测试命令 | `pnpm test` → `node tests/run.js`（进程内加载 unit/api/integration；避免 runner 子进程在受限环境 EPERM）；`pnpm test:ui` | 单一入口 |
 | Lint/格式 | `node --check` 语法检查 + 自定义结构检查；不引入 ESLint | 避免额外依赖，先保证可运行与一致 |
 | 手动运行 | `pnpm start` → `node server/index.js`，默认 `http://localhost:3000` | 一条命令 |
 | 地图 | 默认 Mock SVG；Leaflet + OSM 通过 CDN 可选启用 | 无密钥即可演示；真实地图需网络 |
@@ -574,6 +574,6 @@
 
 ---
 
-## 18. 待确认问题（仅 1 个）
+## 18. 确认记录
 
-1. 是否确认第 16 节技术栈（尤其是**新增 `jsdom` 开发依赖**）与第 4 节 MVP 范围？确认后开始实现；如需调整，请指出具体项。
+1. 第 16 节技术栈（含新增 `jsdom` 开发依赖）与第 4 节 MVP 范围：**已于 2026-10-26 由用户确认（选择“确认，开始实现”）**。确认后按第 17 节的一个里程碑推进，不逐阶段打断；范围/技术栈变更仍需 CRD 与用户同意。

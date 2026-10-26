@@ -49,7 +49,7 @@
 │  ├─ repair retry ≤2（远程非法输出）                                          │
 │  └─ fallback: mock（degraded=true）| error                                   │
 │                                                                             │
-│ 数据：js/data.js（同一 UMD 目录）+ server/data/poi-enrichment.json           │
+│ 数据：js/data.js（UMD：地点/坐标/路线）+ server/data/poi-coords.json      │
 │ 配置：server/config.js（env）+ server/config/scoring.json                    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
