@@ -8,3 +8,15 @@ node_modules/
 # 绯荤粺
 .DS_Store
 Thumbs.db
+
+# 本地安装与工具缓存（不提交）
+.pnpm-store/
+.pnpm-home/
+.pnpm-config/
+.config/
+.data/
+.cache/
+coverage/
+*.log
+.env
+.env.local
