@@ -90,6 +90,22 @@ test('收藏与导出：写入 localStorage、打开导出面板', async () => {
   } catch (e) { dom.window.close(); throw e; }
 });
 
+test('澄清：缺城市与时长时显示问题卡，不生成路线', async () => {
+  const { window, document, dom } = await boot();
+  try {
+    window.CW.state.city = '';
+    window.CW.state.draft.durationMin = 0;
+    window.CW.state.draft.startAt = '';
+    click(window, $('#genBtn', document));
+    await waitFor(() => $('.clarify-card', document), 9000);
+    const card = $('.clarify-card', document);
+    assert.match(card.textContent, /还需要|城市|时长/);
+    assert.equal($('.summary-card', document), null, '澄清阶段不应生成路线');
+    assert.ok($$('.clarify-q', document).length >= 1, '至少一个问题');
+    dom.window.close();
+  } catch (e) { dom.window.close(); throw e; }
+});
+
 test('地图与时间线联动：点击卡片有选中态', async () => {
   const { window, document, dom } = await boot();
   try {

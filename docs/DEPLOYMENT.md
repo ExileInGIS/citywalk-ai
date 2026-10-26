@@ -1,6 +1,6 @@
 # CityWalk AI 部署与运行指南
 
-> 版本：v1.0 ｜ 日期：2026-10-26 ｜ 状态：本地 Mock 已实测；90 项自动化测试、评测与自检通过；**未部署到公网**
+> 版本：v1.0 ｜ 日期：2026-10-26 ｜ 状态：本地 Mock 已实测；91 项自动化测试、评测与自检通过；**未部署到公网**
 > 关联：`README.md`、`docs/PRODUCT-REQUIREMENTS.md` §10/§16、`docs/ARCHITECTURE.md` §6/§10、`.env.example`、`package.json`。
 > 口径：本文命令以 `package.json` 为准；执行过的写「已执行」，没执行的写「未执行」；不把未验证写成已验证。
 
@@ -20,7 +20,7 @@
 | 仓库数据库 | 无 | 收藏只存浏览器 `localStorage`；服务端事件只存内存 |
 | Docker / CI | 无 `Dockerfile`、无 `.github/` | 未构建、未跑 CI |
 | 服务端启动 | **已执行** | `node server/index.js` 监听 `127.0.0.1:3000`；health/config/静态页/plan 均 200 |
-| 自动化测试 | **90/90 通过（已执行）** | `node tests/run.js`；含单元、API、jsdom 集成 |
+| 自动化测试 | **91/91 通过（已执行）** | `node tests/run.js`；含单元、API、jsdom 集成 |
 | 评测 | **21/21 场景、12/12 调整（已执行）** | `node scripts/eval.js`；见 `docs/EVALUATION-REPORT.md` |
 | 一致性自检 | **28/28 通过（已执行）** | `node scripts/check.js` |
 | 一键 QA | **退出码 0（已执行）** | `node qa/run-all.js` |
@@ -405,7 +405,7 @@ git revert <commit>
 ## 12. 验收命令清单（复制即用）
 
 > 以下命令与 `package.json` 一致；`pnpm <script>` 可替换为 `npm run <script>`。
-> **本次执行状态（2026-10-26 15:56，Windows / Node v24.21.0）：** `node tests/run.js` 90/90 通过；`node scripts/eval.js` 21/21 场景、12/12 调整；`node scripts/check.js` 28/28；`node qa/run-all.js` 退出码 0；`node build.js` 生成单文件版；`node server/index.js` 的 health/config/静态页/plan/refine 均已实测。
+> **本次执行状态（2026-10-26 16:05，Windows / Node v24.21.0）：** `node tests/run.js` 91/91 通过；`node scripts/eval.js` 21/21 场景、12/12 调整；`node scripts/check.js` 28/28；`node qa/run-all.js` 退出码 0；`node build.js` 生成单文件版；`node server/index.js` 的 health/config/静态页/plan/refine 均已实测。
 
 ```bash
 # 1) 环境

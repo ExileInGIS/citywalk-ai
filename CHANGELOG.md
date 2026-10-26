@@ -14,7 +14,7 @@
 - **地图 Provider**：统一 `CW.MapEngine` 契约（`update/select/setLayer/fit/destroy`），保留 SVG 示意地图，新增 Leaflet + OSM 适配器（仅渲染 8 个有真实坐标的点）。
 - **保存/导出**：localStorage 持久化收藏，Markdown / JSON 导出，复制分享文本。
 - **可访问性基线**：表单标签、弹窗焦点圈闭与归还、`aria-live` 反馈、键盘可操作地点卡、`:focus-visible`、`prefers-reduced-motion`、对比度修正、响应式布局。
-- **测试与评测**：90 项自动化测试（单元/API/jsdom 集成）、24 条固定评测场景、12 条调整指令、`pnpm eval` 真实执行并生成报告、`pnpm check` 一致性自检、`qa/run-all.js` 一键 QA。
+- **测试与评测**：91 项自动化测试（单元/API/jsdom 集成）、24 条固定评测场景、12 条调整指令、`pnpm eval` 真实执行并生成报告、`pnpm check` 一致性自检、`qa/run-all.js` 一键 QA。
 - **文档**：审计、竞品分析、PRD、用户流程、指标、架构、Agent 工作流、RAG 取舍、API 接入、测试计划、评测报告、部署、复盘、ADR、设计系统知识库。
 
 ### 变更
