@@ -2,8 +2,10 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=1440" />
-<title>CityWalk AI · 智能城市漫步规划助手</title>
+<!-- 桌面布局仍由 CSS 的 1440 最大宽度控制；viewport 只让窄屏能缩放查看，不声明移动端适配 -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CityWalk AI · 一句话规划城市漫步路线</title>
+<meta name="description" content="CityWalk AI 把一句出行想法变成可调整的城市漫步路线：时间、兴趣、预算、步行强度都可约束。默认离线 Mock，可接入真实 Agent 与地图；所有时长、距离与费用均为估算值。" />
 <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
@@ -34,21 +36,31 @@
 
 <!-- ============ 全局容器 ============ -->
 <div id="modalRoot"></div>
-<div id="toastRoot" class="toast-root"></div>
+<div id="toastRoot" class="toast-root" role="status" aria-live="polite"></div>
 
-<!-- ============ 脚本 ============ -->
-<!-- ============ 脚本（config 必须最先加载） ============ -->
+<!-- ============ 可选：启用 Leaflet 真实地图（默认不加载任何 CDN） ============
+     启用步骤：
+       1. 取消下面 3 行注释（Leaflet CSS / Leaflet JS / 本项目适配器）；
+       2. 把 js/config.js 的 MAP.provider 改为 'leaflet'（本地可用 ?map=leaflet 手测）；
+       3. 服务端 CSP 放行 unpkg.com（脚本与样式）和瓦片域名（图片）；
+       4. 需要网络。真实地图只显示有 lat/lng 的 8 个地点，路线是直线示意，
+          不是导航路径；4 个无坐标的泛化地点会被跳过并提示。
+     默认不启用：地图走 mock SVG，完全离线可用。
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./js/adapters/map-leaflet.js"></script>
+-->
+
+<!-- ============ 脚本（config 必须最先加载；shared/core.js 提供确定性地规划核心） ============ -->
 <script src="./js/config.js"></script>
 <script src="./js/data.js"></script>
+<script src="./js/schema.js"></script>
+<script src="./shared/core.js"></script>
 <script src="./js/ui.js"></script>
 <script src="./js/agent.js"></script>
 <script src="./js/map.js"></script>
-<!-- 接入真实地图/智能体时，取消注释并按需引入（详见 docs/API-INTEGRATION.md）
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
-<script src="./js/adapters/map-leaflet.example.js"></script>
-<script src="./js/adapters/agent-custom.example.js"></script>
--->
+<script src="./js/storage.js"></script>
+<script src="./js/telemetry.js"></script>
 <script src="./js/pages/home.js"></script>
 <script src="./js/pages/discover.js"></script>
 <script src="./js/pages/favorites.js"></script>

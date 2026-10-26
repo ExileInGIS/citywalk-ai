@@ -1,105 +1,131 @@
 /* =====================================================================
- * config.js · 第三方服务接入配置（部署时只需要改这一个文件）
+ * config.js · 全局唯一配置入口
  * ---------------------------------------------------------------------
- * 本原型默认完全离线运行：
- *   · AI 规划 = 本地规则模拟（js/agent.js）
- *   · 地图   = 自绘 SVG 示意地图（js/map.js，不含真实坐标）
+ * 所有可替换能力（Agent / 地图 / 存储 / 埋点 / 品牌）都从这里读取。
+ * 业务代码不允许再写死 endpoint、provider 或 localStorage 键名。
  *
- * 需要接入真实服务时，在本文件按注释填写并切换开关即可，业务代码
- * （首页 / 对话 / 时间线 / 收藏等）无需改动。
+ * 默认值完全离线可用：
+ *   · AGENT.mode = 'mock'      → 浏览器本地调用 shared/core.js
+ *   · MAP.provider = 'mock'    → 自绘 SVG 示意地图
+ *   · TELEMETRY.enabled = true → 事件只进内存队列，flush() 时才上报
  *
- * ⚠️ 安全提醒：
- *   浏览器端代码对用户可见，不要把「密钥」硬编码在本文件里直接提交。
- *   正确做法是让请求经过你自己的后端 / Serverless 代理（见 agent.endpoint
- *   与 map.apiKeyFromProxy 的说明），密钥保存在服务端环境变量中。
+ * 本地手测（仅 localhost / 127.0.0.1 / file:// 生效）：
+ *   ?mode=mock|remote   覆盖 AGENT.mode
+ *   ?map=mock|leaflet   覆盖 MAP.provider
+ * 例如：http://localhost:3000/?mode=remote&map=leaflet
+ * 生产环境会忽略这两个参数，避免被 URL 随意切换后端行为。
+ *
+ * 旧字段别名（agent/map/storage/telemetry/app）指向同一对象，旧代码
+ * 不需要修改；新代码只使用大写键。
  * ===================================================================== */
 (function () {
-  window.CW_CONFIG = {
+  'use strict';
 
-    /* ===============================================================
-     * 1) 智能体 API（AI 路线规划 / 对话式修改）
-     * =============================================================== */
-    agent: {
-      // 'mock'   → 本地规则模拟（默认，离线可用，页面显示「演示模式」）
-      // 'remote' → 请求真实智能体服务（需同时填写 endpoint）
+  const config = {
+    /* ---------------- 智能体（浏览器 → 自家服务端） ---------------- */
+    AGENT: {
+      // 'mock'   → 本地确定性核心（离线可用）
+      // 'remote' → POST 到下面同源 endpoint，由服务端调用真实模型
       mode: 'mock',
 
-      // 你的智能体服务地址。建议指向自有后端/Serverless 代理，而不是
-      // 直接暴露大模型平台地址。例如：
-      //   endpoint: 'https://your-domain.example.com/api/agent'
-      endpoint: '',
+      // 默认指向本仓库 Node 服务的统一入口；页面与服务端同源部署。
+      endpoint: '/api/agent/run',
+      timeoutMs: 20000,
 
-      // 鉴权方式（二选一，均建议在服务端完成真正的鉴权）：
-      auth: {
-        type: 'none',          // 'none' | 'bearer' | 'custom'
-        token: '',             // bearer：仅作本地联调用，生产请走代理，勿提交真实密钥
-        headerName: 'X-Api-Key'// custom：自定义请求头名
-      },
+      // 远程失败时的策略：'mock' 回退本地核心并标 degraded；'error' 直接抛错
+      fallback: 'mock',
 
-      // 自定义请求函数：当目标平台（如 Coze Agent SDK、各家大模型 SDK）
-      // 与默认的 fetch JSON 协议不一致时，在这里直接接入其 SDK，返回标准
-      // Route 对象（协议见 docs/API-INTEGRATION.md）。
-      //   request: async function (task, payload) { ... return Route }
-      request: null,
+      // 额外请求头（不要在这里放模型密钥；密钥只能在服务端环境变量里）
+      headers: {},
 
-      // 远程调用失败时的降级策略
-      fallback: 'mock',        // 'mock'（回退本地模拟并提示）| 'error'（只报错）
-      timeoutMs: 20000
+      // 请求 id 头名；trace id 固定使用 X-Trace-Id
+      requestIdHeader: 'X-Request-Id',
+
+      /* ---- 旧字段兼容：旧版 agent-custom.example.js 会读这两项 ---- */
+      auth: { type: 'none', token: '', headerName: 'X-Api-Key' },
+      request: null
     },
 
-    /* ===============================================================
-     * 2) 地图 API
-     * =============================================================== */
-    map: {
-      // 'svg'      → 自绘 SVG 示意地图（默认，离线可用）
-      // 'amap'     → 高德地图
-      // 'tencent'  → 腾讯位置服务
-      // 'leaflet'  → Leaflet + OSM/任意瓦片（开源方案）
-      // 'custom'   → 自行实现适配器
-      provider: 'svg',
+    /* ---------------- 地图 ---------------- */
+    MAP: {
+      // 'mock'    → 现有 SVG 示意地图（默认，离线）
+      // 'leaflet' → 需先按 index.html 注释启用 CDN，并加载 js/adapters/map-leaflet.js
+      provider: 'mock',
 
-      // 各服务商配置（用哪个填哪个；都建议经自己的后端换取临时凭证）
-      amap: {
-        key: '',               // 高德 Web 端 JS API Key
-        securityCode: ''       // 高德安全密钥（2021-12 之后需要）
-      },
-      tencent: {
-        key: ''
-      },
       leaflet: {
-        tileUrl: '',           // 例如 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-        attribution: '',
-        // 路线规划仍需额外服务（OSRM 等）；示意模式下只展示点位与直线
+        tileUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        // 归属标注必须非空；地图适配器会原样展示
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19,
+        // 预留：接入真实步行路径规划后可换掉直线示意
         routerUrl: ''
       },
 
-      // 推荐：由你的后端代理地图密钥，前端不持有 key
-      apiKeyFromProxy: '',     // 例如 '/api/map-config'，返回 { key, securityCode }
+      mock: { id: 'mock' },
 
-      // 真实地图需要地点的经纬度。当前模拟数据只有示意坐标 mapX/mapY。
-      // 接入真实地图时，请在数据里为每个地点补充 lng/lat（见接入文档），
-      // 或通过下面的方法由地点 id 异步解析坐标。
-      geocode: null            // async function (place) { return { lng, lat } }
+      /* ---- 旧字段兼容（旧适配器 / 接入文档示例会读） ---- */
+      geocode: null,
+      apiKeyFromProxy: '',
+      amap: { key: '', securityCode: '' },
+      tencent: { key: '' }
     },
 
-    /* ===============================================================
-     * 3) 收藏持久化（可选）
-     * ===============================================================
-     * 默认 'memory'：仅本次会话有效（需求规定）。
-     * 想本地留存可改 'localStorage'；接入账号体系时把 favorites.js
-     * 换成请求你的用户收藏接口即可。
-     * =============================================================== */
-    storage: {
-      favorites: 'memory'      // 'memory' | 'localStorage'
+    /* ---------------- 本地持久化 ---------------- */
+    STORAGE: {
+      favorites: true,
+      draft: true,
+      keyPrefix: 'cw.v1.'
     },
 
-    /* ===============================================================
-     * 4) 品牌 / 文案（可选）
-     * =============================================================== */
-    app: {
+    /* ---------------- 匿名埋点 ---------------- */
+    TELEMETRY: {
+      enabled: true,
+      endpoint: '/api/events'
+    },
+
+    /* ---------------- 品牌与展示 ---------------- */
+    APP: {
       brand: 'CityWalk AI',
       defaultCity: 'nanjing',
-      showDemoBadge: true      // 是否在 AI 面板显示「演示模式 · 本地规则模拟」
+      version: '1.0.0',
+      showDemoBadge: true
     }
   };
+
+  /* ---------------- 本地 URL 覆盖（仅供手测） ---------------- */
+  function isLocalDebug() {
+    const loc = window.location;
+    if (!loc) return false;
+    if (loc.protocol === 'file:') return true;
+    const host = String(loc.hostname || '').toLowerCase();
+    return host === 'localhost' || host === '127.0.0.1' ||
+      host === '0.0.0.0' || host === '::1' || host === '[::1]';
+  }
+
+  function applyLocalQueryOverrides() {
+    if (!isLocalDebug()) return;
+    let params;
+    try {
+      params = new URLSearchParams(window.location.search || '');
+    } catch (e) {
+      return; // 极老浏览器不支持 URLSearchParams 时保持默认值
+    }
+
+    const mode = params.get('mode');
+    if (mode === 'mock' || mode === 'remote') config.AGENT.mode = mode;
+
+    const map = params.get('map');
+    if (map === 'mock' || map === 'leaflet') config.MAP.provider = map;
+  }
+
+  applyLocalQueryOverrides();
+
+  /* ---------------- 兼容别名：必须指向同一个对象 ---------------- */
+  config.agent = config.AGENT;
+  config.map = config.MAP;
+  config.storage = config.STORAGE;
+  config.telemetry = config.TELEMETRY;
+  config.app = config.APP;
+
+  window.CW_CONFIG = config;
 })();
