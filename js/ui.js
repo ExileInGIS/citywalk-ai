@@ -1,6 +1,8 @@
 /* =====================================================================
  * ui.js · 通用 UI 工具（图标 / Toast / 模态框 / DOM 助手）
- * 纯原生实现，无第三方依赖
+ * 纯原生实现，无第三方依赖。
+ * 本版按 DESIGN-SYSTEM P0 补齐：Modal 焦点管理、Toast live region、
+ * 统一 :focus-visible（样式在 CSS）、下载 / 复制 / 路线字段兼容工具。
  * ===================================================================== */
 (function () {
   const CW = (window.CW = window.CW || {});
@@ -63,68 +65,183 @@
     trash: '<path d="M4.5 7h15M9.5 7V4.8h5V7M6.5 7l1 13h9l1-13"/>',
     compass: '<circle cx="12" cy="12" r="9"/><path d="M15.2 8.8l-1.9 4.4-4.4 1.9 1.9-4.4 4.4-1.9z"/>',
     key: '<circle cx="8" cy="15" r="3.6"/><path d="M10.7 12.3L20 3M16.5 6.5l2.2 2.2M14 9l2.2 2.2"/>',
-    logout: '<path d="M15 4.5h3.5A1.5 1.5 0 0 1 20 6v12a1.5 1.5 0 0 1-1.5 1.5H15"/><path d="M10 8l-4 4 4 4M6 12h9"/>'
+    logout: '<path d="M15 4.5h3.5A1.5 1.5 0 0 1 20 6v12a1.5 1.5 0 0 1-1.5 1.5H15"/><path d="M10 8l-4 4 4 4M6 12h9"/>',
+    download: '<path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4.5 20.5h15"/>',
+    copy: '<rect x="8.5" y="8.5" width="11" height="12" rx="2"/><path d="M15.5 8.5V6A1.5 1.5 0 0 0 14 4.5H6A1.5 1.5 0 0 0 4.5 6v9A1.5 1.5 0 0 0 6 16.5h2.5"/>',
+    database: '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>',
+    sliders: '<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/>',
+    external: '<path d="M14 4h6v6"/><path d="M20 4l-8 8"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>',
+    shield: '<path d="M12 3l7 3v6c0 4.2-2.9 7.5-7 9-4.1-1.5-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>'
   };
   function icon(name, cls) {
     const d = P[name] || P.info;
-    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="${cls || ''}">${d}</svg>`;
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="${cls || ''}">${d}</svg>`;
   }
 
   /* ---------------- Toast ---------------- */
-  function toast(msg, type) {
+  function toast(msg, type, opts) {
     const root = document.getElementById('toastRoot');
     if (!root) return;
-    const ico = type === 'err' ? 'alert' : type === 'warn' ? 'alert' : 'check';
+    if (!root.getAttribute('role')) {
+      root.setAttribute('role', 'status');
+      root.setAttribute('aria-live', 'polite');
+      root.setAttribute('aria-atomic', 'false');
+    }
+    const isErr = type === 'err';
+    const ico = isErr ? 'alert' : type === 'warn' ? 'alert' : 'check';
     const el = document.createElement('div');
     el.className = 'toast ' + (type || 'ok');
+    el.setAttribute('role', isErr ? 'alert' : 'status');
+    if (isErr) el.setAttribute('aria-live', 'assertive');
     el.innerHTML = icon(ico) + '<span>' + esc(msg) + '</span>';
     root.appendChild(el);
+    const ttl = (opts && opts.duration) || (isErr ? 4200 : 2600);
     setTimeout(() => {
       el.style.transition = 'opacity .25s, transform .25s';
       el.style.opacity = '0';
       el.style.transform = 'translateY(8px)';
       setTimeout(() => el.remove(), 260);
-    }, 2400);
+    }, ttl);
   }
 
-  /* ---------------- 模态框 ---------------- */
+  /* ---------------- 模态框（焦点圈闭 + 归还） ---------------- */
+  let modalSeq = 0;
+  const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+
   function modal(opts) {
     const root = document.getElementById('modalRoot');
+    if (!root) return { el: null, close() {} };
+    const titleId = 'modal-title-' + (++modalSeq);
+    const prevFocus = document.activeElement;
     const mask = document.createElement('div');
     mask.className = 'modal-mask';
     mask.innerHTML = `
-      <div class="modal" style="max-width:${opts.width || 620}px">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="${titleId}" tabindex="-1" style="max-width:${opts.width || 620}px">
         <div class="modal-head">
-          <div><h3>${esc(opts.title || '')}</h3>${opts.sub ? `<p>${esc(opts.sub)}</p>` : ''}</div>
-          <button class="close-x" data-mclose>${icon('close')}</button>
+          <div><h3 id="${titleId}">${esc(opts.title || '')}</h3>${opts.sub ? `<p>${esc(opts.sub)}</p>` : ''}</div>
+          <button class="close-x" type="button" data-mclose aria-label="关闭" title="关闭">${icon('close')}</button>
         </div>
         <div class="modal-body">${opts.body || ''}</div>
-        ${opts.footer === false ? '' : `<div class="modal-foot">${opts.footer || `<button class="btn btn-ghost" data-mclose>关闭</button>`}</div>`}
+        ${opts.footer === false ? '' : `<div class="modal-foot">${opts.footer || `<button class="btn btn-ghost" type="button" data-mclose>关闭</button>`}</div>`}
       </div>`;
     root.appendChild(mask);
-    const close = () => { mask.remove(); document.removeEventListener('keydown', onKey); };
-    function onKey(e) { if (e.key === 'Escape') close(); }
-    document.addEventListener('keydown', onKey);
+    const modalEl = mask.querySelector('.modal');
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    let closed = false;
+
+    function focusables() {
+      return $$(FOCUSABLE, modalEl).filter(el => el.offsetParent !== null || el === document.activeElement);
+    }
+    function close() {
+      if (closed) return;
+      closed = true;
+      mask.remove();
+      document.removeEventListener('keydown', onKey, true);
+      if (!document.querySelector('.modal-mask')) document.body.style.overflow = prevOverflow;
+      const back = prevFocus && prevFocus.isConnected ? prevFocus : null;
+      if (back && typeof back.focus === 'function') {
+        try { back.focus(); } catch (e) { /* 忽略 */ }
+      }
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const list = focusables();
+      if (!list.length) { e.preventDefault(); modalEl.focus(); return; }
+      const first = list[0], last = list[list.length - 1];
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === modalEl)) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+    document.addEventListener('keydown', onKey, true);
     mask.addEventListener('click', e => {
       if (e.target === mask || e.target.closest('[data-mclose]')) close();
     });
+    setTimeout(() => {
+      const auto = mask.querySelector('[autofocus]');
+      const target = auto || focusables()[0] || modalEl;
+      try { target.focus(); } catch (e) { /* 忽略 */ }
+    }, 0);
     return { el: mask, close };
   }
 
   /* ---------------- 小工具 ---------------- */
   function fmtDuration(min) {
-    if (min == null) return '—';
-    const h = Math.floor(min / 60), m = min % 60;
+    if (min == null || isNaN(Number(min))) return '—';
+    const n = Math.max(0, Math.round(Number(min)));
+    const h = Math.floor(n / 60), m = n % 60;
     if (h && m) return `${h} 小时 ${m} 分`;
     if (h) return `${h} 小时`;
     return `${m} 分钟`;
   }
   function fmtCost(cost) {
     if (!cost) return '未指定';
-    const [lo, hi] = cost;
+    if (Array.isArray(cost)) {
+      const [lo, hi] = cost;
+      if (lo === 0 && hi === 0) return '免费';
+      if (lo === 0) return `¥0–${hi}`;
+      return `¥${lo}–${hi}`;
+    }
+    if (typeof cost === 'object') {
+      const lo = Number(cost.min) || 0, hi = Number(cost.max) || 0;
+      if (lo === 0 && hi === 0) return '免费';
+      if (lo === 0) return `¥0–${hi}`;
+      return `¥${lo}–${hi}`;
+    }
+    return '未指定';
+  }
+  /* 预算既支持旧数组 [lo,hi]，也支持 Route v1 的 {min,max,currency,basis} */
+  function budgetRange(budget) {
+    if (Array.isArray(budget)) return [Number(budget[0]) || 0, Number(budget[1]) || 0];
+    if (budget && typeof budget === 'object') return [Number(budget.min) || 0, Number(budget.max) || 0];
+    return null;
+  }
+  function fmtBudget(budget, opts) {
+    const rg = budgetRange(budget);
+    if (!rg) return '未指定';
+    const [lo, hi] = rg;
+    const basis = budget && !Array.isArray(budget) && budget.basis === 'per_person' ? '人均 ' : '';
     if (lo === 0 && hi === 0) return '免费';
-    if (lo === 0) return `¥0–${hi}`;
-    return `¥${lo}–${hi}`;
+    if (lo === hi) return `${basis}¥${hi}`;
+    if (lo === 0) return `${basis}¥0–${hi}`;
+    return `${basis}¥${lo}–${hi}`;
+  }
+  function placeIds(route) {
+    if (!route || !Array.isArray(route.places)) return [];
+    return route.places.map(x => (typeof x === 'string' ? x : x && x.id)).filter(Boolean);
+  }
+  /* 旧 Route（stay / walkFromPrev）与 Route v1（stayMin / walkFromPrevMin）统一读取 */
+  function segmentsOf(route) {
+    const ids = placeIds(route);
+    const segs = route && Array.isArray(route.segments) ? route.segments : [];
+    return ids.map((id, i) => {
+      const s = segs[i] || {};
+      const n = (v, d) => (typeof v === 'number' && Number.isFinite(v) ? v : d);
+      return {
+        placeId: id,
+        stayMin: n(s.stayMin, n(s.stay, 0)),
+        walkFromPrevMin: n(s.walkFromPrevMin, n(s.walkFromPrev, 0)),
+        distanceFromPrevKm: n(s.distanceFromPrevKm, null),
+        indoor: s.indoor !== undefined ? s.indoor : null,
+        arriveAt: s.arriveAt || null,
+        departAt: s.departAt || null
+      };
+    });
+  }
+  function fmtDateTime(iso) {
+    if (!iso) return '未知';
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return '未知';
+    const p = n => String(n).padStart(2, '0');
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
   }
   function catIcon(cat) {
     return ({ street: 'walk', cafe: 'coffee', book: 'book', history: 'building', park: 'tree', arch: 'building', food: 'coffee', photo: 'camera' })[cat] || 'pin';
@@ -132,5 +249,60 @@
   /* 文本输入防注入 */
   function nl2br(s) { return esc(s).replace(/\n/g, '<br>'); }
 
-  CW.ui = { $, $$, esc, bind, icon, toast, modal, fmtDuration, fmtCost, catIcon, nl2br };
+  /* ---------------- 下载 / 复制 ---------------- */
+  function download(filename, text, mime) {
+    try {
+      const blob = new Blob([text], { type: mime || 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename || 'citywalk.txt';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { a.remove(); try { URL.revokeObjectURL(url); } catch (e) { /* 忽略 */ } }, 800);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  /* 返回 Promise<boolean>；失败时由调用方提示手动复制 */
+  function copy(text) {
+    return new Promise(resolve => {
+      const fallback = () => {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = String(text == null ? '' : text);
+          ta.setAttribute('readonly', 'readonly');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          let ok = false;
+          try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+          ta.remove();
+          resolve(ok);
+        } catch (e) { resolve(false); }
+      };
+      try {
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          navigator.clipboard.writeText(String(text == null ? '' : text)).then(() => resolve(true), fallback);
+        } else fallback();
+      } catch (e) { fallback(); }
+    });
+  }
+
+  CW.ui = {
+    $, $$, esc, bind, icon, toast, modal,
+    fmtDuration, fmtCost, fmtBudget, budgetRange, placeIds, segmentsOf, fmtDateTime,
+    catIcon, nl2br, download, copy
+  };
+
+  /* 尽早给全局 live region 补上语义，避免第一次 Toast 之前读屏不可见 */
+  const toastRoot = document.getElementById('toastRoot');
+  if (toastRoot) {
+    toastRoot.setAttribute('role', 'status');
+    toastRoot.setAttribute('aria-live', 'polite');
+    toastRoot.setAttribute('aria-atomic', 'false');
+  }
 })();

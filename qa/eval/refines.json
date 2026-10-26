@@ -1,0 +1,18 @@
+{
+  "version": "2026-10-26",
+  "note": "12 条自然语言调整指令，基于 C01 的路线；覆盖 PRD 4.3 F-13 的 8 类要求。",
+  "refines": [
+    { "id": "R01", "type": "walk_less", "text": "少走一点路", "expectChanged": true },
+    { "id": "R02", "type": "replace_category", "text": "把咖啡馆换成书店", "expectChanged": true },
+    { "id": "R03", "type": "add_theme", "text": "我想多看一些历史建筑", "expectChanged": false, "allowExplainedNoChange": true, "explanationPattern": "放不下|延长时长|减少一站" },
+    { "id": "R04", "type": "budget", "text": "预算控制在 100 元以内", "expectChanged": true },
+    { "id": "R05", "type": "end_time", "text": "下午五点前结束", "expectChanged": true },
+    { "id": "R06", "type": "keep_ends", "text": "保留第一站和最后一站，调整中间路线", "expectChanged": true },
+    { "id": "R07", "type": "weather", "text": "下雨了，尽量安排室内活动", "expectChanged": true },
+    { "id": "R08", "type": "diversity", "text": "不要再安排类似的景点了", "expectChanged": false, "allowExplainedNoChange": true, "explanationPattern": "已经比较分散|不需要" },
+    { "id": "R09", "type": "remove_category", "text": "去掉书店", "expectChanged": true },
+    { "id": "R10", "type": "pace", "text": "节奏慢一点", "expectChanged": true },
+    { "id": "R11", "type": "duration", "text": "改成三个小时", "expectChanged": true },
+    { "id": "R12", "type": "unknown", "text": "帮我写一首关于南京的诗", "expectChanged": false }
+  ]
+}

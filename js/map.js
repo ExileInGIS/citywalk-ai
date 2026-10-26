@@ -1,20 +1,54 @@
 /* =====================================================================
- * map.js · 地图层（适配器模式）
+ * map.js · 地图层（Provider 注册 + 统一渲染）
  * ---------------------------------------------------------------------
- * ⚠️ 默认 provider 为【SVG 示意地图】：水系、绿地、道路均为手绘的相对
- *    位置示意，不含真实经纬度，不能用于导航，仅展示标记与路线的对应。
+ * 主 API：CW.MapEngine
+ *   registerProvider({ id, init })
+ *   render(container, route, opts) -> { provider, update, select, setLayer, fit, destroy }
+ *   getProviderId() / reset()
  *
- * 接入真实地图：在 js/config.js 把 CW_CONFIG.map.provider 改成
- *   'amap' | 'tencent' | 'leaflet' | 'custom'，并按
- *   docs/API-INTEGRATION.md 实现/引入对应适配器（参考 js/adapters/*.js）。
- * 适配器只需实现统一接口：
- *   render(host, route, opts) -> { update(route), select(id), destroy() }
- * 业务侧始终只调用 CW.map.render(...)，不感知底层是哪家地图。
+ * 默认内置 mock provider：保留原 SVG 示意地图（缩放 / 拖动 / 图层 / 图例 /
+ * 标记与时间线联动）。地图上没有任何真实经纬度，不能用于导航。
+ *
+ * 配置 MAP.provider='leaflet' 时，只有 js/adapters/map-leaflet.js 已加载、
+ * 且 window.L 存在，才会注册真实地图；否则明确提示「地图适配器未就绪」
+ * 并回退 mock，不静默画错图。
+ *
+ * 兼容：旧代码仍可调用 CW.map.render(...)，行为与 CW.MapEngine.render 相同。
  * ===================================================================== */
 (function () {
-  const CW = (window.CW = window.CW || {});
-  const D = CW.data;
+  'use strict';
+
+  const root = typeof window !== 'undefined' ? window : globalThis;
+  const CW = (root.CW = root.CW || {});
   const VW = 1000, VH = 640;
+
+  function icon(name) {
+    return (CW.ui && typeof CW.ui.icon === 'function') ? CW.ui.icon(name) : '';
+  }
+
+  function esc(value) {
+    if (CW.ui && typeof CW.ui.esc === 'function') return CW.ui.esc(value);
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function showFailure(host, message) {
+    host.innerHTML =
+      '<div class="map-failure note-box rose" role="alert" style="margin:12px">' +
+      icon('alert') + '<span>' + esc(message) + '</span></div>';
+  }
+
+  function failureInstance(host, provider, message) {
+    return {
+      provider: provider || 'mock',
+      update: function () { showFailure(host, message); },
+      select: function () { },
+      setLayer: function () { return false; },
+      fit: function () { },
+      destroy: function () { host.innerHTML = ''; }
+    };
+  }
 
   const BASE = `
   <defs>
@@ -66,39 +100,51 @@
     <text class="mk-label" x="736" y="546" style="font-size:11px" fill="#A99C86">明城墙（示意）</text>
   </g>`;
 
-  /* ---- 内置 provider：SVG 示意地图 ---- */
-  function renderSvg(host, route, opts) {
+  /* =====================================================================
+   * 内置 provider：SVG 示意地图（原实现保留）
+   * ===================================================================== */
+  function initMock(host, route, opts) {
     opts = opts || {};
+    const D = CW.data;
+
+    if (!D || typeof D.placesOfCity !== 'function' || typeof D.place !== 'function') {
+      showFailure(host, '地图数据未加载，暂时无法绘制示意地图。');
+      return failureInstance(host, 'mock', '地图数据未加载，暂时无法绘制示意地图。');
+    }
+
     const state = {
       scale: 1, tx: 0, ty: 0,
       layers: { base: true, route: true, pins: true },
       selected: null,
-      route: route
+      route: route,
+      failed: false
     };
+
     host.innerHTML = `
       <div class="map-stage" id="mapStage">
-        <svg id="mapSvg" viewBox="0 0 ${VW} ${VH}" preserveAspectRatio="xMidYMid meet">
+        <svg id="mapSvg" viewBox="0 0 ${VW} ${VH}" preserveAspectRatio="xMidYMid meet"
+             role="img" aria-label="路线示意地图，编号与下方时间线一致">
           <g id="mapRoot">${BASE}
             <g id="gRoute"></g>
             <g id="gPins"></g>
           </g>
         </svg>
         <div class="map-layers" id="mapLayers">
-          <button data-layer="base" class="on">街区底图</button>
-          <button data-layer="route" class="on">步行路线</button>
-          <button data-layer="pins" class="on">兴趣点</button>
+          <button type="button" data-layer="base" class="on" aria-pressed="true">街区底图</button>
+          <button type="button" data-layer="route" class="on" aria-pressed="true">步行路线</button>
+          <button type="button" data-layer="pins" class="on" aria-pressed="true">兴趣点</button>
         </div>
         <div class="map-ctrl">
-          <button data-zoom="in" title="放大">${CW.ui.icon('plus')}</button>
-          <button data-zoom="out" title="缩小">${CW.ui.icon('minus')}</button>
-          <button data-zoom="reset" title="回到全览">${CW.ui.icon('locate')}</button>
+          <button type="button" data-zoom="in" title="放大" aria-label="放大地图">${icon('plus')}</button>
+          <button type="button" data-zoom="out" title="缩小" aria-label="缩小地图">${icon('minus')}</button>
+          <button type="button" data-zoom="reset" title="回到全览" aria-label="回到全览">${icon('locate')}</button>
         </div>
         <div class="map-legend" id="mapLegend"></div>
       </div>
-      <div class="map-note">${CW.ui.icon('info')}<span>${D.DISCLAIMER.map} · ${D.DISCLAIMER.sample}，仅用于展示标记与路线的对应关系</span></div>`;
+      <div class="map-note">${icon('info')}<span>${esc(D.DISCLAIMER && D.DISCLAIMER.map)} · ${esc(D.DISCLAIMER && D.DISCLAIMER.sample)}，仅用于展示标记与路线的对应关系</span></div>`;
 
     const stage = host.querySelector('#mapStage');
-    const root = host.querySelector('#mapRoot');
+    const rootEl = host.querySelector('#mapRoot');
     const gRoute = host.querySelector('#gRoute');
     const gPins = host.querySelector('#gPins');
     const svg = host.querySelector('#mapSvg');
@@ -107,15 +153,17 @@
     function renderLegend() {
       const cats = {};
       const r = state.route;
-      if (r) r.places.forEach(id => { const p = D.place(id); if (p) cats[p.cat] = true; });
+      if (r && Array.isArray(r.places)) {
+        r.places.forEach(id => { const p = D.place(id); if (p) cats[p.cat] = true; });
+      }
       if (!Object.keys(cats).length) {
         D.placesOfCity(r ? r.city : 'nanjing').forEach(p => { cats[p.cat] = true; });
       }
       const rows = Object.keys(cats).map(c => {
         const cc = D.cat(c);
-        return `<div class="lg-row"><span class="lg-dot" style="background:${cc.color}"></span>${CW.ui.esc(cc.name)}</div>`;
+        return `<div class="lg-row"><span class="lg-dot" style="background:${cc.color}"></span>${esc(cc.name)}</div>`;
       });
-      if (r && r.places.length > 1) {
+      if (r && Array.isArray(r.places) && r.places.length > 1) {
         rows.push('<div class="lg-row"><span class="lg-dot lg-ring"></span>起点 · 终点</div>');
       }
       host.querySelector('#mapLegend').innerHTML = rows.join('');
@@ -123,13 +171,13 @@
 
     /* ---- 变换 ---- */
     function applyTransform() {
-      root.setAttribute('transform', `translate(${state.tx} ${state.ty}) scale(${state.scale})`);
+      rootEl.setAttribute('transform', `translate(${state.tx} ${state.ty}) scale(${state.scale})`);
     }
 
     /* ---- 绘制路线与标记 ---- */
     function draw() {
       const r = state.route;
-      const routeIds = r ? r.places.slice() : [];
+      const routeIds = (r && Array.isArray(r.places)) ? r.places.slice() : [];
       const places = r ? D.places(routeIds) : [];
       const all = D.placesOfCity(r ? r.city : 'nanjing');
 
@@ -153,17 +201,32 @@
         const isEnd = idx != null && idx === places.length - 1 && places.length > 1;
         const role = isStart ? ' mk-start' : (isEnd ? ' mk-end' : '');
         const tag = isStart ? '起点' : (isEnd ? '终点' : '');
-        return `<g class="mk${sel}${role}" data-pin="${p.id}" transform="translate(${p.mapX} ${p.mapY})">
+        return `<g class="mk${sel}${role}" data-pin="${p.id}" aria-hidden="true" transform="translate(${p.mapX} ${p.mapY})">
           <circle class="mk-halo" r="${idx != null ? 15 : 12}"/>
           <circle class="mk-body" r="${idx != null ? 11.5 : 8.5}" fill="${cc.color}"/>
           ${num !== '' ? `<text y="0.5">${num}</text>` : ''}
-          ${idx != null ? `<text class="mk-label" y="${-19}" style="font-weight:700">${CW.ui.esc(p.name.length > 9 ? p.name.slice(0, 8) + '…' : p.name)}</text>` : ''}
+          ${idx != null ? `<text class="mk-label" y="${-19}" style="font-weight:700">${esc(p.name.length > 9 ? p.name.slice(0, 8) + '…' : p.name)}</text>` : ''}
           ${tag ? `<text class="mk-tag" y="28">${tag}</text>` : ''}
         </g>`;
       };
       gPins.innerHTML = others.map(p => pin(p, null)).join('') + places.map((p, i) => pin(p, i)).join('');
       gPins.style.display = state.layers.pins ? '' : 'none';
       host.querySelector('#gBase').style.display = state.layers.base ? '' : 'none';
+    }
+
+    /* ---- 渲染失败状态：不让异常冒到页面，也不留半张残图 ---- */
+    function fail(err) {
+      if (state.failed) return;
+      state.failed = true;
+      showFailure(host, '地图渲染失败：' + ((err && err.message) || '未知错误'));
+    }
+    function safeDraw() {
+      if (state.failed) return;
+      try { draw(); } catch (e) { fail(e); }
+    }
+    function safeLegend() {
+      if (state.failed) return;
+      try { renderLegend(); } catch (e) { fail(e); }
     }
 
     /* ---- 交互：标记点击 ---- */
@@ -191,18 +254,24 @@
       state.tx = Math.max(-max, Math.min(max, state.tx));
       state.ty = Math.max(-max * 0.7, Math.min(max * 0.7, state.ty));
     }
+    function fit() {
+      state.scale = 1; state.tx = 0; state.ty = 0;
+      applyTransform();
+    }
+
     host.querySelector('.map-ctrl').addEventListener('click', e => {
       const b = e.target.closest('[data-zoom]'); if (!b) return;
       if (b.dataset.zoom === 'in') zoom(1.25);
       else if (b.dataset.zoom === 'out') zoom(0.8);
-      else { state.scale = 1; state.tx = 0; state.ty = 0; applyTransform(); }
+      else fit();
     });
+
     let dragging = false, last = null, moved = false;
-    svg.addEventListener('pointerdown', e => {
+    function onPointerDown(e) {
       dragging = true; moved = false; last = { x: e.clientX, y: e.clientY };
       stage.classList.add('dragging');
-    });
-    window.addEventListener('pointermove', e => {
+    }
+    function onPointerMove(e) {
       if (!dragging) return;
       const rect = svg.getBoundingClientRect();
       const k = VW / rect.width;
@@ -211,8 +280,16 @@
       state.tx += dx; state.ty += dy;
       last = { x: e.clientX, y: e.clientY };
       clampPan(); applyTransform();
-    });
-    window.addEventListener('pointerup', () => { dragging = false; stage.classList.remove('dragging'); });
+    }
+    function onPointerUp() {
+      dragging = false;
+      stage.classList.remove('dragging');
+    }
+    svg.addEventListener('pointerdown', onPointerDown);
+    if (typeof root.addEventListener === 'function') {
+      root.addEventListener('pointermove', onPointerMove);
+      root.addEventListener('pointerup', onPointerUp);
+    }
     svg.addEventListener('wheel', e => {
       if (!e.ctrlKey && Math.abs(e.deltaY) < 2) return;
       e.preventDefault();
@@ -220,22 +297,36 @@
     }, { passive: false });
 
     /* ---- 图层切换 ---- */
+    function setLayer(name, on) {
+      if (!Object.prototype.hasOwnProperty.call(state.layers, name)) return false;
+      if (state.failed) return false;
+      state.layers[name] = !!on;
+      const b = host.querySelector('#mapLayers [data-layer="' + name + '"]');
+      if (b) {
+        b.classList.toggle('on', state.layers[name]);
+        b.setAttribute('aria-pressed', String(state.layers[name]));
+      }
+      safeDraw();
+      return true;
+    }
     host.querySelector('#mapLayers').addEventListener('click', e => {
       const b = e.target.closest('[data-layer]'); if (!b) return;
       const key = b.dataset.layer;
-      state.layers[key] = !state.layers[key];
-      b.classList.toggle('on', state.layers[key]);
-      draw();
+      setLayer(key, !state.layers[key]);
     });
 
-    renderLegend(); draw(); applyTransform();
+    safeLegend(); safeDraw(); applyTransform();
 
     return {
-      provider: 'svg',
-      update(newRoute) { state.route = newRoute; draw(); renderLegend(); },
+      provider: 'mock',
+      update(newRoute) {
+        state.route = newRoute;
+        safeLegend(); safeDraw();
+      },
       select(id) {
+        if (state.failed) return;
         state.selected = id;
-        draw();
+        safeDraw();
         if (id) {
           const p = D.place(id);
           if (p && state.layers.pins) {
@@ -246,36 +337,196 @@
           }
         }
       },
-      destroy() { host.innerHTML = ''; }
+      setLayer: setLayer,
+      fit: fit,
+      destroy() {
+        if (typeof root.removeEventListener === 'function') {
+          root.removeEventListener('pointermove', onPointerMove);
+          root.removeEventListener('pointerup', onPointerUp);
+        }
+        host.innerHTML = '';
+      }
     };
   }
 
   /* =====================================================================
-   * 适配器注册与统一入口
+   * Provider 注册表
    * ===================================================================== */
-  const providers = { svg: renderSvg };
-  function registerProvider(name, fn) { providers[name] = fn; }
-  function getProviderName() {
-    const c = (window.CW_CONFIG && window.CW_CONFIG.map) || {};
-    return c.provider || 'svg';
+  const registry = Object.create(null);
+  let lastProviderId = null;
+
+  function configuredProviderId() {
+    const map = (root.CW_CONFIG && (root.CW_CONFIG.MAP || root.CW_CONFIG.map)) || {};
+    const id = map.provider || 'mock';
+    return id === 'svg' ? 'mock' : id;
+  }
+
+  function assertInstance(inst, id) {
+    if (!inst || typeof inst !== 'object') {
+      throw new Error('地图 Provider「' + id + '」的 init 没有返回实例');
+    }
+    if (typeof inst.provider !== 'string' || !inst.provider) {
+      throw new Error('地图 Provider「' + id + '」的实例缺少 provider 字段');
+    }
+    ['update', 'select', 'setLayer', 'fit', 'destroy'].forEach(name => {
+      if (typeof inst[name] !== 'function') {
+        throw new Error('地图 Provider「' + id + '」的实例缺少 ' + name + '()');
+      }
+    });
+    return inst;
+  }
+
+  function registerProvider(def, maybeInit) {
+    let id, init;
+    if (typeof def === 'string' && typeof maybeInit === 'function') {
+      // 兼容旧签名 registerProvider('leaflet', fn)
+      id = def; init = maybeInit;
+    } else if (def && typeof def === 'object') {
+      id = def.id; init = def.init;
+    }
+    if (typeof id !== 'string' || !id.trim()) {
+      throw new TypeError('registerProvider 需要合法的 id');
+    }
+    if (typeof init !== 'function') {
+      throw new TypeError('registerProvider 需要 init 函数');
+    }
+    registry[id.trim()] = init;
+    return MapEngine;
+  }
+
+  function reportFailure(provider, reasonCode) {
+    try {
+      if (CW.telemetry && typeof CW.telemetry.track === 'function') {
+        CW.telemetry.track('map_failed', { provider: provider, reasonCode: reasonCode || 'UNKNOWN' });
+      }
+    } catch (e) { /* 埋点失败不影响地图 */ }
+  }
+
+  function createNotice(host, text) {
+    const doc = (host && host.ownerDocument) || root.document;
+    const box = doc.createElement('div');
+    box.className = 'map-adapter-notice note-box amber';
+    box.setAttribute('role', 'status');
+    box.style.margin = '8px 12px 12px';
+
+    const span = doc.createElement('span');
+    span.textContent = text;
+    span.style.flex = '1';
+
+    const close = doc.createElement('button');
+    close.type = 'button';
+    close.textContent = '×';
+    close.title = '关闭提示';
+    close.setAttribute('aria-label', '关闭地图提示');
+    close.style.cssText = 'flex:0 0 auto;border:0;background:transparent;color:inherit;font-size:18px;line-height:1;cursor:pointer;padding:0 2px';
+    close.addEventListener('click', () => box.remove());
+
+    box.appendChild(span);
+    box.appendChild(close);
+    return box;
+  }
+
+  function wrapInstance(inst, notice) {
+    return {
+      provider: inst.provider,
+      update: function (route) { return inst.update(route); },
+      select: function (id) { return inst.select(id); },
+      setLayer: function (name, on) { return inst.setLayer(name, on); },
+      fit: function () { return inst.fit(); },
+      destroy: function () {
+        try { inst.destroy(); } finally { if (notice && notice.parentNode) notice.remove(); }
+      }
+    };
+  }
+
+  function fallbackToMock(host, route, opts, wanted, reasonCode, reasonText) {
+    reportFailure(wanted, reasonCode);
+    let inst = null;
+    let mockErr = null;
+    try {
+      inst = registry.mock(host, route, opts || {});
+      assertInstance(inst, 'mock');
+    } catch (e) {
+      mockErr = e;
+      inst = null;
+    }
+    if (!inst) {
+      const message = reasonText + (mockErr ? '；示意地图也不可用：' + mockErr.message : '');
+      showFailure(host, message);
+      return failureInstance(host, 'mock', message);
+    }
+    lastProviderId = 'mock';
+    const notice = createNotice(host, reasonText);
+    host.appendChild(notice);
+    return wrapInstance(inst, notice);
   }
 
   function render(host, route, opts) {
     opts = opts || {};
-    const name = getProviderName();
-    const fn = providers[name];
-    if (typeof fn === 'function') return fn(host, route, opts);
+    if (typeof host === 'string') {
+      host = root.document && root.document.querySelector(host);
+    }
+    if (!host || host.nodeType !== 1) {
+      throw new TypeError('MapEngine.render(container, route, opts) 需要一个 DOM 容器');
+    }
 
-    // 配置了真实地图但未加载适配器 → 给出明确提示，不静默画错图
-    const c = (window.CW_CONFIG && window.CW_CONFIG.map) || {};
-    host.innerHTML =
-      '<div class="card" style="padding:22px">' +
-      '<div class="note-box amber">' + (CW.ui.icon ? CW.ui.icon('alert') : '⚠️') +
-      '<span><b>地图适配器未就绪。</b>config.js 指定的 <code>' + name + '</code> 地图缺少实现或密钥。' +
-      '请按 docs/API-INTEGRATION.md 引入 js/adapters/map-' + name + '.js 并填写配置；' +
-      '当前临时回退到 SVG 示意地图。</span></div></div>';
-    return renderSvg(host, route, opts);
+    const wanted = configuredProviderId();
+    const init = registry[wanted];
+
+    if (typeof init !== 'function') {
+      // 明确提示，不静默画错图；提示可关闭，但地图本身回退到示意地图
+      return fallbackToMock(host, route, opts, wanted, 'PROVIDER_MISSING',
+        '地图适配器未就绪：配置的「' + wanted + '」Provider 未注册，已回退到示意地图。');
+    }
+
+    try {
+      const inst = init(host, route, opts);
+      assertInstance(inst, wanted);
+      lastProviderId = wanted;
+      return inst;
+    } catch (err) {
+      if (wanted === 'mock') {
+        const message = '地图渲染失败：' + ((err && err.message) || '未知错误');
+        reportFailure('mock', 'RENDER_FAILED');
+        showFailure(host, message);
+        return failureInstance(host, 'mock', message);
+      }
+      return fallbackToMock(host, route, opts, wanted, 'INIT_FAILED',
+        '地图适配器未就绪：「' + wanted + '」初始化失败（' + ((err && err.message) || '未知错误') + '），已回退到示意地图。');
+    }
   }
 
-  CW.map = { render, registerProvider, getProviderName, providers };
+  function getProviderId() {
+    return lastProviderId || configuredProviderId();
+  }
+
+  function reset() {
+    Object.keys(registry).forEach(key => { delete registry[key]; });
+    registerProvider({ id: 'mock', init: initMock });
+    lastProviderId = null;
+    return MapEngine;
+  }
+
+  const MapEngine = {
+    registerProvider: registerProvider,
+    render: render,
+    getProviderId: getProviderId,
+    reset: reset,
+    providers: registry
+  };
+
+  /* 启动即注册内置 mock */
+  registerProvider({ id: 'mock', init: initMock });
+
+  CW.MapEngine = MapEngine;
+
+  /* 兼容旧接口：业务页面原先只调用 CW.map.render / registerProvider */
+  CW.map = {
+    render: render,
+    registerProvider: registerProvider,
+    getProviderId: getProviderId,
+    getProviderName: configuredProviderId,
+    reset: reset,
+    providers: registry
+  };
 })();
