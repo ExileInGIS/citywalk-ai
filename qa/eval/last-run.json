@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-26T08:04:01.962Z",
+  "generatedAt": "2026-10-27T05:22:56.354Z",
   "node": "v24.21.0",
   "platform": "win32",
-  "commit": "e6f9f0b",
+  "commit": "1128d8d",
   "dataVersion": "2026-10-26",
   "commands": [
     "node scripts/eval.js"
@@ -33,7 +33,7 @@
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.905Z",
+        "createdAt": "2026-10-27T05:22:56.292Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -333,7 +333,7 @@
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.911Z",
+        "createdAt": "2026-10-27T05:22:56.297Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -571,7 +571,7 @@
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.912Z",
+        "createdAt": "2026-10-27T05:22:56.298Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -836,7 +836,7 @@
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.912Z",
+        "createdAt": "2026-10-27T05:22:56.299Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1018,7 +1018,7 @@
         "city": "nanjing",
         "name": "南京绿道 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.913Z",
+        "createdAt": "2026-10-27T05:22:56.300Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1237,7 +1237,7 @@
         "city": "nanjing",
         "name": "南京绿道 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.914Z",
+        "createdAt": "2026-10-27T05:22:56.301Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1483,7 +1483,7 @@
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.915Z",
+        "createdAt": "2026-10-27T05:22:56.303Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1804,7 +1804,7 @@
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.922Z",
+        "createdAt": "2026-10-27T05:22:56.311Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2070,7 +2070,7 @@
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.922Z",
+        "createdAt": "2026-10-27T05:22:56.312Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2386,7 +2386,7 @@
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.925Z",
+        "createdAt": "2026-10-27T05:22:56.314Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2670,7 +2670,7 @@
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-26T08:04:01.928Z",
+        "createdAt": "2026-10-27T05:22:56.317Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -3019,8 +3019,8 @@
     "refineChanged": 9,
     "refineExplainedNoop": 2,
     "refineUnknownNoop": 1,
-    "p50Ms": 0.32,
-    "p90Ms": 0.48,
+    "p50Ms": 0.33,
+    "p90Ms": 0.58,
     "poiVerified": 8,
     "poiTotal": 12,
     "baseline": [
