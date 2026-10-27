@@ -1,0 +1,25 @@
+{
+  "name": "citywalk-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CityWalk AI · 个性化城市漫步路线规划与调整（Mock/Remote 双模式，Node 零运行时依赖）",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "build": "node build.js",
+    "test": "node tests/run.js",
+    "test:unit": "node tests/run.js unit",
+    "test:api": "node tests/run.js api",
+    "test:ui": "node tests/run.js integration",
+    "eval": "node scripts/eval.js",
+    "check": "node scripts/check.js",
+    "qa": "node qa/run-all.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

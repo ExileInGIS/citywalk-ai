@@ -1,0 +1,486 @@
+{
+  "title": "CityWalk AI 竞品研究来源记录",
+  "accessed_at": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "method": "桌面研究：用 web_search 找官方入口，再用 web_fetch 打开页面；只记录实际读到的页面内容。未登录、未安装 App、未实际下单、未实测 AI 输出。",
+  "research_notes": [
+    "功能描述优先使用官方产品页、官方帮助中心、官方开发者文档和官方应用商店介绍。",
+    "官方页面属于厂商自述，能证明“厂商这样写”，不等于独立实测。",
+    "页面打不开、需要登录、被地区限制或只有脚本壳时，记为未能验证，不用记忆补全。",
+    "没有抓取小红书用户内容；只读取官网标题与官方应用商店文案。",
+    "Mindtrip 官网无法读取正文，Layla 在当前地区不可用，因此第 3 个研究对象替换为 Trip.com TripGenie。"
+  ],
+  "products": [
+    {
+      "id": "amap",
+      "name": "高德地图",
+      "category": "地图 / 导航 / 本地生活",
+      "credibility": "高",
+      "credibility_note": "官方帮助中心 + 官方应用商店 + 官方开发者文档互相支持；消费者端“小高老师”未能验证。"
+    },
+    {
+      "id": "wanderlog",
+      "name": "Wanderlog",
+      "category": "旅行行程规划",
+      "credibility": "高",
+      "credibility_note": "官方产品页与 AI 页描述具体；Pro 价格、AI 模型与路线优化限制未能验证。"
+    },
+    {
+      "id": "tripgenie",
+      "name": "Trip.com TripGenie",
+      "category": "AI 行程 / 旅行助手",
+      "credibility": "高",
+      "credibility_note": "官方产品页可读；能力未实测，规模数字为厂商自述。作为 Mindtrip 的替代对象。"
+    },
+    {
+      "id": "voicemap",
+      "name": "VoiceMap",
+      "category": "城市音频漫步",
+      "credibility": "高",
+      "credibility_note": "官网、About、帮助中心三处互相支持；消费者价格与中国覆盖未能验证。"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "category": "内容社区",
+      "credibility": "中",
+      "credibility_note": "官方应用商店文案可读；官网首页有登录墙，官方帮助中心/关于我们未能访问。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "product": "高德地图",
+      "title": "高德地图帮助中心",
+      "url": "https://www.amap.com/ssr/doc",
+      "type": "official_help",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "PC 帮助中心的功能目录与范围",
+      "key_facts": [
+        "帮助中心描述的是高德地图 PC 新版网页",
+        "功能目录包含地点搜索、路线规划、公交查询、收藏、分享、实时路况等",
+        "本次打开的帮助中心没有 AI 助手条目"
+      ]
+    },
+    {
+      "id": "S2",
+      "product": "高德地图",
+      "title": "地点搜索 - 高德地图帮助中心",
+      "url": "https://www.amap.com/ssr/doc/search",
+      "type": "official_help",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "page_last_updated": "2026-07-30",
+      "used_for": "地点发现、搜索入口、结果页与筛选",
+      "key_facts": [
+        "支持关键词搜索、周边搜索、分类搜索",
+        "入口包括搜索框、地图右键搜周边、POI 详情页周边",
+        "结果列表与地图 marker 联动，可按区域/分类/排序筛选",
+        "拖动或缩放地图后可点击在此区域搜索"
+      ]
+    },
+    {
+      "id": "S3",
+      "product": "高德地图",
+      "title": "路线规划 - 高德地图帮助中心",
+      "url": "https://www.amap.com/ssr/doc/route-plan",
+      "type": "official_help",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "page_last_updated": "2026-08-11",
+      "used_for": "路线规划、路线调整、发到手机",
+      "key_facts": [
+        "支持驾车、公交、步行、骑行四种出行方式",
+        "驾车可切换推荐方案、躲避拥堵、避免收费",
+        "公交可切换高德推荐、步行少、换乘少、无地铁",
+        "驾车/步行/骑行可添加途经点，PC 新版最多 16 个",
+        "可删除途经点、交换起终点，修改后重新规划",
+        "结果页支持收藏、分享、发到手机"
+      ]
+    },
+    {
+      "id": "S4",
+      "product": "高德地图",
+      "title": "高德地图 - App Store（中国区）",
+      "url": "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208",
+      "type": "official_app_store",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "App 定位、扫街榜、导航方式、语音助手、订阅价格",
+      "key_facts": [
+        "扫街榜被描述为基于真实用户导航、搜索、到店等行为数据，并结合 AI 技术和芝麻信用",
+        "页面称扫街榜覆盖全国 300+ 城市、160 多万家线下商户",
+        "导航支持驾车、打车、公交、骑行、步行、货车、摩托车、新能源等",
+        "提供实时路况、到达时间预估、组队出行、导航对讲",
+        "语音助手名为“你好小德”，提供特色语音包",
+        "提供世界地图、高德打车、代驾、酒店比价、景区门票",
+        "中国区介绍页写明高德数字资产连续包月每月 9.9 元",
+        "介绍页未出现“小高老师”字样"
+      ]
+    },
+    {
+      "id": "S5",
+      "product": "高德地图",
+      "title": "MCP Server 概述 - 高德开放平台",
+      "url": "https://lbs.amap.com/api/mcp-server/summary",
+      "type": "official_developer_doc",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "page_last_updated": "2026-03-17",
+      "used_for": "面向开发者的 AI 能力与 App 打通",
+      "key_facts": [
+        "为开发者提供基于位置服务、地点信息搜索、路径规划、天气查询等 12 大核心数据",
+        "2025 年 3 月高德地图 MCP 首发",
+        "2025 年 5 月升级后与高德地图 App 打通",
+        "可把大模型生成的攻略导入 App，生成专属地图",
+        "实际出行中可导航、打车、订票"
+      ]
+    },
+    {
+      "id": "S6",
+      "product": "高德地图",
+      "title": "高德 MCP + 通义灵码 定制专属地图 - 应用案例",
+      "url": "https://lbs.amap.com/api/mcp-server/application-case/tourism-planning",
+      "type": "official_developer_doc",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "page_last_updated": "2026-03-17",
+      "used_for": "AI 生成攻略并导入地图的具体能力",
+      "key_facts": [
+        "案例用端午北京 3 天旅行攻略演示",
+        "能力包括生成专属地图、导航到目的地、打车",
+        "还包括地理编码、逆地理编码、IP 定位、天气查询",
+        "还包括骑行、步行、驾车、公交路径规划",
+        "输入输出字段在页面中写明"
+      ]
+    },
+    {
+      "id": "S7",
+      "product": "Wanderlog",
+      "title": "Wanderlog 首页",
+      "url": "https://wanderlog.com/",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "产品定位、功能清单、行程+地图",
+      "key_facts": [
+        "定位为一站式旅行规划：详细行程、用户分享指南、预订管理",
+        "核心卖点是行程和地图在同一视图",
+        "功能包括从指南一键添加地点、实时协作、导入预订单、预算分摊、清单、离线、附件、路线优化",
+        "首页标题称 free vacation planner"
+      ]
+    },
+    {
+      "id": "S8",
+      "product": "Wanderlog",
+      "title": "Trip Planner AI - Wanderlog",
+      "url": "https://wanderlog.com/trip-planner-ai",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "AI 行程生成、AI 助手、路线优化、邮件导入",
+      "key_facts": [
+        "AI 可建议观光点和餐厅、优化路线、自动生成行程",
+        "自动填充每日行程时使用 Tripadvisor 和 Google 的旅行者评论排序",
+        "AI 助手可给活动/餐厅建议、快速翻译、回答目的地问题",
+        "路线优化：选起点和终点，给出最快路线",
+        "可转发邮件或由 Pro 自动扫描 Gmail 导入预订信息",
+        "预算工具可按同行人分摊费用",
+        "地图视图可导出到 Google Maps",
+        "页面提到 Pro，但未展示具体价格"
+      ]
+    },
+    {
+      "id": "S9",
+      "product": "Trip.com TripGenie",
+      "title": "TripGenie 官方页",
+      "url": "https://www.trip.com/tripgenie/",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "AI 旅行助手的能力、输入方式、预订、规模自述",
+      "key_facts": [
+        "页面标题为 Free AI travel Q&A assistant",
+        "主文案为 Beyond conversations: AI weaves your dream trips",
+        "示例覆盖灵感、定制行程、找酒店、找机票、旅行贴士",
+        "FAQ 称可提供 tailored travel advice 和 customized itineraries",
+        "可帮忙预订机票和住宿，并提供行后支持",
+        "页面称覆盖 100 万+ 景点、180+ 国家和地区",
+        "实际使用入口在 Trip.com App，页面为营销页",
+        "页面未展示地图、导航或路线优化"
+      ]
+    },
+    {
+      "id": "S10",
+      "product": "VoiceMap",
+      "title": "VoiceMap 首页",
+      "url": "https://voicemap.me/",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "定位、规模、GPS 自动播放、离线、暂停继续",
+      "key_facts": [
+        "标题为 Self-guided GPS audio tours in over 600 destinations",
+        "页面写 2,338 条 VoiceMap tours，覆盖 86 个国家",
+        "音频由历史学家、播客、小说家、厨师、导游、本地爱好者制作",
+        "支持按自己的节奏开始/停止",
+        "GPS 自动播放，turn-by-turn 指引",
+        "可提前下载离线使用，包含离线地图",
+        "可暂停后继续"
+      ]
+    },
+    {
+      "id": "S11",
+      "product": "VoiceMap",
+      "title": "About VoiceMap",
+      "url": "https://voicemap.me/about",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "反 AI 定位、规模、编辑审核、行中体验",
+      "key_facts": [
+        "定位为 Curiously human self-guided tours",
+        "明确对比 AI-generated itineraries 和 influencer bucket lists",
+        "页面写 over 2,000 tours，数百个目的地",
+        "页面写接近 100,000 条评分，平均 4.6/5",
+        "App 已下载数百万次，12 年历史",
+        "到起点点 Start 后获得 turn-by-turn 指引和 GPS 自动播放",
+        "离线可用，可暂停/继续"
+      ]
+    },
+    {
+      "id": "S12",
+      "product": "VoiceMap",
+      "title": "What is VoiceMap? - Help Center",
+      "url": "https://support.voicemap.me/what-is-voicemap/",
+      "type": "official_help",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "制作人构成、编辑审核、GPS 自动播放",
+      "key_facts": [
+        "VoiceMap 是音频导览 App，讲述走过的地方背后的故事",
+        "手机用 GPS 判断位置，自动播放对应音频",
+        "制作人包括记者、历史学家、小说家、街头艺术家、导游、本地爱好者",
+        "编辑会与每位发布者合作，确保准确、有趣、好跟随",
+        "Tours 覆盖数百个城市/目的地，包括步行、驾车、骑行等"
+      ]
+    },
+    {
+      "id": "S13",
+      "product": "VoiceMap",
+      "title": "How does a VoiceMap tour work? - Help Center",
+      "url": "https://support.voicemap.me/how-does-a-voicemap-tour-work/",
+      "type": "official_help",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "固定路线、stop、离线、turn-by-turn",
+      "key_facts": [
+        "每条 tour 是固定路线，沿途有若干 stop",
+        "到达 stop 时音频自动播放，不需要点按或一直亮屏",
+        "出发前下载 tour，地图、音频、导航存在本地",
+        "离线不需要数据连接",
+        "stop 之间提供 turn-by-turn 指引",
+        "多数是步行，也有驾车、骑行、船 tour"
+      ]
+    },
+    {
+      "id": "S14",
+      "product": "VoiceMap",
+      "title": "Self-Guided Walking Tour App",
+      "url": "https://voicemap.me/walking-tour-app",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "步行 tour 规模、发布者、Lost Alert",
+      "key_facts": [
+        "页面写 1,933 条 walking tours",
+        "页面写 809 个发布者、684 个目的地",
+        "页面写 4.7 平均分、78,552 条评分",
+        "有自动 Lost Alert，走偏时提示",
+        "可打开编号地点帮助回到路线",
+        "下载后离线可用，含离线地图"
+      ]
+    },
+    {
+      "id": "S15",
+      "product": "VoiceMap",
+      "title": "创建新 tour 页面",
+      "url": "https://voicemap.me/tour/new",
+      "type": "official_product_page",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "发布者定价档位、交通方式",
+      "key_facts": [
+        "Price (USD) 选项包含 Free (Pro and Premium Plans)",
+        "付费档位包含 4.99、5.99、6.99、7.99、8.99、9.99、11.99、14.99、19.99、24.99、29.99",
+        "交通方式包含 Walk、Drive、Indoor、Cycle、Train Trip、Boat Ride、Run、Other",
+        "这是发布者给 tour 定价的页面，不是消费者订阅价"
+      ]
+    },
+    {
+      "id": "S16",
+      "product": "小红书",
+      "title": "小红书官网首页",
+      "url": "https://www.xiaohongshu.com/",
+      "type": "official_website",
+      "status": "partial",
+      "accessed_at": "2026-10-26",
+      "used_for": "官网访问状态与页面标题",
+      "key_facts": [
+        "打开官网被重定向到登录页",
+        "页面标题为“小红书 - 你的生活兴趣社区”",
+        "没有读到用户内容"
+      ]
+    },
+    {
+      "id": "S17",
+      "product": "小红书",
+      "title": "小红书 - App Store（中国区）",
+      "url": "https://apps.apple.com/cn/app/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%85%B4%E8%B6%A3%E7%A4%BE%E5%8C%BA/id741292507",
+      "type": "official_app_store",
+      "status": "verified",
+      "accessed_at": "2026-10-26",
+      "used_for": "定位、内容与互动、线下/电商、价格标识",
+      "key_facts": [
+        "标题为“小红书 - 你的生活兴趣社区”",
+        "副标题为“3亿人的生活兴趣爱好聚集地”",
+        "介绍描述为生活兴趣社区",
+        "核心动作包括发现精彩、遇见同好、勇敢发光、热爱成真",
+        "用户分享故事、心得、尝试，可评论、点赞",
+        "内容覆盖手作、音乐、美食、远行、穿搭、科技等",
+        "提到线下活动和种草下单",
+        "价格标识为免费 + App 内购买，未展示具体内购价格",
+        "页面未提及地图、地点数据库、路线规划、导航、AI 规划助手"
+      ]
+    }
+  ],
+  "unverified_attempts": [
+    {
+      "id": "U1",
+      "target": "Mindtrip 官网",
+      "url": "https://mindtrip.ai/",
+      "result": "cross-origin redirect to https://images.mindtrip.ai；没有可读正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U2",
+      "target": "Mindtrip 官网（www）",
+      "url": "https://www.mindtrip.ai/",
+      "result": "cross-origin redirect to https://images.mindtrip.ai；没有可读正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U3",
+      "target": "Mindtrip About",
+      "url": "https://mindtrip.ai/about",
+      "result": "cross-origin redirect to https://images.mindtrip.ai；没有可读正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U4",
+      "target": "Mindtrip iOS 页",
+      "url": "https://mindtrip.ai/ios",
+      "result": "cross-origin redirect to https://images.mindtrip.ai；没有可读正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U5",
+      "target": "Layla",
+      "url": "https://layla.ai/",
+      "result": "HTTP 403；页面写 Layla isn't available in your region",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U6",
+      "target": "Roam Around",
+      "url": "https://www.roamaround.io/",
+      "result": "重定向到 layla.ai，随后地区不可用",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U7",
+      "target": "Wonderplan",
+      "url": "https://www.wonderplan.ai/",
+      "result": "getaddrinfo ENOTFOUND",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U8",
+      "target": "Curiosio",
+      "url": "https://www.curiosio.com/",
+      "result": "getaddrinfo ENOTFOUND",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U9",
+      "target": "小红书帮助中心",
+      "url": "https://www.xiaohongshu.com/help",
+      "result": "404，跳到站内错误页",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U10",
+      "target": "小红书关于我们",
+      "url": "https://www.xiaohongshu.com/about",
+      "result": "请求超时",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U11",
+      "target": "小红书关于我们（备选）",
+      "url": "https://www.xiaohongshu.com/aboutus",
+      "result": "请求超时",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U12",
+      "target": "小红书关于我们（备选）",
+      "url": "https://www.xiaohongshu.com/about-us",
+      "result": "请求超时",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U13",
+      "target": "Wanderlog 定价",
+      "url": "https://wanderlog.com/pricing",
+      "result": "HTTP 404",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U14",
+      "target": "Wanderlog Pro",
+      "url": "https://wanderlog.com/pro",
+      "result": "只渲染出页面空壳，没有价格正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U15",
+      "target": "Wanderlog 帮助中心",
+      "url": "https://help.wanderlog.com/",
+      "result": "TypeError: fetch failed",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U16",
+      "target": "高德地图 2025 页面",
+      "url": "https://www.amap.com/2025",
+      "result": "只返回脚本壳/占位内容，没有可读正文",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U17",
+      "target": "高德官方微信公众号文章",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzA4NTQ4NzM1NQ==&mid=2651748775&idx=1&sn=a2485826afae79a284b4b1bbbbd57a17",
+      "result": "跳到验证码页，未读到正文；未作为证据",
+      "used_as_evidence": false
+    },
+    {
+      "id": "U18",
+      "target": "高德 App Store（错误 ID）",
+      "url": "https://apps.apple.com/cn/app/id288478590",
+      "result": "HTTP 404",
+      "used_as_evidence": false
+    }
+  ]
+}

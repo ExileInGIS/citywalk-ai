@@ -1,0 +1,13 @@
+{
+  "schema": "scoring.v1",
+  "method": "heuristic-v1",
+  "updatedAt": "2026-10-26",
+  "note": "初始假设权重：无用户研究依据，后续可做 A/B 验证。修改此文件只影响排序与评分展示，不改变硬约束校验（时间/预算/步行/必去等由 shared/core.js 执行）。",
+  "weights": {
+    "interest": 0.35,
+    "timeFit": 0.2,
+    "efficiency": 0.15,
+    "budgetFit": 0.15,
+    "diversity": 0.15
+  }
+}

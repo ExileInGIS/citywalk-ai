@@ -9,8 +9,15 @@
  *      · 不含真实坐标，地图为【示意地图】，不是真实导航结果。
  *  - 真实部署前需接入地图/POI 服务（高德/百度/Google Places）核验。
  * ===================================================================== */
-(function () {
-  const CW = (window.CW = window.CW || {});
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.CW = root.CW || {};
+    root.CW.data = factory();
+  }
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
 
   /* ---------------- 图片来源（本地素材，非实时抓取） ---------------- */
   const IMG = {
@@ -256,9 +263,54 @@
   /* ---------------- 地点发现（首页右侧「地点发现」） ---------------- */
   const FEATURED_PLACE_IDS = ['p_laomendong', 'p_cafe_sh', 'p_book_xf', 'p_xuanwu', 'p_yihe', 'p_qinhuai'];
 
-  CW.data = {
+  /* =====================================================================
+   * 真实坐标（OpenStreetMap，ODbL 1.0）
+   * ---------------------------------------------------------------------
+   * 只有能在 OSM 找到确定对象的点才有坐标；泛化/示例地点保持 null。
+   * 坐标不等于“入口”或“门牌”：湖面/公园面/道路的坐标是对象中心点。
+   * 浏览器 Leaflet Provider 与 Node 服务端共用这份数据。
+   * ===================================================================== */
+  const GEO = {
+    p_yihe:      { lat: 32.0652918, lon: 118.7614006, osmType: 'way',      osmId: 89567586,   confidence: 'high',   status: 'verified' },
+    p_cafe_sh:   { lat: null, lon: null, osmType: null, osmId: null, confidence: null, status: 'generic-no-entity' },
+    p_book_xf:   { lat: 32.0527745, lon: 118.7682621, osmType: 'node',     osmId: 6331495101, confidence: 'medium', status: 'verified' },
+    p_book_tg:   { lat: null, lon: null, osmType: null, osmId: null, confidence: null, status: 'generic-no-entity' },
+    p_xinjiekou: { lat: 32.0438303, lon: 118.7788612, osmType: 'way',      osmId: 155883034,  confidence: 'high',   status: 'verified' },
+    p_changjiang:{ lat: 32.0467613, lon: 118.7905898, osmType: 'way',      osmId: 857492847,  confidence: 'high',   status: 'verified' },
+    p_xuanwu:    { lat: 32.0744113, lon: 118.795514,  osmType: 'relation', osmId: 2138994,    confidence: 'medium', status: 'verified' },
+    p_qinhuai:   { lat: 32.0204106, lon: 118.7827931, osmType: 'way',      osmId: 590937998,  confidence: 'medium', status: 'verified' },
+    p_laomendong:{ lat: 32.013464,  lon: 118.7822575, osmType: 'way',      osmId: 948332291,  confidence: 'high',   status: 'verified' },
+    p_food_ld:   { lat: null, lon: null, osmType: null, osmId: null, confidence: null, status: 'generic-no-entity' },
+    p_bailuzhou: { lat: 32.0194287, lon: 118.7897433, osmType: 'way',      osmId: 88807020,   confidence: 'high',   status: 'verified-coordinate-only' },
+    p_market:    { lat: null, lon: null, osmType: null, osmId: null, confidence: null, status: 'generic-no-entity' }
+  };
+
+  /* 室内外属性：产品标注，不是营业事实；null = 未知 */
+  const INDOOR = {
+    p_yihe: false, p_cafe_sh: true, p_book_xf: true, p_book_tg: true,
+    p_xinjiekou: false, p_changjiang: false, p_xuanwu: false,
+    p_qinhuai: false, p_laomendong: false, p_food_ld: true,
+    p_bailuzhou: false, p_market: false
+  };
+
+  PLACES.forEach(p => {
+    const g = GEO[p.id] || {};
+    p.lat = typeof g.lat === 'number' ? g.lat : null;
+    p.lng = typeof g.lon === 'number' ? g.lon : null;
+    p.geoStatus = g.status || 'unverified';
+    p.geoConfidence = g.confidence || null;
+    p.geoSource = g.osmType ? ('OpenStreetMap ' + g.osmType + '/' + g.osmId) : null;
+    p.geoLicense = g.osmType ? 'ODbL 1.0 © OpenStreetMap contributors' : null;
+    p.geoVerified = typeof g.lat === 'number';
+    p.indoor = Object.prototype.hasOwnProperty.call(INDOOR, p.id) ? INDOOR[p.id] : null;
+  });
+
+  const DATA_VERSION = '2026-10-26';
+  const GEO_ATTRIBUTION = '坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。';
+
+  const api = {
     IMG, CATEGORIES, CITIES, THEMES, INTERESTS, PACES, TRANSPORTS,
-    PLACES, CURATED_ROUTES, FEATURED_PLACE_IDS,
+    PLACES, CURATED_ROUTES, FEATURED_PLACE_IDS, GEO, DATA_VERSION, GEO_ATTRIBUTION,
 
     /* ---- 查询工具 ---- */
     city: id => CITIES.find(c => c.id === id),
@@ -279,7 +331,11 @@
       sample: '示例数据 · 非真实导航结果',
       estimate: '时长、距离与费用均为估算值',
       hours: '营业信息待确认',
-      map: '示意地图 · 不含真实坐标'
+      map: '示意地图 · 不含真实坐标',
+      realMap: '真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径',
+      genericPlace: '示例/泛化地点 · 无单一实体 · 不参与真实地图定位'
     }
   };
-})();
+
+  return api;
+});

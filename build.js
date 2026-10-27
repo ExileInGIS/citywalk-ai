@@ -11,8 +11,10 @@ const ROOT = __dirname;
 const OUT = path.join(ROOT, 'CityWalk-AI.html');
 
 const JS_ORDER = [
+  // config 必须第一；shared/core.js 在 schema/data 之后提供确定性规划核心
   'js/config.js',
-  'js/data.js', 'js/ui.js', 'js/agent.js', 'js/map.js',
+  'js/data.js', 'js/schema.js', 'shared/core.js',
+  'js/ui.js', 'js/agent.js', 'js/map.js', 'js/storage.js', 'js/telemetry.js',
   'js/pages/home.js', 'js/pages/discover.js', 'js/pages/favorites.js', 'js/app.js'
 ];
 
