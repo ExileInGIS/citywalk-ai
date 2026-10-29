@@ -1,0 +1,4800 @@
+{
+  "summary": {
+    "generatedAt": "2026-10-29T12:38:10.925Z",
+    "source": "高德地图 Web服务 POI 搜索 API",
+    "endpoint": "https://restapi.amap.com/v3/place/text",
+    "counts": {
+      "total": 67,
+      "matched": 62,
+      "ambiguous": 0,
+      "needs_review": 3,
+      "not_found": 2,
+      "error": 0,
+      "withPhotos": 64,
+      "withCost": 4,
+      "withOpenTime": 44
+    },
+    "calls": 69,
+    "note": "钥匙仅从本地 .env 读取，未写入结果；坐标为高德 GCJ-02；未写 js/data.js。"
+  },
+  "results": [
+    {
+      "id": "p_yihe",
+      "name": "颐和路民国公馆区",
+      "cat": "arch",
+      "area": "鼓楼区 · 颐和路",
+      "wgs": {
+        "lat": 32.0652918,
+        "lng": 118.7614006
+      },
+      "gcj": {
+        "lng": 118.766625162761,
+        "lat": 32.063250868056
+      },
+      "status": "needs_review",
+      "query": "颐和路民国公馆区",
+      "amap": {
+        "id": "B0KKSU0VR1",
+        "name": "颐和路12号民国建筑",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "颐和路12号",
+        "location": {
+          "lng": 118.767678,
+          "lat": 32.064198
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "水佐岗",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周日 00:00-24:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/comment/content_service__1771853121784_33523059_1771853328518_15728456.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0KKSU0VR1/comment/94103849_D64D_435B_8215_56B4F797A0E3_L0_001_1500_200_1772177012267_71987195.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0KKSU0VR1/comment/content_media_external_file_200652_1771425828333_06563247.jpg"
+          }
+        ],
+        "distanceM": 145,
+        "matchType": "nearby"
+      },
+      "alternatives": [
+        {
+          "name": "颐和路12号民国建筑",
+          "address": "颐和路12号",
+          "distanceM": 145,
+          "location": "118.767678,32.064198",
+          "nameScore": 0
+        },
+        {
+          "name": "罗莱夏朵·南京颐和公馆",
+          "address": "江苏路3号",
+          "distanceM": 279,
+          "location": "118.769516,32.062714",
+          "nameScore": 0
+        },
+        {
+          "name": "颐和民国花园咖啡·茶",
+          "address": "江苏路5-1号颐和路公馆区第十二片区内(南侧)",
+          "distanceM": 296,
+          "location": "118.769651,32.062529",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_book_xf",
+      "name": "先锋书店（五台山店）",
+      "cat": "book",
+      "area": "鼓楼区 · 五台山",
+      "wgs": {
+        "lat": 32.0527745,
+        "lng": 118.7682621
+      },
+      "gcj": {
+        "lng": 118.773481174046,
+        "lat": 32.050732150608
+      },
+      "status": "needs_review",
+      "query": "先锋书店（五台山店）",
+      "amap": {
+        "id": "B001905YQ1",
+        "name": "先锋书店(五台山总店)",
+        "type": "购物服务;专卖店;书店",
+        "typecode": "061205",
+        "address": "广州路173号五台山体育馆地下车库(古南都饭店对面)",
+        "location": {
+          "lng": 118.773496,
+          "lat": 32.05072
+        },
+        "tel": "025-83711455",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "南大",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "周一至周日 10:00-21:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/63b9a0ce56fb77fc8c7219db7b8facbd"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/67afbde536dee4e8b3465ad8a2ebcafd"
+          },
+          {
+            "title": "内景图",
+            "url": "http://store.is.autonavi.com/showpic/7d11bc230be799c28a0f53e883398182"
+          }
+        ],
+        "distanceM": 2,
+        "matchType": "nearby"
+      },
+      "alternatives": [
+        {
+          "name": "先锋书店(五台山总店)",
+          "address": "广州路173号五台山体育馆地下车库(古南都饭店对面)",
+          "distanceM": 2,
+          "location": "118.773496,32.050720",
+          "nameScore": 0
+        },
+        {
+          "name": "南京苏宁环球套房饭店(五台山地铁站店)",
+          "address": "广州路188号(五台山地铁站3A口旁)",
+          "distanceM": 134,
+          "location": "118.774856,32.051043",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_xinjiekou",
+      "name": "新街口商圈",
+      "cat": "street",
+      "area": "秦淮区 · 新街口",
+      "wgs": {
+        "lat": 32.0438303,
+        "lng": 118.7788612
+      },
+      "gcj": {
+        "lng": 118.784069281685,
+        "lat": 32.041780870226
+      },
+      "status": "matched",
+      "query": "新街口商圈",
+      "amap": {
+        "id": "B00190YYHC",
+        "name": "新街口",
+        "type": "地名地址信息;热点地名;热点地名",
+        "typecode": "190700",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.788055,
+          "lat": 32.0415
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "新街口",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/13bb8b9cbc2aee9b54e24361bcd339f4"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/58508e7fb0a0759a0000006006192768?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/fad13d7d6974c8a1157a76dc1be4d26c"
+          }
+        ],
+        "distanceM": 377,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "新街口",
+          "address": "秦淮区",
+          "distanceM": 377,
+          "location": "118.788055,32.041500",
+          "nameScore": 2
+        },
+        {
+          "name": "商茂世纪广场",
+          "address": "中山南路49号(新街口地铁站13号口步行90米)",
+          "distanceM": 252,
+          "location": "118.784661,32.039567",
+          "nameScore": 0
+        },
+        {
+          "name": "金轮国际广场",
+          "address": "汉中路8号(新街口地铁站20号口步行310米)",
+          "distanceM": 397,
+          "location": "118.780025,32.042789",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_changjiang",
+      "name": "长江路 · 1912 街区",
+      "cat": "photo",
+      "area": "玄武区 · 长江路",
+      "wgs": {
+        "lat": 32.0467613,
+        "lng": 118.7905898
+      },
+      "gcj": {
+        "lng": 118.795782606337,
+        "lat": 32.044697265625
+      },
+      "status": "needs_review",
+      "query": "长江路 · 1912 街区",
+      "amap": {
+        "id": "B0J1HS6DUH",
+        "name": "品苑蟹府·蟹黄面(总统府1912店)",
+        "type": "餐饮服务;中餐厅;中餐厅",
+        "typecode": "050100",
+        "address": "长江路288号1912街区5号楼(南京大牌档旁)",
+        "location": {
+          "lng": 118.795935,
+          "lat": 32.04473
+        },
+        "tel": "025-83131018",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "大行宫",
+        "rating": "4.3",
+        "cost": "78.00",
+        "openTime": "周一至周日 09:00-21:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0J1HS6DUH/comment/8e7ce89482f66c4247c75b73839d7cd9_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/02ab3d618a2e80930000007387446734?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0J1HS6DUH/comment/c8d995b670c3198e538e93b005f3d9cf_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 15,
+        "matchType": "nearby"
+      },
+      "alternatives": [
+        {
+          "name": "品苑蟹府·蟹黄面(总统府1912店)",
+          "address": "长江路288号1912街区5号楼(南京大牌档旁)",
+          "distanceM": 15,
+          "location": "118.795935,32.044730",
+          "nameScore": 0
+        },
+        {
+          "name": "寻魏·金陵十二菜(臻选店)",
+          "address": "长江路288号南京1912街区8号楼1-3层",
+          "distanceM": 35,
+          "location": "118.795537,32.044929",
+          "nameScore": 0
+        },
+        {
+          "name": "南京大牌档(1912总统府店)",
+          "address": "长江路288号南京1912街区(东北角)",
+          "distanceM": 44,
+          "location": "118.795997,32.045050",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_xuanwu",
+      "name": "玄武湖环湖步道",
+      "cat": "park",
+      "area": "玄武区 · 玄武湖",
+      "wgs": {
+        "lat": 32.0744113,
+        "lng": 118.795514
+      },
+      "gcj": {
+        "lng": 118.800701226129,
+        "lat": 32.072334255643
+      },
+      "status": "not_found",
+      "query": "玄武湖环湖步道",
+      "amap": {
+        "id": "B0019067HC",
+        "name": "玄武湖景区情侣园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "龙蟠路100号",
+        "location": {
+          "lng": 118.809617,
+          "lat": 32.07004
+        },
+        "tel": "025-83614286;025-85410103",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "玄武湖",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "4月至10月 周一至周日 06:00-22:00；11月至12月,1月至3月 周一至周日 06:00-21:00",
+        "photos": [
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/530151b4f1816cfaea51b0b6c4a78577"
+          },
+          {
+            "title": "情侣园",
+            "url": "http://store.is.autonavi.com/showpic/1e331dd87cb795b8c0071da5e50de578"
+          },
+          {
+            "title": "情侣园",
+            "url": "http://store.is.autonavi.com/showpic/b1cd8ca07e1fca5a83f0aa681ebadb46"
+          }
+        ],
+        "distanceM": 878,
+        "matchType": "nearby"
+      },
+      "alternatives": [
+        {
+          "name": "玄武湖景区情侣园",
+          "address": "龙蟠路100号",
+          "distanceM": 878,
+          "location": "118.809617,32.070040",
+          "nameScore": 0
+        },
+        {
+          "name": "乌龙潭公园",
+          "address": "广州路215号(省人民医院对面)",
+          "distanceM": 4348,
+          "location": "118.766475,32.046112",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_qinhuai",
+      "name": "夫子庙 · 秦淮河",
+      "cat": "history",
+      "area": "秦淮区 · 夫子庙",
+      "wgs": {
+        "lat": 32.0204106,
+        "lng": 118.7827931
+      },
+      "gcj": {
+        "lng": 118.787994249132,
+        "lat": 32.018363172744
+      },
+      "status": "matched",
+      "query": "夫子庙 · 秦淮河",
+      "amap": {
+        "id": "B0HRD7YRTX",
+        "name": "秦淮河",
+        "type": "地名地址信息;自然地名;河流",
+        "typecode": "190204",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.790897,
+          "lat": 32.020287
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0HRD7YRTX/comment/25078fe42457b39ee3717ee44c8fa74e_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/5d03872cf64632be0000005672538514?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0HRD7YRTX/comment/F25019F7_9A8E_4E8E_BE26_188BC3BD2CE6_L0_001_2000_150_1766306608335_00694937.jpg"
+          }
+        ],
+        "distanceM": 347,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "秦淮河",
+          "address": "秦淮区",
+          "distanceM": 347,
+          "location": "118.790897,32.020287",
+          "nameScore": 2
+        },
+        {
+          "name": "南京夫子庙秦淮河流蘇·栖云酒店",
+          "address": "信府河60号",
+          "distanceM": 458,
+          "location": "118.784455,32.015536",
+          "nameScore": 2
+        },
+        {
+          "name": "秦淮河",
+          "address": "钞库街",
+          "distanceM": 494,
+          "location": "118.792026,32.021196",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_laomendong",
+      "name": "老门东历史文化街区",
+      "cat": "history",
+      "area": "秦淮区 · 老门东",
+      "wgs": {
+        "lat": 32.013464,
+        "lng": 118.7822575
+      },
+      "gcj": {
+        "lng": 118.787459038629,
+        "lat": 32.011418185764
+      },
+      "status": "matched",
+      "query": "老门东历史文化街区",
+      "amap": {
+        "id": "B00190BU4S",
+        "name": "老门东",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "剪子巷与箍桶巷交汇处剪子巷54号",
+        "location": {
+          "lng": 118.787645,
+          "lat": 32.011604
+        },
+        "tel": "025-58776699;025-58776868",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "中华门",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "周一至周日 00:00-24:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/69e7ca3e4d0357955c61d1ec1682a587"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/593ecf40b029c8c88039bc0440c62156"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/aa99d0326fcfba214c97f6d3e81cabed"
+          }
+        ],
+        "distanceM": 27,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "老门东",
+          "address": "剪子巷与箍桶巷交汇处剪子巷54号",
+          "distanceM": 27,
+          "location": "118.787645,32.011604",
+          "nameScore": 2
+        },
+        {
+          "name": "老门东历史文化街区-巨然雕像",
+          "address": "剪子巷与箍桶巷交叉口西南140米",
+          "distanceM": 108,
+          "location": "118.786925,32.012275",
+          "nameScore": 2
+        },
+        {
+          "name": "老门东历史文化街区北门寄存点",
+          "address": "马道街与大油坊巷交叉口东南180米",
+          "distanceM": 240,
+          "location": "118.786275,32.013325",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_bailuzhou",
+      "name": "白鹭洲公园",
+      "cat": "park",
+      "area": "秦淮区 · 白鹭洲",
+      "wgs": {
+        "lat": 32.0194287,
+        "lng": 118.7897433
+      },
+      "gcj": {
+        "lng": 118.794934353299,
+        "lat": 32.017372775608
+      },
+      "status": "matched",
+      "query": "白鹭洲公园",
+      "amap": {
+        "id": "B00190B3YG",
+        "name": "白鹭洲公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "夫子庙白鹭村1号",
+        "location": {
+          "lng": 118.79513,
+          "lat": 32.017888
+        },
+        "tel": "025-86669799;025-86908386",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 06:00-20:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/80cceddb4c70d1da790ace3073e2ff2f"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/0604aae300305e9845c09ee74a4623bf"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/172382c505c4394bbf67980553d13d1a"
+          }
+        ],
+        "distanceM": 60,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "白鹭洲公园",
+          "address": "夫子庙白鹭村1号",
+          "distanceM": 60,
+          "location": "118.795130,32.017888",
+          "nameScore": 3
+        },
+        {
+          "name": "白鹭洲公园-二水桥",
+          "address": "长乐路174号白鹭洲公园内",
+          "distanceM": 50,
+          "location": "118.795240,32.017009",
+          "nameScore": 2
+        },
+        {
+          "name": "白鹭洲公园-心远楼",
+          "address": "白鹭村1号白鹭洲公园(西南角)",
+          "distanceM": 63,
+          "location": "118.794285,32.017243",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_cafe_zw",
+      "name": "南京植物咖啡馆",
+      "cat": "cafe",
+      "area": "鼓楼区 · 慈悲社",
+      "wgs": {
+        "lat": 32.0477103,
+        "lng": 118.7747492
+      },
+      "gcj": {
+        "lng": 118.779961751303,
+        "lat": 32.045664333768
+      },
+      "status": "not_found",
+      "query": "南京植物咖啡馆",
+      "amap": {
+        "id": "B0MGRULG2L",
+        "name": "ziz! 植物商店",
+        "type": "生活服务;美容美发店;美容美发店",
+        "typecode": "071100",
+        "address": "朝天宫街道南台巷东5号",
+        "location": {
+          "lng": 118.780309,
+          "lat": 32.036604
+        },
+        "tel": "18705110067",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "新街口",
+        "rating": "4.5",
+        "cost": "48.00",
+        "openTime": "周一至周日 10:00-19:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/512dcc1cdfcac9910000003097446422?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/52c420589dc32aa5a3cba6e229b879f6"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/6554b397e6bee46a0000008527364602?type=pic"
+          }
+        ],
+        "distanceM": 1008,
+        "matchType": "nearby"
+      },
+      "alternatives": [
+        {
+          "name": "ziz! 植物商店",
+          "address": "朝天宫街道南台巷东5号",
+          "distanceM": 1008,
+          "location": "118.780309,32.036604",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_book_dz",
+      "name": "大众书局",
+      "cat": "book",
+      "area": "秦淮区 · 新街口",
+      "wgs": {
+        "lat": 32.04455,
+        "lng": 118.77617
+      },
+      "gcj": {
+        "lng": 118.781381293403,
+        "lat": 32.042503526476
+      },
+      "status": "matched",
+      "query": "大众书局",
+      "amap": {
+        "id": "B0FFFRGOX9",
+        "name": "大众书局(国药大厦店)",
+        "type": "购物服务;专卖店;书店",
+        "typecode": "061205",
+        "address": "汉中路6号国药大厦1层",
+        "location": {
+          "lng": 118.781425,
+          "lat": 32.042575
+        },
+        "tel": "025-86982999",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "新街口",
+        "rating": "3.6",
+        "cost": "",
+        "openTime": "周一至周日 09:30-21:00 10-01至10-07 周一至周日 全天关闭",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/20e4d95f7720edaa790ef4157c1e6946"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFFRGOX9/comment/97ddbf9707c7ef24d74884ce8de44409_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/9eaff20c5ebc98be2415cd8a49d73621"
+          }
+        ],
+        "distanceM": 9,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "大众书局(国药大厦店)",
+          "address": "汉中路6号国药大厦1层",
+          "distanceM": 9,
+          "location": "118.781425,32.042575",
+          "nameScore": 2
+        },
+        {
+          "name": "大众书局·城市书房旗舰店(新街口友谊广场店)",
+          "address": "汉中路27号友谊广场2层(新街口地铁站21号口旁)",
+          "distanceM": 125,
+          "location": "118.781817,32.041440",
+          "nameScore": 2
+        },
+        {
+          "name": "大众书局梧桐语爱心驿站",
+          "address": "华侨路街道广州路248号",
+          "distanceM": 1386,
+          "location": "118.771104,32.051425",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_food_wl",
+      "name": "问柳菜馆",
+      "cat": "food",
+      "area": "秦淮区 · 老门东",
+      "wgs": {
+        "lat": 32.013581,
+        "lng": 118.7822306
+      },
+      "gcj": {
+        "lng": 118.787432454428,
+        "lat": 32.011535101997
+      },
+      "status": "matched",
+      "query": "问柳菜馆",
+      "amap": {
+        "id": "B0FFF5P4QZ",
+        "name": "问柳菜馆(老门东店)",
+        "type": "餐饮服务;中餐厅;中餐厅",
+        "typecode": "050100",
+        "address": "秦准区夫子庙街道雅桶巷121号",
+        "location": {
+          "lng": 118.787347,
+          "lat": 32.011411
+        },
+        "tel": "025-52685757;18466720732",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙地区",
+        "rating": "4.5",
+        "cost": "59.00",
+        "openTime": "周一至周日 11:00-13:30,17:00-21:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFF5P4QZ/comment/f640884a1c29d9a040183961d52142eb_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFF5P4QZ/comment/%5B2026-01-25-19-34-05%5DB50EEB2C-FABA-47C8-9D88-6D85DE0D544_1769340847862_35042123.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/b49f5e3e48ca8ff80000002594210848?type=pic"
+          }
+        ],
+        "distanceM": 16,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "问柳菜馆(老门东店)",
+          "address": "秦准区夫子庙街道雅桶巷121号",
+          "distanceM": 16,
+          "location": "118.787347,32.011411",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_nanjing_eye",
+      "name": "南京眼步行桥",
+      "cat": "photo",
+      "area": "建邺区 · 河西",
+      "wgs": {
+        "lat": 31.998311,
+        "lng": 118.696873
+      },
+      "gcj": {
+        "lng": 118.702034233941,
+        "lat": 31.996237792969
+      },
+      "status": "matched",
+      "query": "南京眼步行桥",
+      "amap": {
+        "id": "BY00004EC5",
+        "name": "南京眼步行桥",
+        "type": "地名地址信息;交通地名;桥",
+        "typecode": "190307",
+        "address": "建邺区",
+        "location": {
+          "lng": 118.703146,
+          "lat": 31.995131
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "建邺区",
+        "business_area": "",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BY00004EC5/comment/247B0DB1_25A4_443C_BAE0_8F2BE7573E8C_L0_001_1500_200_1771051098684_85318209.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BY00004EC5/comment/content_media_external_images_media_1000131118_ss__1732973828015_53751267.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/27d858cb8c3685340000009156048754?type=pic"
+          }
+        ],
+        "distanceM": 162,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京眼步行桥",
+          "address": "建邺区",
+          "distanceM": 162,
+          "location": "118.703146,31.995131",
+          "nameScore": 3
+        },
+        {
+          "name": "江心洲夹江步行桥",
+          "address": "建邺区",
+          "distanceM": 369,
+          "location": "118.704277,31.993514",
+          "nameScore": 0
+        },
+        {
+          "name": "河西南京眼旅游区",
+          "address": "河西大街239号",
+          "distanceM": 424,
+          "location": "118.705886,31.994270",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_zhongshanling",
+      "name": "中山陵",
+      "cat": "history",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.06018,
+        "lng": 118.848543
+      },
+      "gcj": {
+        "lng": 118.853621961806,
+        "lat": 32.058011881511
+      },
+      "status": "matched",
+      "query": "中山陵",
+      "amap": {
+        "id": "B0M2BU8W85",
+        "name": "中山陵景区-陵门",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "石象路7号中山陵景区内(北侧)",
+        "location": {
+          "lng": 118.853525,
+          "lat": 32.060025
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "",
+        "rating": "3.3",
+        "cost": "",
+        "openTime": "周一至周日 00:00-24:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/e14516c013e0d5f8e4481ddfd66a262a"
+          }
+        ],
+        "distanceM": 224,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "中山陵景区-陵门",
+          "address": "石象路7号中山陵景区内(北侧)",
+          "distanceM": 224,
+          "location": "118.853525,32.060025",
+          "nameScore": 2
+        },
+        {
+          "name": "中山陵博爱广场",
+          "address": "钟山风景区",
+          "distanceM": 231,
+          "location": "118.853814,32.055937",
+          "nameScore": 2
+        },
+        {
+          "name": "中山陵商业街",
+          "address": "中山门外石象路7号中山陵园风景区",
+          "distanceM": 242,
+          "location": "118.852575,32.056025",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_mingxiaoling",
+      "name": "明孝陵",
+      "cat": "history",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.062314,
+        "lng": 118.834704
+      },
+      "gcj": {
+        "lng": 118.839811469185,
+        "lat": 32.060170627171
+      },
+      "status": "matched",
+      "query": "明孝陵",
+      "amap": {
+        "id": "B0FFHE3I6U",
+        "name": "明孝陵景区-明孝陵",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "四方城西路26号",
+        "location": {
+          "lng": 118.839826,
+          "lat": 32.058692
+        },
+        "tel": "025-84437786",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "1月,12月 周一至周日 07:00-17:30；2月至11月 周一至周日 06:30-18:30；明孝陵博物馆:周二–周日09:00–17:00（16:30停止入馆），周一闭馆",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/aee2b6bfb92ad7340000002976032815?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/cd5edcc10451fc830000002449708439?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFHE3I6U/comment/content_media_external_file_1000009379_ss__1759563575705_30155135.jpg"
+          }
+        ],
+        "distanceM": 164,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "明孝陵景区-明孝陵",
+          "address": "四方城西路26号",
+          "distanceM": 164,
+          "location": "118.839826,32.058692",
+          "nameScore": 2
+        },
+        {
+          "name": "钟山风景名胜区明孝陵景区紫霞湖停车场",
+          "address": "石象路7号钟山风景区明孝陵景区(东北角)",
+          "distanceM": 738,
+          "location": "118.843070,32.054139",
+          "nameScore": 2
+        },
+        {
+          "name": "钟山风景名胜区明孝陵景区7号门售票处",
+          "address": "石象路7号中山陵园风景区",
+          "distanceM": 807,
+          "location": "118.841608,32.053076",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_nanjing_museum",
+      "name": "南京博物院",
+      "cat": "history",
+      "area": "玄武区 · 中山东路",
+      "wgs": {
+        "lat": 32.042299,
+        "lng": 118.819887
+      },
+      "gcj": {
+        "lng": 118.825024142796,
+        "lat": 32.040187988282
+      },
+      "status": "matched",
+      "query": "南京博物院",
+      "amap": {
+        "id": "B001907TGR",
+        "name": "南京博物院",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "中山东路321号",
+        "location": {
+          "lng": 118.825064,
+          "lat": 32.040802
+        },
+        "tel": "025-84807923",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "月牙湖",
+        "rating": "4.9",
+        "cost": "",
+        "openTime": "周一 闭馆(法定节假日除外)；周二至周日 09:00-17:00开放(16:00停止入园)",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/6d9679442d9f514b78d55213b43d9417"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/7b34bad405cc8c519b800c910b2369fa"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/5ea532a7b89f4327791e2e599d253e0f"
+          }
+        ],
+        "distanceM": 68,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京博物院",
+          "address": "中山东路321号",
+          "distanceM": 68,
+          "location": "118.825064,32.040802",
+          "nameScore": 3
+        },
+        {
+          "name": "南京博物院·民国主题邮局",
+          "address": "中山东路321号南京博物院民国馆",
+          "distanceM": 19,
+          "location": "118.824867,32.040300",
+          "nameScore": 2
+        },
+        {
+          "name": "南京博物院-民国火车站景区",
+          "address": "中山东路321号南京博物院负一楼民国馆",
+          "distanceM": 31,
+          "location": "118.824898,32.040448",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_presidential_palace",
+      "name": "总统府",
+      "cat": "history",
+      "area": "玄武区 · 长江路",
+      "wgs": {
+        "lat": 32.04609,
+        "lng": 118.792206
+      },
+      "gcj": {
+        "lng": 118.797396104601,
+        "lat": 32.044024251303
+      },
+      "status": "matched",
+      "query": "总统府",
+      "amap": {
+        "id": "B00190BMRC",
+        "name": "总统府",
+        "type": "风景名胜;风景名胜;国家级景点",
+        "typecode": "110202",
+        "address": "长江路292号",
+        "location": {
+          "lng": 118.797398,
+          "lat": 32.044228
+        },
+        "tel": "025-84578716;025-84578888",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "4.9",
+        "cost": "",
+        "openTime": "08:30-18:00（17:00停止入场，周一闭馆）(数据来源:江苏省文旅厅公共服务平台苏心游)",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://aos-cdn-image.amap.com/sns/ugccomment/21acde57-d540-4737-974a-11b6c69d23de.jpg"
+          },
+          {
+            "title": [],
+            "url": "http://aos-cdn-image.amap.com/sns/ugccomment/9de05734-5535-4a28-b267-6034209ee871.jpg"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/012a55c80fb8e55d85789ac1198bf526"
+          }
+        ],
+        "distanceM": 23,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "总统府",
+          "address": "长江路292号",
+          "distanceM": 23,
+          "location": "118.797398,32.044228",
+          "nameScore": 3
+        },
+        {
+          "name": "总统府礼堂",
+          "address": "长江路292号总统府内",
+          "distanceM": 8,
+          "location": "118.797317,32.044008",
+          "nameScore": 2
+        },
+        {
+          "name": "总统府会客厅",
+          "address": "长江路292号总统府",
+          "distanceM": 41,
+          "location": "118.797619,32.044343",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_six_dynasties",
+      "name": "六朝博物馆",
+      "cat": "history",
+      "area": "玄武区 · 长江路",
+      "wgs": {
+        "lat": 32.044784,
+        "lng": 118.794282
+      },
+      "gcj": {
+        "lng": 118.79946858724,
+        "lat": 32.042715657553
+      },
+      "status": "matched",
+      "query": "六朝博物馆",
+      "amap": {
+        "id": "B0019135C5",
+        "name": "六朝博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "长江路302号",
+        "location": {
+          "lng": 118.799124,
+          "lat": 32.04284
+        },
+        "tel": "025-52326032",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周二至周日 09:00-17:30",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/de50004f8b367977e4d6a3543890a578"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/ef1f42546503d045bb5295085b44f8cb"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/560ad5f0dd0d31b0d2cbfb4cab9fb487"
+          }
+        ],
+        "distanceM": 35,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "六朝博物馆",
+          "address": "长江路302号",
+          "distanceM": 35,
+          "location": "118.799124,32.042840",
+          "nameScore": 3
+        },
+        {
+          "name": "六朝博物馆东侧停车场(出口)",
+          "address": "六朝博物馆东侧停车场",
+          "distanceM": 50,
+          "location": "118.799536,32.042273",
+          "nameScore": 2
+        },
+        {
+          "name": "六朝博物馆地下停车场",
+          "address": "长江路302号六朝博物馆",
+          "distanceM": 50,
+          "location": "118.799169,32.043090",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_jiangning_weaving",
+      "name": "江宁织造博物馆",
+      "cat": "history",
+      "area": "秦淮区 · 长江路",
+      "wgs": {
+        "lat": 32.044648,
+        "lng": 118.788981
+      },
+      "gcj": {
+        "lng": 118.794175889757,
+        "lat": 32.042587076823
+      },
+      "status": "matched",
+      "query": "江宁织造博物馆",
+      "amap": {
+        "id": "B001911KPA",
+        "name": "江宁织造博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "长江路123号",
+        "location": {
+          "lng": 118.794071,
+          "lat": 32.042136
+        },
+        "tel": "025-52243204",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "大行宫",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周二至周日09:00-17:30(17:00停止入馆),周一闭馆（法定节假日正常开放） 5月18日国际博物馆日9:00-17:30开放(17:30停止入馆),(数据来源:江苏省文旅厅公共服务平台苏心游)",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/bb8cdb6e6d186e660000003043840263?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/a9a67156485b3be90000000731984139?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/8bfe7a4eb2170a9b0000009208768810?type=pic"
+          }
+        ],
+        "distanceM": 51,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "江宁织造博物馆",
+          "address": "长江路123号",
+          "distanceM": 51,
+          "location": "118.794071,32.042136",
+          "nameScore": 3
+        },
+        {
+          "name": "江宁织造博物馆-游客中心",
+          "address": "长江路123号江宁织造博物馆F1",
+          "distanceM": 32,
+          "location": "118.794175,32.042875",
+          "nameScore": 2
+        },
+        {
+          "name": "江宁织造博物馆售票处",
+          "address": "长江路123号江宁织造博物馆",
+          "distanceM": 37,
+          "location": "118.794200,32.042917",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_folk_museum",
+      "name": "南京市民俗博物馆",
+      "cat": "history",
+      "area": "秦淮区 · 南捕厅",
+      "wgs": {
+        "lat": 32.027691,
+        "lng": 118.776544
+      },
+      "gcj": {
+        "lng": 118.781753200955,
+        "lat": 32.025648057726
+      },
+      "status": "matched",
+      "query": "南京市民俗博物馆",
+      "amap": {
+        "id": "B0019067DD",
+        "name": "南京市民俗博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "南捕厅15",
+        "location": {
+          "lng": 118.7817,
+          "lat": 32.025849
+        },
+        "tel": "025-86628704",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "升州路",
+        "rating": "4.5",
+        "cost": "",
+        "openTime": "01-01至06-17 周一 全天关闭；01-01至09-23 周二至周四,周日 09:00-17:30 最晚进入17:00；01-01至09-23 周五至周六 09:00-21:00 最晚进入20:30；06-18至08-31 周一 09:00-17:30 最晚进入17:00；09-01至09-23 周一 全天关闭；09-24至09-24 周一至周日 09:00-21:00 最晚进入20:30；09-25至09-26 周一至周日 08:30-21:00 最晚进入20:30；09-27至09-27 周一至周日 08:30-18:00 最晚进入17:30；09-28至09-30 周一 全天关闭；09-28至09-30 周二至周四,周日 09:00-17:30 最晚进入17:00；09-28至09-30 周五至周六 09:00-21:00 最晚进入20:30；10-01至10-06 周一至周日 08:30-21:00 最晚进入20:30；10-07至10-07 周一至周日 08:30-18:00 最晚进入17:30；10-08至12-31 周一 全天关闭；10-08至12-31 周二至周四,周日 09:00-17:30 最晚进入17:00；10-08至12-31 周五至周六 09:00-21:00 最晚进入20:30；日场09:00-17:30（17:00停止售票），夜场:周五周六17:00-21:00（20:30停止售票） 节假日日场08:30-18:00（17:30停止售票），夜场:周五周六17:30-21:00（20:30停止售票）",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/0311ed51bf264f530000003134924288?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/68464c5e6358aeb10000002995050209?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/cfaa33055a8be2ad3d52b5536562b9bf"
+          }
+        ],
+        "distanceM": 23,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京市民俗博物馆",
+          "address": "南捕厅15",
+          "distanceM": 23,
+          "location": "118.7817,32.025849",
+          "nameScore": 3
+        },
+        {
+          "name": "南京市民俗博物馆-门厅",
+          "address": "南京市民俗博物馆(三山街地铁站2号口步行470米)",
+          "distanceM": 26,
+          "location": "118.781709,32.025882",
+          "nameScore": 2
+        },
+        {
+          "name": "南京市民俗博物馆-临展厅",
+          "address": "南捕厅15号甘家大院(三山街地铁站3号口步行340米)",
+          "distanceM": 71,
+          "location": "118.781887,32.026276",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_zhanyuan",
+      "name": "瞻园",
+      "cat": "history",
+      "area": "秦淮区 · 瞻园路",
+      "wgs": {
+        "lat": 32.0231,
+        "lng": 118.780054
+      },
+      "gcj": {
+        "lng": 118.78525906033,
+        "lat": 32.021054416233
+      },
+      "status": "matched",
+      "query": "瞻园",
+      "amap": {
+        "id": "B00190536A",
+        "name": "瞻园",
+        "type": "风景名胜;风景名胜;国家级景点",
+        "typecode": "110202",
+        "address": "瞻园路128号",
+        "location": {
+          "lng": 118.785163,
+          "lat": 32.021034
+        },
+        "tel": "025-52201849",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周二至周日:08:30-17:00,每周一闭园；具体营业时间以官方通知为准",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/3a5a2d6f6ad2612b8c9f42587d61b56f"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/105b72eda1b46de4bb8a9489c37de915"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/99e677a177e2e2fe88dfabf752afa9fc"
+          }
+        ],
+        "distanceM": 9,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "瞻园",
+          "address": "瞻园路128号",
+          "distanceM": 9,
+          "location": "118.785163,32.021034",
+          "nameScore": 3
+        },
+        {
+          "name": "瞻园-老树斋",
+          "address": "瞻园路128号瞻园内(三山街地铁站出入口步行390米)",
+          "distanceM": 8,
+          "location": "118.785272,32.020979",
+          "nameScore": 2
+        },
+        {
+          "name": "瞻园-一览阁",
+          "address": "瞻园路128号瞻园内(三山街地铁站出入口步行390米)",
+          "distanceM": 12,
+          "location": "118.785146,32.020996",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_jiangnan_exam",
+      "name": "江南贡院",
+      "cat": "history",
+      "area": "秦淮区 · 夫子庙",
+      "wgs": {
+        "lat": 32.023086,
+        "lng": 118.785483
+      },
+      "gcj": {
+        "lng": 118.790680881077,
+        "lat": 32.021034342448
+      },
+      "status": "matched",
+      "query": "江南贡院",
+      "amap": {
+        "id": "B0FFL4EUBJ",
+        "name": "南京中国科举博物馆(江南贡院)北馆-铁保手书碑",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "南京中国科举博物馆南馆",
+        "location": {
+          "lng": 118.790712,
+          "lat": 32.021064
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "3.2",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFL4EUBJ/comment/87e2c86123ddcf998c7fa8d3ff6933b1_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFL4EUBJ/comment/bb6db899321407eb1280dd7d5153a946_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFL4EUBJ/comment/30d2490a5944de3869b67e4101742d4b_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 4,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "南京中国科举博物馆(江南贡院)北馆-铁保手书碑",
+          "address": "南京中国科举博物馆南馆",
+          "distanceM": 4,
+          "location": "118.790712,32.021064",
+          "nameScore": 2
+        },
+        {
+          "name": "江南贡院牌坊",
+          "address": "贡院街65号(夫子庙地铁站2号口步行320米)",
+          "distanceM": 16,
+          "location": "118.790833,32.020979",
+          "nameScore": 2
+        },
+        {
+          "name": "中国科举博物馆(江南贡院)",
+          "address": "贡院街95号",
+          "distanceM": 27,
+          "location": "118.790669,32.020795",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_wuyi_lane",
+      "name": "乌衣巷",
+      "cat": "street",
+      "area": "秦淮区 · 夫子庙",
+      "wgs": {
+        "lat": 32.019864,
+        "lng": 118.785976
+      },
+      "gcj": {
+        "lng": 118.791172688803,
+        "lat": 32.0178125
+      },
+      "status": "matched",
+      "query": "乌衣巷",
+      "amap": {
+        "id": "BZAPQF03AG",
+        "name": "乌衣巷",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.78963,
+          "lat": 32.018554
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BZAPQF03AG/comment/content_media_external_images_media_547496_ss__1730768521894_53266362.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BZAPQF03AG/comment/7dd8c609982bba4564e60b3cb9475c2f_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/e03491d07f744e421bad515855787e16"
+          }
+        ],
+        "distanceM": 167,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "乌衣巷",
+          "address": "秦淮区",
+          "distanceM": 167,
+          "location": "118.789630,32.018554",
+          "nameScore": 3
+        },
+        {
+          "name": "德佑地产(乌衣巷店)",
+          "address": "乌衣巷22-5号",
+          "distanceM": 8,
+          "location": "118.791125,32.017875",
+          "nameScore": 2
+        },
+        {
+          "name": "乌衣巷停车场",
+          "address": "乌衣巷琵琶小区",
+          "distanceM": 11,
+          "location": "118.791256,32.017747",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_city_wall_museum",
+      "name": "南京城墙博物馆",
+      "cat": "history",
+      "area": "秦淮区 · 中华门",
+      "wgs": {
+        "lat": 32.014595,
+        "lng": 118.777701
+      },
+      "gcj": {
+        "lng": 118.782907714844,
+        "lat": 32.012553982205
+      },
+      "status": "matched",
+      "query": "南京城墙博物馆",
+      "amap": {
+        "id": "B0H3XR19VD",
+        "name": "南京城墙博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "新民坊路边营1号",
+        "location": {
+          "lng": 118.783016,
+          "lat": 32.012551
+        },
+        "tel": "025-83217710",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "中华门",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周二至周日 09:00-17:00 最晚进入16:30",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/8eff7696f783cd4d0000002744874537?type=pic"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/c9c92a3d94a387167d5fac5dd22cb0c1"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/3032aa3dd0cfffae0000002780106835?type=pic"
+          }
+        ],
+        "distanceM": 10,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京城墙博物馆",
+          "address": "新民坊路边营1号",
+          "distanceM": 10,
+          "location": "118.783016,32.012551",
+          "nameScore": 3
+        },
+        {
+          "name": "平安守望点(城墙博物馆)",
+          "address": "边营1号",
+          "distanceM": 49,
+          "location": "118.782815,32.012123",
+          "nameScore": 0
+        },
+        {
+          "name": "中华门",
+          "address": "中华路",
+          "distanceM": 106,
+          "location": "118.781821,32.012800",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_zhonghuamen",
+      "name": "中华门",
+      "cat": "history",
+      "area": "秦淮区 · 中华门",
+      "wgs": {
+        "lat": 32.0145171,
+        "lng": 118.7763911
+      },
+      "gcj": {
+        "lng": 118.781599121094,
+        "lat": 32.012477213542
+      },
+      "status": "matched",
+      "query": "中华门",
+      "amap": {
+        "id": "B00190AMPR",
+        "name": "中华门",
+        "type": "风景名胜;风景名胜;国家级景点",
+        "typecode": "110202",
+        "address": "中华路",
+        "location": {
+          "lng": 118.781821,
+          "lat": 32.0128
+        },
+        "tel": "025-52314577",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "中华门",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 08:30-22:00；具体营业状态以当天开放情况为准。",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/c6fc8d9abde53360671e66f795dd6408"
+          },
+          {
+            "title": "中华门瓮城",
+            "url": "http://store.is.autonavi.com/showpic/e94ea08e141c471b51e6c013251de283"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/d01ed623ad7bee9b488b220dfa0768fd"
+          }
+        ],
+        "distanceM": 42,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "中华门",
+          "address": "中华路",
+          "distanceM": 42,
+          "location": "118.781821,32.012800",
+          "nameScore": 3
+        },
+        {
+          "name": "中华门瓮城-观光台",
+          "address": "中华路中华门瓮城内",
+          "distanceM": 18,
+          "location": "118.781775,32.012534",
+          "nameScore": 2
+        },
+        {
+          "name": "中华门-藏兵洞",
+          "address": "中华路中华门瓮城内",
+          "distanceM": 30,
+          "location": "118.781822,32.012675",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_yuhuatai",
+      "name": "雨花台风景名胜区",
+      "cat": "history",
+      "area": "雨花台区 · 雨花台",
+      "wgs": {
+        "lat": 32.0006529,
+        "lng": 118.7780548
+      },
+      "gcj": {
+        "lng": 118.783260091146,
+        "lat": 31.998614908855
+      },
+      "status": "matched",
+      "query": "雨花台风景名胜区",
+      "amap": {
+        "id": "B0FFGIF5PZ",
+        "name": "雨花台风景名胜区-北门地面停车场",
+        "type": "交通设施服务;停车场;公共停车场",
+        "typecode": "150904",
+        "address": "雨花西路1号",
+        "location": {
+          "lng": 118.778812,
+          "lat": 32.00425
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "雨花台区",
+        "business_area": "",
+        "rating": "",
+        "cost": "",
+        "openTime": "周一至周日 09:00-17:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/0ee484dd24e791f30000002704638189"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/2f49b15b936e4a688147b7c24bf86088"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/485036712ebd6d91aa6cd9dc003f3321"
+          }
+        ],
+        "distanceM": 754,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "雨花台风景名胜区-北门地面停车场",
+          "address": "雨花西路1号",
+          "distanceM": 754,
+          "location": "118.778812,32.004250",
+          "nameScore": 2
+        },
+        {
+          "name": "南京雨花台风景区-涌泉广场",
+          "address": "雨花路215号南京雨花台风景区雨花石文化区",
+          "distanceM": 24,
+          "location": "118.783366,31.998418",
+          "nameScore": 0
+        },
+        {
+          "name": "南京雨花台风景区-天降花雨广场(装修中)",
+          "address": "雨花路215号南京雨花台风景区雨花石文化区",
+          "distanceM": 115,
+          "location": "118.782800,31.997661",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_dabaoensi",
+      "name": "大报恩寺遗址博物馆",
+      "cat": "history",
+      "area": "秦淮区 · 雨花路",
+      "wgs": {
+        "lat": 32.0112465,
+        "lng": 118.7782558
+      },
+      "gcj": {
+        "lng": 118.783461642796,
+        "lat": 32.009205186632
+      },
+      "status": "matched",
+      "query": "大报恩寺遗址博物馆",
+      "amap": {
+        "id": "B0FFG9GMZ7",
+        "name": "大报恩寺遗址博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "中华门外雨花路1号",
+        "location": {
+          "lng": 118.783021,
+          "lat": 32.00922
+        },
+        "tel": "025-52009999",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "中华门",
+        "rating": "4.2",
+        "cost": "",
+        "openTime": "08:30-20:15（19:30停止售票，19:30停止入园）(数据来源:江苏省文旅厅公共服务平台苏心游)",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/9e129476a7214dc80000003167474542?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFG9GMZ7/comment/173051989152_1730519957469_81904377.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/daac93475934db6463163f0f06834a31"
+          }
+        ],
+        "distanceM": 42,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "大报恩寺遗址博物馆",
+          "address": "中华门外雨花路1号",
+          "distanceM": 42,
+          "location": "118.783021,32.009220",
+          "nameScore": 3
+        },
+        {
+          "name": "大报恩寺遗址博物馆地下停车场",
+          "address": "雨花路与上码头路交叉口西南100米",
+          "distanceM": 260,
+          "location": "118.780825,32.009875",
+          "nameScore": 2
+        },
+        {
+          "name": "大报恩寺遗址景区",
+          "address": "中华门外雨花路1号",
+          "distanceM": 43,
+          "location": "118.783010,32.009204",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_jiming_temple",
+      "name": "鸡鸣寺",
+      "cat": "history",
+      "area": "玄武区 · 鸡鸣寺",
+      "wgs": {
+        "lat": 32.062962,
+        "lng": 118.789928
+      },
+      "gcj": {
+        "lng": 118.795123155382,
+        "lat": 32.060895724827
+      },
+      "status": "matched",
+      "query": "鸡鸣寺",
+      "amap": {
+        "id": "B001917UAU",
+        "name": "古鸡鸣寺-毗卢宝殿",
+        "type": "风景名胜;风景名胜;寺庙道观",
+        "typecode": "110205",
+        "address": "玄武门街道鸡鸣寺路1号古鸡鸣寺",
+        "location": {
+          "lng": 118.795144,
+          "lat": 32.06079
+        },
+        "tel": "025-57715595",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "3.7",
+        "cost": "",
+        "openTime": "周一至周日 07:30-17:30；停止售票:17:15",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001917UAU/comment/content_media_external_file_1000083848_ss__1768533772122_42745544.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/12460c41d18f8d070000003245946221?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/eac48a01665a19a90000002638624260?type=pic"
+          }
+        ],
+        "distanceM": 12,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "古鸡鸣寺-毗卢宝殿",
+          "address": "玄武门街道鸡鸣寺路1号古鸡鸣寺",
+          "distanceM": 12,
+          "location": "118.795144,32.060790",
+          "nameScore": 2
+        },
+        {
+          "name": "古鸡鸣寺-客堂",
+          "address": "古鸡鸣寺路1号古鸡鸣寺内(西南角)",
+          "distanceM": 20,
+          "location": "118.795245,32.061042",
+          "nameScore": 2
+        },
+        {
+          "name": "古鸡鸣寺",
+          "address": "鸡鸣寺路1号钟山风景名胜区玄武湖景区内西南侧",
+          "distanceM": 22,
+          "location": "118.795246,32.061061",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_taicheng",
+      "name": "台城",
+      "cat": "history",
+      "area": "玄武区 · 玄武湖",
+      "wgs": {
+        "lat": 32.0637819,
+        "lng": 118.7902212
+      },
+      "gcj": {
+        "lng": 118.795415581598,
+        "lat": 32.061714952257
+      },
+      "status": "matched",
+      "query": "台城",
+      "amap": {
+        "id": "B0KB3U40RE",
+        "name": "台城花园社区党群服务中心",
+        "type": "政府机构及社会团体;政府机关;乡镇以下级政府及事业单位",
+        "typecode": "130106",
+        "address": "台城花园小区3号楼",
+        "location": {
+          "lng": 118.794924,
+          "lat": 32.062228
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/4e286e0c5b70e886528e8d10dbefd9ba"
+          }
+        ],
+        "distanceM": 73,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "台城花园社区党群服务中心",
+          "address": "台城花园小区3号楼",
+          "distanceM": 73,
+          "location": "118.794924,32.062228",
+          "nameScore": 2
+        },
+        {
+          "name": "台城花园社区驿站",
+          "address": "台城花园3号楼",
+          "distanceM": 82,
+          "location": "118.794802,32.062240",
+          "nameScore": 2
+        },
+        {
+          "name": "台城花园社区居民委员会",
+          "address": "台城花园3栋",
+          "distanceM": 84,
+          "location": "118.794856,32.062307",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_yuejianglou",
+      "name": "阅江楼",
+      "cat": "arch",
+      "area": "鼓楼区 · 下关",
+      "wgs": {
+        "lat": 32.096168,
+        "lng": 118.741324
+      },
+      "gcj": {
+        "lng": 118.746550835504,
+        "lat": 32.094120822483
+      },
+      "status": "matched",
+      "query": "阅江楼",
+      "amap": {
+        "id": "B0FFFDRUH8",
+        "name": "阅江楼",
+        "type": "地名地址信息;热点地名;热点地名",
+        "typecode": "190700",
+        "address": "鼓楼区",
+        "location": {
+          "lng": 118.748535,
+          "lat": 32.093857
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "阅江楼",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFFDRUH8/comment/fc53d79db58b9b93808deb3853487281_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFFDRUH8/comment/2F4BD372_CE64_48EE_BBCB_7A7C10A252DB_L0_001_2000_1125_1734104531925_10219425.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFFDRUH8/comment/content_media_external_file_1000121051_ss__1766825540564_30267224.jpg"
+          }
+        ],
+        "distanceM": 189,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "阅江楼",
+          "address": "鼓楼区",
+          "distanceM": 189,
+          "location": "118.748535,32.093857",
+          "nameScore": 3
+        },
+        {
+          "name": "阅江楼鼎",
+          "address": "下关街道下关街道建宁路202号阅江楼风景区内",
+          "distanceM": 35,
+          "location": "118.746796,32.093886",
+          "nameScore": 2
+        },
+        {
+          "name": "阅江楼景区-藏兵洞",
+          "address": "建宁路202号阅江楼景区",
+          "distanceM": 41,
+          "location": "118.746926,32.093940",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_jinghaisi",
+      "name": "静海寺",
+      "cat": "history",
+      "area": "鼓楼区 · 下关",
+      "wgs": {
+        "lat": 32.094035,
+        "lng": 118.739672
+      },
+      "gcj": {
+        "lng": 118.744897732205,
+        "lat": 32.091987575955
+      },
+      "status": "matched",
+      "query": "静海寺",
+      "amap": {
+        "id": "B0FFFQET24",
+        "name": "南京静海寺纪念馆-安全保卫部",
+        "type": "风景名胜;风景名胜相关;旅游景点",
+        "typecode": "110000",
+        "address": "建宁路288号南京静海寺纪念馆内",
+        "location": {
+          "lng": 118.744716,
+          "lat": 32.092039
+        },
+        "tel": "025-58808703",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "建宁路",
+        "rating": "1.8",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/eced09c0f7b9c69e0000009292052137?type=pic"
+          }
+        ],
+        "distanceM": 18,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "南京静海寺纪念馆-安全保卫部",
+          "address": "建宁路288号南京静海寺纪念馆内",
+          "distanceM": 18,
+          "location": "118.744716,32.092039",
+          "nameScore": 2
+        },
+        {
+          "name": "南京静海寺纪念馆-戏台(建宁路)",
+          "address": "建宁路288号南京静海寺纪念馆",
+          "distanceM": 28,
+          "location": "118.745069,32.092190",
+          "nameScore": 2
+        },
+        {
+          "name": "南京静海寺纪念馆-钟楼(建宁路)",
+          "address": "建宁路288号南京静海寺纪念馆内(南侧)",
+          "distanceM": 33,
+          "location": "118.744694,32.091750",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_tianfeigong",
+      "name": "天妃宫",
+      "cat": "history",
+      "area": "鼓楼区 · 下关",
+      "wgs": {
+        "lat": 32.09433,
+        "lng": 118.741091
+      },
+      "gcj": {
+        "lng": 118.746317545573,
+        "lat": 32.092283257379
+      },
+      "status": "matched",
+      "query": "天妃宫",
+      "amap": {
+        "id": "B001908LX4",
+        "name": "天妃宫",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "建宁路284号",
+        "location": {
+          "lng": 118.746261,
+          "lat": 32.092242
+        },
+        "tel": "025-58801266",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "建宁路",
+        "rating": "4.3",
+        "cost": "",
+        "openTime": "周一至周日 08:00-17:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001908LX4/comment/content_media_external_file_1000007520_ss__1767169362913_16600968.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001908LX4/comment/content_media_external_file_862581_ss__1758092975390_71160104.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/50012bf350e779010000000963528383?type=pic"
+          }
+        ],
+        "distanceM": 7,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "天妃宫",
+          "address": "建宁路284号",
+          "distanceM": 7,
+          "location": "118.746261,32.092242",
+          "nameScore": 3
+        },
+        {
+          "name": "天妃宫-玉皇阁",
+          "address": "建宁路与明城墙绿道交叉口西北120米",
+          "distanceM": 9,
+          "location": "118.746236,32.092321",
+          "nameScore": 2
+        },
+        {
+          "name": "天妃宫-公共厕所",
+          "address": "建宁路284号天妃宫内",
+          "distanceM": 15,
+          "location": "118.746236,32.092396",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_chaotiangong",
+      "name": "朝天宫",
+      "cat": "history",
+      "area": "秦淮区 · 朝天宫",
+      "wgs": {
+        "lat": 32.036581,
+        "lng": 118.770333
+      },
+      "gcj": {
+        "lng": 118.775548773872,
+        "lat": 32.034541286893
+      },
+      "status": "matched",
+      "query": "朝天宫",
+      "amap": {
+        "id": "B00190AMPT",
+        "name": "朝天宫",
+        "type": "风景名胜;风景名胜;国家级景点",
+        "typecode": "110202",
+        "address": "朝天宫4号(朝天宫地铁站1号口步行210米)",
+        "location": {
+          "lng": 118.77532,
+          "lat": 32.034344
+        },
+        "tel": "025-84200177;025-84466460",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "止马营",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一全天关闭(法定节假日正常开放),周二至周日:09:00-18:00(17:00停止售票),2026年2月1日至2026年3月3日周一正常开放",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/96c1349ad96bd7e8cbb427cf991991c0"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/27444c9790ad9ddc68b5b1d7cf8fcc50"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/7372aebde41b3551b05fe063e74ce2f9"
+          }
+        ],
+        "distanceM": 31,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "朝天宫",
+          "address": "朝天宫4号(朝天宫地铁站1号口步行210米)",
+          "distanceM": 31,
+          "location": "118.775320,32.034344",
+          "nameScore": 3
+        },
+        {
+          "name": "朝天宫",
+          "address": "秦淮区",
+          "distanceM": 138,
+          "location": "118.774810,32.035613",
+          "nameScore": 3
+        },
+        {
+          "name": "朝天宫",
+          "address": "秦淮区",
+          "distanceM": 173,
+          "location": "118.775278,32.033004",
+          "nameScore": 3
+        }
+      ]
+    },
+    {
+      "id": "p_nju",
+      "name": "南京大学（鼓楼校区）",
+      "cat": "arch",
+      "area": "鼓楼区 · 鼓楼",
+      "wgs": {
+        "lat": 32.056596,
+        "lng": 118.774088
+      },
+      "gcj": {
+        "lng": 118.779302571615,
+        "lat": 32.054548611112
+      },
+      "status": "matched",
+      "query": "南京大学（鼓楼校区）",
+      "amap": {
+        "id": "B00190B4AC",
+        "name": "南京大学(鼓楼校区)",
+        "type": "科教文化服务;学校;高等院校",
+        "typecode": "141201",
+        "address": "汉口路22号",
+        "location": {
+          "lng": 118.779562,
+          "lat": 32.055153
+        },
+        "tel": "025-83593186",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "南大",
+        "rating": "5.0",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/6380abaf2532090f0000002978268138?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/comment/content_service__1772806734523_31448548_1772809454920_77655066.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/65481bbd638816420000002382272804?type=pic"
+          }
+        ],
+        "distanceM": 72,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京大学(鼓楼校区)",
+          "address": "汉口路22号",
+          "distanceM": 72,
+          "location": "118.779562,32.055153",
+          "nameScore": 3
+        },
+        {
+          "name": "南京大学鼓楼校区物理学院",
+          "address": "汉口路22号南京大学鼓楼校区",
+          "distanceM": 43,
+          "location": "118.779711,32.054377",
+          "nameScore": 2
+        },
+        {
+          "name": "南京大学鼓楼校区法学院",
+          "address": "汉口路22号南京大学鼓楼校区",
+          "distanceM": 90,
+          "location": "118.778784,32.055228",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_seu",
+      "name": "东南大学（四牌楼校区）",
+      "cat": "arch",
+      "area": "玄武区 · 四牌楼",
+      "wgs": {
+        "lat": 32.057648,
+        "lng": 118.788282
+      },
+      "gcj": {
+        "lng": 118.793479003907,
+        "lat": 32.055585123698
+      },
+      "status": "matched",
+      "query": "东南大学（四牌楼校区）",
+      "amap": {
+        "id": "B00190B8QT",
+        "name": "东南大学(四牌楼校区)",
+        "type": "科教文化服务;学校;高等院校",
+        "typecode": "141201",
+        "address": "新街口街道四牌楼2号(鸡鸣寺地铁站6号口步行300米)",
+        "location": {
+          "lng": 118.795193,
+          "lat": 32.054213
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "5.0",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/ad59c08e32a6399aaa0ed56e048d4f8c"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190B8QT/comment/content_media_external_file_100003177_1764585384166_63583733.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/d5f08df3488ec2ec0000000970686957?type=pic"
+          }
+        ],
+        "distanceM": 222,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "东南大学(四牌楼校区)",
+          "address": "新街口街道四牌楼2号(鸡鸣寺地铁站6号口步行300米)",
+          "distanceM": 222,
+          "location": "118.795193,32.054213",
+          "nameScore": 3
+        },
+        {
+          "name": "东南大学(四牌楼校区)日新堂",
+          "address": "四牌楼2号东南大学四牌楼校区内",
+          "distanceM": 64,
+          "location": "118.793975,32.055975",
+          "nameScore": 2
+        },
+        {
+          "name": "东南大学四牌楼校区机械工程学院",
+          "address": "南高路",
+          "distanceM": 90,
+          "location": "118.792523,32.055515",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_njnu",
+      "name": "南京师范大学（随园校区）",
+      "cat": "arch",
+      "area": "鼓楼区 · 随园",
+      "wgs": {
+        "lat": 32.055056,
+        "lng": 118.762101
+      },
+      "gcj": {
+        "lng": 118.767323947483,
+        "lat": 32.053017035591
+      },
+      "status": "matched",
+      "query": "南京师范大学（随园校区）",
+      "amap": {
+        "id": "B00190AYWN",
+        "name": "南京师范大学(随园校区)",
+        "type": "科教文化服务;学校;高等院校",
+        "typecode": "141201",
+        "address": "华侨路街道宁海路街道宁海路122号",
+        "location": {
+          "lng": 118.76768,
+          "lat": 32.053187
+        },
+        "tel": "025-83598010",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "南大",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/fd500da283544f3fd4944809550989da"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190AYWN/comment/file_media_Photo_36461_IMG_1769815751_33879_IMG_33879_web_1769815756985_54386546.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190AYWN/comment/content_media_external_images_media_103433_ss__1763827666792_83568801.jpg"
+          }
+        ],
+        "distanceM": 39,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京师范大学(随园校区)",
+          "address": "华侨路街道宁海路街道宁海路122号",
+          "distanceM": 39,
+          "location": "118.767680,32.053187",
+          "nameScore": 3
+        },
+        {
+          "name": "南京师范大学随园校区文学院",
+          "address": "宁海路122号南京师范大学随园校区中大楼",
+          "distanceM": 74,
+          "location": "118.768108,32.053038",
+          "nameScore": 2
+        },
+        {
+          "name": "南京师范大学随园校区教育科学学院",
+          "address": "华侨路街道宁海路街道宁海路122号南京师范大学(随园校区)",
+          "distanceM": 110,
+          "location": "118.767861,32.052135",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_nanjing_library",
+      "name": "南京图书馆",
+      "cat": "arch",
+      "area": "玄武区 · 大行宫",
+      "wgs": {
+        "lat": 32.044111,
+        "lng": 118.790488
+      },
+      "gcj": {
+        "lng": 118.795680338542,
+        "lat": 32.042048068577
+      },
+      "status": "matched",
+      "query": "南京图书馆",
+      "amap": {
+        "id": "B00190B67M",
+        "name": "南京图书馆",
+        "type": "科教文化服务;图书馆;图书馆",
+        "typecode": "140500",
+        "address": "中山东路189号(大行宫地铁站1号口步行140米)",
+        "location": {
+          "lng": 118.795711,
+          "lat": 32.04195
+        },
+        "tel": "025-84356000",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "大行宫",
+        "rating": "",
+        "cost": "",
+        "openTime": "周一全天关闭，周二至周日 09:00-17:30，节假日营业时间以官方通知为准",
+        "photos": [
+          {
+            "title": "内景图",
+            "url": "http://store.is.autonavi.com/showpic/bba6f218341dec0bb14879fe6c264593"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/52636cc25d712ff01057cf5fa725b800"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/9d093680d2d4b1155a2fe7b984ac299c"
+          }
+        ],
+        "distanceM": 11,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京图书馆",
+          "address": "中山东路189号(大行宫地铁站1号口步行140米)",
+          "distanceM": 11,
+          "location": "118.795711,32.041950",
+          "nameScore": 3
+        },
+        {
+          "name": "六朝遗迹展示厅(南京图书馆)",
+          "address": "中山东路189号南京图书馆B2层",
+          "distanceM": 28,
+          "location": "118.795876,32.042232",
+          "nameScore": 2
+        },
+        {
+          "name": "江苏作家作品馆(南京图书馆)",
+          "address": "中山东路189号南京图书馆F1层",
+          "distanceM": 44,
+          "location": "118.795386,32.042360",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_jiangsu_art_museum",
+      "name": "江苏省美术馆",
+      "cat": "arch",
+      "area": "玄武区 · 长江路",
+      "wgs": {
+        "lat": 32.043494,
+        "lng": 118.7936
+      },
+      "gcj": {
+        "lng": 118.798787706164,
+        "lat": 32.04142686632
+      },
+      "status": "matched",
+      "query": "江苏省美术馆",
+      "amap": {
+        "id": "B00190D1I8",
+        "name": "江苏省美术馆",
+        "type": "科教文化服务;美术馆;美术馆",
+        "typecode": "140400",
+        "address": "长江路333号(总统府对面)",
+        "location": {
+          "lng": 118.798789,
+          "lat": 32.041463
+        },
+        "tel": "025-89610840;025-89610845",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "大行宫",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "周二至周日09:00-17:00(16:30 停止入馆),周一闭馆（法定节假日除外),(数据来源:江苏省文旅厅公共服务平台苏心游)",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190D1I8/comment/content_media_external_file_116029_ss__1771478710907_09039225.jpg"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/5a8220db6820c0b1fe93a9c3041516c9"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190D1I8/comment/content_media_external_file_4282_1757123613038_98484783.jpg"
+          }
+        ],
+        "distanceM": 4,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "江苏省美术馆",
+          "address": "长江路333号(总统府对面)",
+          "distanceM": 4,
+          "location": "118.798789,32.041463",
+          "nameScore": 3
+        },
+        {
+          "name": "江苏省美术馆地下停车场",
+          "address": "中山东路与利济巷交叉口东北60米",
+          "distanceM": 43,
+          "location": "118.798466,32.041156",
+          "nameScore": 2
+        },
+        {
+          "name": "江苏省美术馆地下停车场(出入口)",
+          "address": "中山东路与利济巷交叉口东北60米",
+          "distanceM": 48,
+          "location": "118.798358,32.041196",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_yunjin_museum",
+      "name": "南京云锦博物馆",
+      "cat": "history",
+      "area": "建邺区 · 茶亭",
+      "wgs": {
+        "lat": 32.038434,
+        "lng": 118.73957
+      },
+      "gcj": {
+        "lng": 118.744790852865,
+        "lat": 32.036399197049
+      },
+      "status": "matched",
+      "query": "南京云锦博物馆",
+      "amap": {
+        "id": "B00190682O",
+        "name": "中国南京云锦博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "茶亭东街240号",
+        "location": {
+          "lng": 118.744814,
+          "lat": 32.03639
+        },
+        "tel": "025-86611377;025-86518580",
+        "cityname": "南京市",
+        "adname": "建邺区",
+        "business_area": "汉中门",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周日 09:00-18:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/486379dde96afff5922e0e7d90aa244d"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/f165067ca302b6d30d34dbea68d73f80"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/9bcfc0ed78b6f9900000002236966884?type=pic"
+          }
+        ],
+        "distanceM": 2,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "中国南京云锦博物馆",
+          "address": "茶亭东街240号",
+          "distanceM": 2,
+          "location": "118.744814,32.036390",
+          "nameScore": 2
+        },
+        {
+          "name": "VGRASS(南京云锦博物馆店)",
+          "address": "茶亭东街与云锦路交叉口东北60米",
+          "distanceM": 11,
+          "location": "118.744875,32.036325",
+          "nameScore": 2
+        },
+        {
+          "name": "中国南京云锦博物馆停车场",
+          "address": "茶亭东街240号中国南京云锦博物馆",
+          "distanceM": 23,
+          "location": "118.744698,32.036210",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_paleontology_museum",
+      "name": "南京古生物博物馆",
+      "cat": "history",
+      "area": "玄武区 · 鸡鸣寺",
+      "wgs": {
+        "lat": 32.06167,
+        "lng": 118.79011
+      },
+      "gcj": {
+        "lng": 118.795304633247,
+        "lat": 32.059603678386
+      },
+      "status": "matched",
+      "query": "南京古生物博物馆",
+      "amap": {
+        "id": "B001906KX9",
+        "name": "南京古生物博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "北京东路39号(鸡鸣寺地铁站5号口步行320米)",
+        "location": {
+          "lng": 118.795172,
+          "lat": 32.059611
+        },
+        "tel": "025-83282255",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周二 全天关闭；周三至周日 09:00-17:00 最晚进入16:00；每周一、周二闭馆（法定节假日开放安排以官方公告为准）",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/d1b6d4dd2e8b6782beccd0b996d27b47"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/8f71539de02bc4340000003018902646?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001906KX9/comment/content_media_external_file_1636313_ss__1756350243813_23543916.jpg"
+          }
+        ],
+        "distanceM": 13,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京古生物博物馆",
+          "address": "北京东路39号(鸡鸣寺地铁站5号口步行320米)",
+          "distanceM": 13,
+          "location": "118.795172,32.059611",
+          "nameScore": 3
+        },
+        {
+          "name": "南京古生物博物馆-文创店",
+          "address": "北京东路39号南京古生物博物馆",
+          "distanceM": 11,
+          "location": "118.795189,32.059603",
+          "nameScore": 2
+        },
+        {
+          "name": "南京古生物博物馆-内部专用地下停车场",
+          "address": "北京东路39号南京古生物博物馆",
+          "distanceM": 29,
+          "location": "118.795475,32.059825",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_geology_museum",
+      "name": "南京地质博物馆",
+      "cat": "history",
+      "area": "玄武区 · 珠江路",
+      "wgs": {
+        "lat": 32.04671,
+        "lng": 118.802057
+      },
+      "gcj": {
+        "lng": 118.807230088976,
+        "lat": 32.044629177518
+      },
+      "status": "matched",
+      "query": "南京地质博物馆",
+      "amap": {
+        "id": "B00190BD4M",
+        "name": "南京地质博物馆",
+        "type": "科教文化服务;博物馆;博物馆",
+        "typecode": "140100",
+        "address": "珠江路700号地质大厦",
+        "location": {
+          "lng": 118.807343,
+          "lat": 32.044617
+        },
+        "tel": "025-51816587;025-84813754",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周三至周五:09:30-16:30(16:00停止入馆),周六至周日:09:00-16:30(16:00停止入馆)；周一、周二闭馆,法定节假日开放时间另行通知；节假日营业时间以官方通知为准",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BD4M/comment/content_media_external_file_1000021094_ss__1762588499032_06660535.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BD4M/comment/content_media_external_file_1000015695_ss__1765864341461_18192529.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/2802dbb9ddda8d030000003136638666?type=pic"
+          }
+        ],
+        "distanceM": 11,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "南京地质博物馆",
+          "address": "珠江路700号地质大厦",
+          "distanceM": 11,
+          "location": "118.807343,32.044617",
+          "nameScore": 3
+        },
+        {
+          "name": "魔法特工(南京地质博物馆店)",
+          "address": "珠江路与龙蟠中路交叉口东180米",
+          "distanceM": 39,
+          "location": "118.807575,32.044825",
+          "nameScore": 2
+        },
+        {
+          "name": "江苏省矿业协会",
+          "address": "南京地质博物馆",
+          "distanceM": 3,
+          "location": "118.807228,32.044656",
+          "nameScore": 0
+        }
+      ]
+    },
+    {
+      "id": "p_crossing_memorial",
+      "name": "渡江胜利纪念馆",
+      "cat": "history",
+      "area": "鼓楼区 · 三汊河",
+      "wgs": {
+        "lat": 32.0757,
+        "lng": 118.726512
+      },
+      "gcj": {
+        "lng": 118.731726074219,
+        "lat": 32.07364827474
+      },
+      "status": "matched",
+      "query": "渡江胜利纪念馆",
+      "amap": {
+        "id": "B00190BJ76",
+        "name": "渡江胜利纪念馆",
+        "type": "风景名胜;风景名胜;纪念馆",
+        "typecode": "110204",
+        "address": "渡江路1号",
+        "location": {
+          "lng": 118.73173,
+          "lat": 32.073563
+        },
+        "tel": "025-84649423",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "热河南路",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": "渡江胜利纪念馆",
+            "url": "http://store.is.autonavi.com/showpic/ba2f0b3864e26b9c95b30c1e787f7b90"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/a30a3994116854d682a75a2a9034a6a4"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/52d633a9cd2506945b8d98b966390988"
+          }
+        ],
+        "distanceM": 9,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "渡江胜利纪念馆",
+          "address": "渡江路1号",
+          "distanceM": 9,
+          "location": "118.731730,32.073563",
+          "nameScore": 3
+        },
+        {
+          "name": "渡江胜利纪念馆母婴室",
+          "address": "渡江路与树人路交叉口西北60米",
+          "distanceM": 36,
+          "location": "118.731902,32.073365",
+          "nameScore": 2
+        },
+        {
+          "name": "渡江胜利纪念馆-千帆竞渡群雕",
+          "address": "渡江路1号渡江胜利纪念馆",
+          "distanceM": 64,
+          "location": "118.731077,32.073826",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_meiyuan",
+      "name": "梅园新村纪念馆",
+      "cat": "history",
+      "area": "玄武区 · 梅园新村",
+      "wgs": {
+        "lat": 32.045077,
+        "lng": 118.7964813
+      },
+      "gcj": {
+        "lng": 118.801663953994,
+        "lat": 32.043005099827
+      },
+      "status": "matched",
+      "query": "梅园新村纪念馆",
+      "amap": {
+        "id": "B001907IVB",
+        "name": "中共代表团梅园新村纪念馆",
+        "type": "风景名胜;风景名胜;纪念馆",
+        "typecode": "110204",
+        "address": "汉府街18-1",
+        "location": {
+          "lng": 118.801602,
+          "lat": 32.042379
+        },
+        "tel": "025-84540739",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/4d7a89b05e0157190000004692278846"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/1f09b293f2faf957a7a28f7574c9f7a2"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/65efd07669943376b53ad9a501f716b8"
+          }
+        ],
+        "distanceM": 70,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "中共代表团梅园新村纪念馆",
+          "address": "汉府街18-1",
+          "distanceM": 70,
+          "location": "118.801602,32.042379",
+          "nameScore": 2
+        },
+        {
+          "name": "中国共产党代表团梅园新村纪念馆-史料陈列馆",
+          "address": "汉府街18-1中共代表团梅园新村纪念馆",
+          "distanceM": 74,
+          "location": "118.801606,32.042345",
+          "nameScore": 2
+        },
+        {
+          "name": "中国共产党代表团梅园新村纪念馆-存包处",
+          "address": "汉府街18-1中共代表团梅园新村纪念馆",
+          "distanceM": 75,
+          "location": "118.801620,32.042334",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_mochou_lake",
+      "name": "莫愁湖公园",
+      "cat": "park",
+      "area": "建邺区 · 莫愁湖",
+      "wgs": {
+        "lat": 32.03717,
+        "lng": 118.756725
+      },
+      "gcj": {
+        "lng": 118.761948242188,
+        "lat": 32.03513671875
+      },
+      "status": "matched",
+      "query": "莫愁湖公园",
+      "amap": {
+        "id": "B00190BBTX",
+        "name": "莫愁湖公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "莫愁湖街道莫愁湖街道水西门大街132号莫愁湖",
+        "location": {
+          "lng": 118.759541,
+          "lat": 32.03383
+        },
+        "tel": "025-86661790;025-86612802",
+        "cityname": "南京市",
+        "adname": "建邺区",
+        "business_area": "汉中门",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "5月至9月周二至周日:06:00-21:00；1月至4月,10月至12月07:00-21:00；主景区开放时间:华严庵、胜棋楼、莫愁女故居、莫愁水院、棋文馆、家具馆08:30-17:00(除法定节假日,),2026年2月15日-2026年2月23日07:00-21:00,2026年2月15日-2026年2月23日07:00-21:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/23b14a7a89abc66d00fcdda4266105af"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/e535104f4a94986e88f459a9385a180e"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/f5e9a31bd41bb02d1c80b1e561c6255e"
+          }
+        ],
+        "distanceM": 269,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "莫愁湖公园",
+          "address": "莫愁湖街道莫愁湖街道水西门大街132号莫愁湖",
+          "distanceM": 269,
+          "location": "118.759541,32.033830",
+          "nameScore": 3
+        },
+        {
+          "name": "莫愁湖公园-三道桥码头",
+          "address": "水西门大街132号莫愁湖公园内(南侧)",
+          "distanceM": 171,
+          "location": "118.761545,32.033636",
+          "nameScore": 2
+        },
+        {
+          "name": "莫愁湖公园-莫愁女",
+          "address": "汉中门大街36号",
+          "distanceM": 227,
+          "location": "118.763241,32.033413",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_qingliangshan",
+      "name": "清凉山公园",
+      "cat": "park",
+      "area": "鼓楼区 · 清凉山",
+      "wgs": {
+        "lat": 32.05215,
+        "lng": 118.755493
+      },
+      "gcj": {
+        "lng": 118.760717773438,
+        "lat": 32.050113661025
+      },
+      "status": "matched",
+      "query": "清凉山公园",
+      "amap": {
+        "id": "B001905364",
+        "name": "清凉山公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "清凉山路83号(近广州路)",
+        "location": {
+          "lng": 118.760835,
+          "lat": 32.050132
+        },
+        "tel": "025-83726592",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 06:00-18:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/97cf48450343e62f85e555915caa122e"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/e4d2d81c676f30d2eac7fd92b3598e4d"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/691f0856e577cd380000003586336535?type=pic"
+          }
+        ],
+        "distanceM": 11,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "清凉山公园",
+          "address": "清凉山路83号(近广州路)",
+          "distanceM": 11,
+          "location": "118.760835,32.050132",
+          "nameScore": 3
+        },
+        {
+          "name": "清凉山公园-银杏谷乐园",
+          "address": "清凉山公园内",
+          "distanceM": 13,
+          "location": "118.760833,32.050056",
+          "nameScore": 2
+        },
+        {
+          "name": "清凉山公园-还阳泉",
+          "address": "清凉山83号清凉山公园内",
+          "distanceM": 69,
+          "location": "118.760447,32.049535",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_gulin_park",
+      "name": "古林公园",
+      "cat": "park",
+      "area": "鼓楼区 · 古林",
+      "wgs": {
+        "lat": 32.0687,
+        "lng": 118.748217
+      },
+      "gcj": {
+        "lng": 118.75344373915,
+        "lat": 32.066660427518
+      },
+      "status": "matched",
+      "query": "古林公园",
+      "amap": {
+        "id": "B00190BBS0",
+        "name": "古林公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "宁海路街道虎踞北路21号",
+        "location": {
+          "lng": 118.753335,
+          "lat": 32.066877
+        },
+        "tel": "025-83700646",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "虎踞北路",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 06:30-20:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/5827ccd80c0892dc0000002739980978?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BBS0/comment/file_media_Photo_4202_IMG_1771293924_3946_IMG_20260217_100344_jpg_ss__1771311892137_69449929.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BBS0/comment/C8D7258D_6849_4AAF_8AE5_BA77894E6CFB_L0_001_1284_194_1766115871043_13721901.jpg"
+          }
+        ],
+        "distanceM": 26,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "古林公园",
+          "address": "宁海路街道虎踞北路21号",
+          "distanceM": 26,
+          "location": "118.753335,32.066877",
+          "nameScore": 3
+        },
+        {
+          "name": "古林公园-拜梅亭",
+          "address": "宁海路街道虎踞北路21号古林公园",
+          "distanceM": 72,
+          "location": "118.753937,32.066169",
+          "nameScore": 2
+        },
+        {
+          "name": "古林公园-嬉水园",
+          "address": "宁海路街道虎踞北路21号古林公园",
+          "distanceM": 88,
+          "location": "118.753518,32.067446",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_guofang_park",
+      "name": "国防园",
+      "cat": "park",
+      "area": "鼓楼区 · 清凉门",
+      "wgs": {
+        "lat": 32.052783,
+        "lng": 118.749655
+      },
+      "gcj": {
+        "lng": 118.754880371094,
+        "lat": 32.050747070313
+      },
+      "status": "matched",
+      "query": "国防园",
+      "amap": {
+        "id": "B00190513A",
+        "name": "南京国防园",
+        "type": "风景名胜;风景名胜;省级景点",
+        "typecode": "110203",
+        "address": "虎踞路87号",
+        "location": {
+          "lng": 118.754817,
+          "lat": 32.051368
+        },
+        "tel": "025-83313180;025-83728950",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "草场门",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周日 06:00-18:00 最晚进入17:00；展馆每周一不开放。",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/fc50b9fa8893af18cffb2eb4d76b14a2"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/02f4efe0c0254e900a384a756c783bcf"
+          },
+          {
+            "title": "外景图",
+            "url": "http://store.is.autonavi.com/showpic/3a38b41ecf52e4d2d3f9c54caf3fd89c"
+          }
+        ],
+        "distanceM": 69,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "南京国防园",
+          "address": "虎踞路87号",
+          "distanceM": 69,
+          "location": "118.754817,32.051368",
+          "nameScore": 2
+        },
+        {
+          "name": "公共厕所(南京国防园)",
+          "address": "虎踞路87号国防教育馆附近",
+          "distanceM": 118,
+          "location": "118.754591,32.051777",
+          "nameScore": 2
+        },
+        {
+          "name": "南京国防园-国防教育馆",
+          "address": "虎踞路87号南京国防园",
+          "distanceM": 118,
+          "location": "118.754332,32.051705",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_jiuhuashan",
+      "name": "九华山公园",
+      "cat": "park",
+      "area": "玄武区 · 九华山",
+      "wgs": {
+        "lat": 32.0616,
+        "lng": 118.803314
+      },
+      "gcj": {
+        "lng": 118.808486056858,
+        "lat": 32.059513888889
+      },
+      "status": "matched",
+      "query": "九华山公园",
+      "amap": {
+        "id": "B00190001A",
+        "name": "九华山公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "九华山路21号钟山风景名胜区玄武湖景区内南侧(九华山地铁站1号口步行310米)",
+        "location": {
+          "lng": 118.807313,
+          "lat": 32.059806
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "4.5",
+        "cost": "",
+        "openTime": "周一至周日 09:00-18:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/e472ba22aa3480d7a5e7080eabee3b75"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190001A/comment/content_media_external_file_1000021563_ss__1764479506859_82915021.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190001A/comment/f638d71420672ac8ef1460cf5a0ce9ed_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 115,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "九华山公园",
+          "address": "九华山路21号钟山风景名胜区玄武湖景区内南侧(九华山地铁站1号口步行310米)",
+          "distanceM": 115,
+          "location": "118.807313,32.059806",
+          "nameScore": 3
+        },
+        {
+          "name": "九华山公园-千年龟",
+          "address": "九华山公园内(东侧)",
+          "distanceM": 40,
+          "location": "118.808904,32.059548",
+          "nameScore": 2
+        },
+        {
+          "name": "九华山公园-甘露亭(九华山)",
+          "address": "九华山路21号",
+          "distanceM": 56,
+          "location": "118.808844,32.059115",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_qinglv_park",
+      "name": "情侣园",
+      "cat": "park",
+      "area": "玄武区 · 玄武湖",
+      "wgs": {
+        "lat": 32.072127,
+        "lng": 118.805193
+      },
+      "gcj": {
+        "lng": 118.810362684462,
+        "lat": 32.070035264757
+      },
+      "status": "matched",
+      "query": "情侣园",
+      "amap": {
+        "id": "B0FFGZJ41R",
+        "name": "情侣园游乐场",
+        "type": "体育休闲服务;休闲场所;游乐场",
+        "typecode": "080501",
+        "address": "龙蟠路100号玄武湖情侣园内",
+        "location": {
+          "lng": 118.810283,
+          "lat": 32.06995
+        },
+        "tel": "025-85410103;13372020358",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "玄武湖",
+        "rating": "4.5",
+        "cost": "129.00",
+        "openTime": "周一至周日 09:00-18:30",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/f8f10fa6913197540000009212174332?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFGZJ41R/comment/content_media_external_images_media_35996_ss__1725723447383_90656668.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/08ac88ceb9e956b70000006330298475?type=pic"
+          }
+        ],
+        "distanceM": 12,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "情侣园游乐场",
+          "address": "龙蟠路100号玄武湖情侣园内",
+          "distanceM": 12,
+          "location": "118.810283,32.069950",
+          "nameScore": 2
+        },
+        {
+          "name": "蜜雪冰城(玄武湖情侣园店)",
+          "address": "龙蟠路100号",
+          "distanceM": 47,
+          "location": "118.810015,32.070341",
+          "nameScore": 2
+        },
+        {
+          "name": "情侣园生态烧烤",
+          "address": "龙蟠路100号",
+          "distanceM": 56,
+          "location": "118.809925,32.070375",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_baima_park",
+      "name": "白马公园",
+      "cat": "park",
+      "area": "玄武区 · 太平门",
+      "wgs": {
+        "lat": 32.06321,
+        "lng": 118.811667
+      },
+      "gcj": {
+        "lng": 118.816823187935,
+        "lat": 32.06110921224
+      },
+      "status": "matched",
+      "query": "白马公园",
+      "amap": {
+        "id": "B00190517A",
+        "name": "白马公园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "锁金村街道白马山庄1号(近龙蟠路)",
+        "location": {
+          "lng": 118.816692,
+          "lat": 32.060725
+        },
+        "tel": "025-85408062",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "1月至2月,12月 周一至周日 06:00-21:00；3月至11月 周一至周日 06:00-22:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/bb742e585e9dd8a4df84e6cfcb55b305"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/1ee72faf741762e8063d9d6f56acc321"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/5e473bff2d4b8794abbbc4680e08024b"
+          }
+        ],
+        "distanceM": 44,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "白马公园",
+          "address": "锁金村街道白马山庄1号(近龙蟠路)",
+          "distanceM": 44,
+          "location": "118.816692,32.060725",
+          "nameScore": 3
+        },
+        {
+          "name": "白马公园-宋代石羊",
+          "address": "锁金村街道白马山庄1号(近龙蟠路)白马公园",
+          "distanceM": 25,
+          "location": "118.816728,32.061321",
+          "nameScore": 2
+        },
+        {
+          "name": "白马公园-螭首龟趺",
+          "address": "锁金村街道白马山庄1号(近龙蟠路)白马公园",
+          "distanceM": 48,
+          "location": "118.816317,32.061112",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_botanical_garden",
+      "name": "中山植物园",
+      "cat": "park",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.057734,
+        "lng": 118.828279
+      },
+      "gcj": {
+        "lng": 118.833399793837,
+        "lat": 32.055603569879
+      },
+      "status": "matched",
+      "query": "中山植物园",
+      "amap": {
+        "id": "B0FFHLP8ZQ",
+        "name": "南京中山植物园-百花园",
+        "type": "风景名胜;风景名胜相关;旅游景点",
+        "typecode": "110000",
+        "address": "南京中山植物园内",
+        "location": {
+          "lng": 118.833851,
+          "lat": 32.055463
+        },
+        "tel": "025-84347036",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "",
+        "rating": "3.2",
+        "cost": "",
+        "openTime": "周一至周日 08:30-17:30 最晚进入17:30；售票时间:08:30-17:00 停止售票:17:00 停止入场:17:30",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFHLP8ZQ/comment/97b8330e7e16be51d58c38f169eb0df9_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFHLP8ZQ/comment/8855dabe64b34fb02ae36a4830583c0b_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFHLP8ZQ/comment/ca900921913310724b04fea97e6b4d71_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 45,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "南京中山植物园-百花园",
+          "address": "南京中山植物园内",
+          "distanceM": 45,
+          "location": "118.833851,32.055463",
+          "nameScore": 2
+        },
+        {
+          "name": "中山植物园桥世界",
+          "address": "南京中山植物园",
+          "distanceM": 75,
+          "location": "118.833142,32.054970",
+          "nameScore": 2
+        },
+        {
+          "name": "南京中山植物园-铁索桥",
+          "address": "前湖后村1号南京中山植物园内",
+          "distanceM": 75,
+          "location": "118.833225,32.054946",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_yueya_lake",
+      "name": "月牙湖",
+      "cat": "park",
+      "area": "秦淮区 · 月牙湖",
+      "wgs": {
+        "lat": 32.031306,
+        "lng": 118.822766
+      },
+      "gcj": {
+        "lng": 118.827896050348,
+        "lat": 32.029191894532
+      },
+      "status": "matched",
+      "query": "月牙湖",
+      "amap": {
+        "id": "B00190ZFOY",
+        "name": "月牙湖",
+        "type": "地名地址信息;自然地名;湖泊|地名地址信息;热点地名;热点地名",
+        "typecode": "190205|190700",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.827512,
+          "lat": 32.032393
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "月牙湖",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/54c0e0ea68e5e73a5eceee91c04fdc03"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/bda7e91993c9b64752c7dd9e2fad2db0"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/f4d9a3d3528464461af8d43f4ea329c9"
+          }
+        ],
+        "distanceM": 358,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "月牙湖",
+          "address": "秦淮区",
+          "distanceM": 358,
+          "location": "118.827512,32.032393",
+          "nameScore": 3
+        },
+        {
+          "name": "月牙湖公园",
+          "address": "后标营路164号钟山风景名胜区内西南侧",
+          "distanceM": 136,
+          "location": "118.828757,32.030173",
+          "nameScore": 2
+        },
+        {
+          "name": "月牙湖桥",
+          "address": "秦淮区",
+          "distanceM": 169,
+          "location": "118.828115,32.030698",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_wulongtan",
+      "name": "乌龙潭公园",
+      "cat": "park",
+      "area": "鼓楼区 · 乌龙潭",
+      "wgs": {
+        "lat": 32.047835,
+        "lng": 118.76059
+      },
+      "gcj": {
+        "lng": 118.765812717014,
+        "lat": 32.045798068577
+      },
+      "status": "matched",
+      "query": "乌龙潭公园",
+      "amap": {
+        "id": "B001905179",
+        "name": "乌龙潭公园",
+        "type": "风景名胜;风景名胜;省级景点",
+        "typecode": "110203",
+        "address": "广州路215号(省人民医院对面)",
+        "location": {
+          "lng": 118.766475,
+          "lat": 32.046112
+        },
+        "tel": "025-83714809",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "汉中门",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周日 06:00-21:30",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001905179/comment/content_media_external_file_652_1749178288728_44625563.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/ac45dd359eedf8870000002349396991?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B001905179/comment/content_media_external_file_1000008435_ss__1766832133135_54821259.jpg"
+          }
+        ],
+        "distanceM": 72,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "乌龙潭公园",
+          "address": "广州路215号(省人民医院对面)",
+          "distanceM": 72,
+          "location": "118.766475,32.046112",
+          "nameScore": 3
+        },
+        {
+          "name": "乌龙潭",
+          "address": "鼓楼区",
+          "distanceM": 35,
+          "location": "118.765691,32.045499",
+          "nameScore": 2
+        },
+        {
+          "name": "乌龙潭公园-紫菱洲",
+          "address": "广州路217号乌龙潭公园内(西侧)",
+          "distanceM": 38,
+          "location": "118.766049,32.046075",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_xiaotaoyuan",
+      "name": "小桃园",
+      "cat": "park",
+      "area": "鼓楼区 · 小桃园",
+      "wgs": {
+        "lat": 32.082627,
+        "lng": 118.741601
+      },
+      "gcj": {
+        "lng": 118.74682671441,
+        "lat": 32.08058295356
+      },
+      "status": "matched",
+      "query": "小桃园",
+      "amap": {
+        "id": "B00190BTV1",
+        "name": "小桃园",
+        "type": "风景名胜;公园广场;公园",
+        "typecode": "110101",
+        "address": "中山北路",
+        "location": {
+          "lng": 118.745479,
+          "lat": 32.078714
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "挹江门",
+        "rating": "4.6",
+        "cost": "",
+        "openTime": "周一至周日 00:00-24:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/8daaa9236b812ef4ec55119e3eaeab75"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/4818c83a8e08520b85e8e95113291f95"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/598d1ac8c5f905fc15b99efb6d7ad332"
+          }
+        ],
+        "distanceM": 244,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "小桃园",
+          "address": "中山北路",
+          "distanceM": 244,
+          "location": "118.745479,32.078714",
+          "nameScore": 3
+        },
+        {
+          "name": "新小桃园路",
+          "address": "鼓楼区",
+          "distanceM": 62,
+          "location": "118.747408,32.080330",
+          "nameScore": 2
+        },
+        {
+          "name": "小桃园绿道",
+          "address": "鼓楼区",
+          "distanceM": 92,
+          "location": "118.745930,32.080915",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_pipa_lake",
+      "name": "琵琶湖",
+      "cat": "park",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.055545,
+        "lng": 118.817194
+      },
+      "gcj": {
+        "lng": 118.822337782119,
+        "lat": 32.053435872396
+      },
+      "status": "matched",
+      "query": "琵琶湖",
+      "amap": {
+        "id": "B0FFFS03HA",
+        "name": "琵琶湖",
+        "type": "地名地址信息;自然地名;湖泊",
+        "typecode": "190205",
+        "address": "玄武区",
+        "location": {
+          "lng": 118.822146,
+          "lat": 32.053414
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "九华山",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/7739ff97f802e28e0000002884142462?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/727b680d63ea45700000002884152140?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFFS03HA/comment/content_media_external_file_1000095835_ss__1768577496263_70583682.jpg"
+          }
+        ],
+        "distanceM": 18,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "琵琶湖",
+          "address": "玄武区",
+          "distanceM": 18,
+          "location": "118.822146,32.053414",
+          "nameScore": 3
+        },
+        {
+          "name": "琵琶湖公园-观景平台",
+          "address": "琵琶湖景区",
+          "distanceM": 96,
+          "location": "118.822427,32.054294",
+          "nameScore": 2
+        },
+        {
+          "name": "琵琶湖景区地面停车场(出口)",
+          "address": "太平门路与天文台路交叉口南300米",
+          "distanceM": 213,
+          "location": "118.822538,32.055346",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_qianhu",
+      "name": "前湖",
+      "cat": "park",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.050321,
+        "lng": 118.825424
+      },
+      "gcj": {
+        "lng": 118.830550401476,
+        "lat": 32.048197699653
+      },
+      "status": "matched",
+      "query": "前湖",
+      "amap": {
+        "id": "B0FFFEDEWA",
+        "name": "前湖",
+        "type": "地名地址信息;自然地名;湖泊",
+        "typecode": "190205",
+        "address": "玄武区",
+        "location": {
+          "lng": 118.830766,
+          "lat": 32.047882
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/c7f614dd1f66a1800000000699702927?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/a69433d52703c06fe24564d43ebc9ba3"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/d97848f264b036a00000000699724427?type=pic"
+          }
+        ],
+        "distanceM": 41,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "前湖",
+          "address": "玄武区",
+          "distanceM": 41,
+          "location": "118.830766,32.047882",
+          "nameScore": 3
+        },
+        {
+          "name": "南京城墙前湖处豁口",
+          "address": "南京中山植物园(明陵路西)",
+          "distanceM": 193,
+          "location": "118.830170,32.046490",
+          "nameScore": 2
+        },
+        {
+          "name": "前湖公园",
+          "address": "石象路7号中山陵园风景区",
+          "distanceM": 224,
+          "location": "118.832920,32.048092",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_meihua_mountain",
+      "name": "梅花山",
+      "cat": "park",
+      "area": "玄武区 · 紫金山",
+      "wgs": {
+        "lat": 32.055763,
+        "lng": 118.835155
+      },
+      "gcj": {
+        "lng": 118.840260959202,
+        "lat": 32.053620062935
+      },
+      "status": "matched",
+      "query": "梅花山",
+      "amap": {
+        "id": "B001905156",
+        "name": "梅花山",
+        "type": "风景名胜;风景名胜;风景名胜",
+        "typecode": "110200",
+        "address": "孝陵卫街道明孝陵景区内南京国际会议大酒店商务楼西北",
+        "location": {
+          "lng": 118.840594,
+          "lat": 32.050478
+        },
+        "tel": "025-84442880",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "1月至2月,11月至12月 周一至周日 06:30-18:00；3月至10月 周一至周日 06:30-18:30",
+        "photos": [
+          {
+            "title": "梅花山[南京梅花山]",
+            "url": "http://store.is.autonavi.com/showpic/4e99e065e55d54ce135c73528b139c70"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/0e4c80e161a563fecffd36e3291a4147"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/7a943c642b4b50d358f0cc2dcfc47d2a"
+          }
+        ],
+        "distanceM": 351,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "梅花山",
+          "address": "孝陵卫街道明孝陵景区内南京国际会议大酒店商务楼西北",
+          "distanceM": 351,
+          "location": "118.840594,32.050478",
+          "nameScore": 3
+        },
+        {
+          "name": "梅花山",
+          "address": "河滨南路附近",
+          "distanceM": 16195,
+          "location": "118.715493,31.953537",
+          "nameScore": 3
+        },
+        {
+          "name": "梅花山",
+          "address": "傅家边农业科技园东北侧360米",
+          "distanceM": 57228,
+          "location": "119.029645,31.564764",
+          "nameScore": 3
+        }
+      ]
+    },
+    {
+      "id": "p_stone_city",
+      "name": "石头城",
+      "cat": "park",
+      "area": "鼓楼区 · 石头城",
+      "wgs": {
+        "lat": 32.052524,
+        "lng": 118.747671
+      },
+      "gcj": {
+        "lng": 118.752896050348,
+        "lat": 32.050488009983
+      },
+      "status": "matched",
+      "query": "石头城",
+      "amap": {
+        "id": "BZAPQE013T",
+        "name": "石头城",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "鼓楼区",
+        "location": {
+          "lng": 118.751522,
+          "lat": 32.0561
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "草场门",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BZAPQE013T/comment/b13d85ffe6d12db99cbc4135b127917a_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BZAPQE013T/comment/6447343d5df9c17ee31783a4070b5300_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/BZAPQE013T/comment/4f850b2fee6d9c0a08031477d638e7c5_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 637,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "石头城",
+          "address": "鼓楼区",
+          "distanceM": 637,
+          "location": "118.751522,32.056100",
+          "nameScore": 3
+        },
+        {
+          "name": "南京石头城遗址公园-龟石群",
+          "address": "石头城1号石头城遗址公园内",
+          "distanceM": 13,
+          "location": "118.752770,32.050535",
+          "nameScore": 2
+        },
+        {
+          "name": "南京石头城遗址公园石头城镜子湖",
+          "address": "石头城1号石头城遗址公园内",
+          "distanceM": 78,
+          "location": "118.752414,32.051057",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_hunan_road",
+      "name": "湖南路",
+      "cat": "street",
+      "area": "鼓楼区 · 湖南路",
+      "wgs": {
+        "lat": 32.071289,
+        "lng": 118.775647
+      },
+      "gcj": {
+        "lng": 118.780861273872,
+        "lat": 32.069236924914
+      },
+      "status": "matched",
+      "query": "湖南路",
+      "amap": {
+        "id": "B0FFGQ79T1",
+        "name": "湖南路",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "鼓楼区",
+        "location": {
+          "lng": 118.777984,
+          "lat": 32.069014
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "中央路",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [],
+        "distanceM": 272,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "湖南路",
+          "address": "鼓楼区",
+          "distanceM": 272,
+          "location": "118.777984,32.069014",
+          "nameScore": 3
+        },
+        {
+          "name": "湖南路",
+          "address": "玄武区",
+          "distanceM": 316,
+          "location": "118.784217,32.069338",
+          "nameScore": 3
+        },
+        {
+          "name": "湖南路",
+          "address": "鼓楼区",
+          "distanceM": 461,
+          "location": "118.776197,32.067975",
+          "nameScore": 3
+        }
+      ]
+    },
+    {
+      "id": "p_shiziqiao",
+      "name": "狮子桥步行街",
+      "cat": "street",
+      "area": "鼓楼区 · 湖南路",
+      "wgs": {
+        "lat": 32.069691,
+        "lng": 118.772625
+      },
+      "gcj": {
+        "lng": 118.777841796875,
+        "lat": 32.06764187283
+      },
+      "status": "matched",
+      "query": "狮子桥步行街",
+      "amap": {
+        "id": "B0IA3YN2QG",
+        "name": "狮子桥步行街",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "鼓楼区",
+        "location": {
+          "lng": 118.777732,
+          "lat": 32.068114
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "鼓楼区",
+        "business_area": "中央路",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [],
+        "distanceM": 54,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "狮子桥步行街",
+          "address": "鼓楼区",
+          "distanceM": 54,
+          "location": "118.777732,32.068114",
+          "nameScore": 3
+        },
+        {
+          "name": "麦兜冰玉米工坊(南京狮子桥步行街店)",
+          "address": "湖南路街道湖南路狮子桥步行街38号",
+          "distanceM": 19,
+          "location": "118.778025,32.067575",
+          "nameScore": 2
+        },
+        {
+          "name": "格林豪泰酒店(南京玄武湖狮子桥步行街店)",
+          "address": "狮子桥32号(青春广场地铁站1号口步行470米)",
+          "distanceM": 76,
+          "location": "118.777816,32.068327",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_sanqiba_lane",
+      "name": "三七八巷",
+      "cat": "street",
+      "area": "秦淮区 · 三七八巷",
+      "wgs": {
+        "lat": 32.01743,
+        "lng": 118.785867
+      },
+      "gcj": {
+        "lng": 118.791063910591,
+        "lat": 32.015378960504
+      },
+      "status": "matched",
+      "query": "三七八巷",
+      "amap": {
+        "id": "B00190BP4A",
+        "name": "三七八巷",
+        "type": "商务住宅;住宅区;住宅小区|地名地址信息;交通地名;道路名",
+        "typecode": "120302|190301",
+        "address": "饮虹园37号(武定门地铁站3号口步行370米)",
+        "location": {
+          "lng": 118.790913,
+          "lat": 32.015373
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BP4A/comment/content_media_external_file_42682_ss__1749424927146_90963334.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BP4A/comment/1188E4F0_B40B_40DB_9536_CA1592ED1273_L0_001_1500_200_1763023240411_07373391.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B00190BP4A/comment/0DAE157A_1245_48F7_B9B6_53457AD711D7_L0_001_1500_200_1767919561576_50585493.jpg"
+          }
+        ],
+        "distanceM": 14,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "三七八巷",
+          "address": "饮虹园37号(武定门地铁站3号口步行370米)",
+          "distanceM": 14,
+          "location": "118.790913,32.015373",
+          "nameScore": 3
+        },
+        {
+          "name": "三七八巷",
+          "address": "秦淮区",
+          "distanceM": 22,
+          "location": "118.790912,32.015234",
+          "nameScore": 3
+        },
+        {
+          "name": "田园清蒸草鸡(三七八巷店)",
+          "address": "三七八巷长乐路136号边",
+          "distanceM": 12,
+          "location": "118.790943,32.015409",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_kexiang",
+      "name": "科巷",
+      "cat": "street",
+      "area": "秦淮区 · 科巷",
+      "wgs": {
+        "lat": 32.041183,
+        "lng": 118.791213
+      },
+      "gcj": {
+        "lng": 118.796404079862,
+        "lat": 32.039120008681
+      },
+      "status": "matched",
+      "query": "科巷",
+      "amap": {
+        "id": "B0IA3MP3IP",
+        "name": "科巷",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.79607,
+          "lat": 32.039213
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "大行宫",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0IA3MP3IP/comment/58bdf6e8a5797c8dd956ef7ad6d43ced_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0IA3MP3IP/comment/41177a2af1497b31a8f955d96d25c7f6_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0IA3MP3IP/comment/58642679976f942a69841ec1e13ce47d_2048_2048_80.jpg"
+          }
+        ],
+        "distanceM": 33,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "科巷",
+          "address": "秦淮区",
+          "distanceM": 33,
+          "location": "118.796070,32.039213",
+          "nameScore": 3
+        },
+        {
+          "name": "科巷",
+          "address": "西白菜园与东白菜园交叉口东北40米",
+          "distanceM": 98,
+          "location": "118.795753,32.038428",
+          "nameScore": 3
+        },
+        {
+          "name": "科巷美食市集",
+          "address": "西白菜园29号(大行宫地铁站出入口步行270米)",
+          "distanceM": 9,
+          "location": "118.796370,32.039046",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_pingshi_street",
+      "name": "评事街",
+      "cat": "street",
+      "area": "秦淮区 · 评事街",
+      "wgs": {
+        "lat": 32.032604,
+        "lng": 118.775236
+      },
+      "gcj": {
+        "lng": 118.780446777344,
+        "lat": 32.030561252171
+      },
+      "status": "matched",
+      "query": "评事街",
+      "amap": {
+        "id": "B0FFGQ5Q89",
+        "name": "评事街",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.779752,
+          "lat": 32.028534
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "升州路",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/603166487947de7ee0cea4f901f0f7b2"
+          },
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/8d80682f8845dc8bb032dc27668236bb"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/67ec2efa717f55f42c9d6fc062f87778"
+          }
+        ],
+        "distanceM": 235,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "评事街",
+          "address": "秦淮区",
+          "distanceM": 235,
+          "location": "118.779752,32.028534",
+          "nameScore": 3
+        },
+        {
+          "name": "建邺路与评事街交叉口",
+          "address": "秦淮区",
+          "distanceM": 10,
+          "location": "118.780484,32.030644",
+          "nameScore": 2
+        },
+        {
+          "name": "章云板鸭店(评事街店)",
+          "address": "评事街208号(张府园地铁站4号口步行440米)",
+          "distanceM": 52,
+          "location": "118.780328,32.030101",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_xinanli",
+      "name": "熙南里文化街区",
+      "cat": "street",
+      "area": "秦淮区 · 熙南里",
+      "wgs": {
+        "lat": 32.026888,
+        "lng": 118.776148
+      },
+      "gcj": {
+        "lng": 118.781357421875,
+        "lat": 32.024845377605
+      },
+      "status": "matched",
+      "query": "熙南里文化街区",
+      "amap": {
+        "id": "B00190B51H",
+        "name": "熙南里",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "中山南路400号(三山街地铁站2出口)",
+        "location": {
+          "lng": 118.781344,
+          "lat": 32.024967
+        },
+        "tel": "025-52217104",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "升州路",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 00:00-24:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/53b135e8afb00d970000002655930403?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFGX7QIQ/comment/274107e15cc8bf07cee035f3fa3f2161_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/a500f0548289c1a60000003171634976?type=pic"
+          }
+        ],
+        "distanceM": 14,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "熙南里",
+          "address": "中山南路400号(三山街地铁站2出口)",
+          "distanceM": 14,
+          "location": "118.781344,32.024967",
+          "nameScore": 2
+        },
+        {
+          "name": "熙南里文化街区地上停车场(暂停营业)",
+          "address": "老坊巷与升州路交叉口北80米",
+          "distanceM": 175,
+          "location": "118.779736,32.025610",
+          "nameScore": 2
+        },
+        {
+          "name": "熙南里文化街区地面停车场(出入口)",
+          "address": "中山南路398号(三山街地铁站3号口步行340米)",
+          "distanceM": 205,
+          "location": "118.782758,32.026251",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_deji_plaza",
+      "name": "德基广场",
+      "cat": "street",
+      "area": "玄武区 · 新街口",
+      "wgs": {
+        "lat": 32.045086,
+        "lng": 118.779713
+      },
+      "gcj": {
+        "lng": 118.784920518664,
+        "lat": 32.043036024306
+      },
+      "status": "matched",
+      "query": "德基广场",
+      "amap": {
+        "id": "B0FFGCYLKO",
+        "name": "德基广场一期",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "中山路18号(新街口地铁站7号口旁)",
+        "location": {
+          "lng": 118.784955,
+          "lat": 32.043132
+        },
+        "tel": "4008289598",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "新街口",
+        "rating": "4.7",
+        "cost": "",
+        "openTime": "周一至周日 10:00-22:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "http://store.is.autonavi.com/showpic/f7e518731a960316c7bfa8f74e3f80e1"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFGCYLKO/comment/content_media_external_file_115025_ss__1765512923825_53630248.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/comment/content_service__1769567912860_79474679_1769567915410_94720845.jpg"
+          }
+        ],
+        "distanceM": 11,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "德基广场一期",
+          "address": "中山路18号(新街口地铁站7号口旁)",
+          "distanceM": 11,
+          "location": "118.784955,32.043132",
+          "nameScore": 2
+        },
+        {
+          "name": "M江苏南京德基广场",
+          "address": "德基一期五楼L501MM",
+          "distanceM": 34,
+          "location": "118.784639,32.042838",
+          "nameScore": 2
+        },
+        {
+          "name": "德基广场一期(三楼L313PORTS)",
+          "address": "中山路18号德基广场一期",
+          "distanceM": 51,
+          "location": "118.785090,32.043468",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_golden_eagle",
+      "name": "金鹰国际购物中心",
+      "cat": "street",
+      "area": "秦淮区 · 新街口",
+      "wgs": {
+        "lat": 32.052995,
+        "lng": 118.779434
+      },
+      "gcj": {
+        "lng": 118.784642198351,
+        "lat": 32.050943467882
+      },
+      "status": "matched",
+      "query": "金鹰国际购物中心",
+      "amap": {
+        "id": "B0LRLNMDNU",
+        "name": "JY(金鹰国际购物中心珠江路店)",
+        "type": "购物服务;服装鞋帽皮具店;品牌服装店",
+        "typecode": "061101",
+        "address": "珠江路1号金鹰国际购物中心珠江路店F3层",
+        "location": {
+          "lng": 118.784828,
+          "lat": 32.050785
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "南大",
+        "rating": "3.8",
+        "cost": "",
+        "openTime": "周一至周日 10:00-22:00",
+        "photos": [],
+        "distanceM": 25,
+        "matchType": "contains"
+      },
+      "alternatives": [
+        {
+          "name": "JY(金鹰国际购物中心珠江路店)",
+          "address": "珠江路1号金鹰国际购物中心珠江路店F3层",
+          "distanceM": 25,
+          "location": "118.784828,32.050785",
+          "nameScore": 2
+        },
+        {
+          "name": "金鹰国际购物中心(珠江路店)",
+          "address": "珠江路1号(珠江路地铁站出入口步行140米)",
+          "distanceM": 31,
+          "location": "118.784957,32.050861",
+          "nameScore": 2
+        },
+        {
+          "name": "珠江路金鹰摆摊点(金鹰国际购物中心珠江路店)",
+          "address": "珠江路1号金鹰国际购物中心珠江路店F1层",
+          "distanceM": 50,
+          "location": "118.784360,32.050559",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_hongmiao",
+      "name": "红庙",
+      "cat": "street",
+      "area": "秦淮区 · 红庙",
+      "wgs": {
+        "lat": 32.049661,
+        "lng": 118.785094
+      },
+      "gcj": {
+        "lng": 118.790294867622,
+        "lat": 32.0476038954
+      },
+      "status": "matched",
+      "query": "红庙",
+      "amap": {
+        "id": "B0FFGQ62QV",
+        "name": "红庙",
+        "type": "购物服务;特色商业街;步行街|地名地址信息;交通地名;道路名|生活服务;生活服务场所;生活服务场所",
+        "typecode": "061001|190301|070000",
+        "address": "安将军巷与相府营交叉口北80米",
+        "location": {
+          "lng": 118.790175,
+          "lat": 32.047675
+        },
+        "tel": "13813834315",
+        "cityname": "南京市",
+        "adname": "玄武区",
+        "business_area": "梅园",
+        "rating": "4.8",
+        "cost": "",
+        "openTime": "周一至周日 07:00-18:00",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/baff85e558bd5bb10000003437338249?type=pic"
+          },
+          {
+            "title": [],
+            "url": "https://aos-comment.amap.com/B0FFGQ62QV/comment/056505f43533a042c5dbe81783d948c3_2048_2048_80.jpg"
+          },
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/3b0efb697d7e27580000000734584981?type=pic"
+          }
+        ],
+        "distanceM": 14,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "红庙",
+          "address": "安将军巷与相府营交叉口北80米",
+          "distanceM": 14,
+          "location": "118.790175,32.047675",
+          "nameScore": 3
+        },
+        {
+          "name": "高裕兴港式烧腊(红庙小区店)",
+          "address": "红庙小区6号",
+          "distanceM": 10,
+          "location": "118.790287,32.047690",
+          "nameScore": 2
+        },
+        {
+          "name": "佰人王串串香火锅(红庙街店)",
+          "address": "红庙街9号(洪武北路与交口)",
+          "distanceM": 16,
+          "location": "118.790162,32.047513",
+          "nameScore": 2
+        }
+      ]
+    },
+    {
+      "id": "p_xiaoxihu",
+      "name": "小西湖",
+      "cat": "street",
+      "area": "秦淮区 · 小西湖",
+      "wgs": {
+        "lat": 32.017907,
+        "lng": 118.781937
+      },
+      "gcj": {
+        "lng": 118.787138943143,
+        "lat": 32.015860731337
+      },
+      "status": "matched",
+      "query": "小西湖",
+      "amap": {
+        "id": "BZAPQF03PH",
+        "name": "小西湖",
+        "type": "地名地址信息;交通地名;道路名",
+        "typecode": "190301",
+        "address": "秦淮区",
+        "location": {
+          "lng": 118.786685,
+          "lat": 32.016034
+        },
+        "tel": "",
+        "cityname": "南京市",
+        "adname": "秦淮区",
+        "business_area": "夫子庙",
+        "rating": "",
+        "cost": "",
+        "openTime": "",
+        "photos": [
+          {
+            "title": [],
+            "url": "https://store.is.autonavi.com/showpic/85b826767487f243c6242a7d51a39936"
+          }
+        ],
+        "distanceM": 47,
+        "matchType": "exact"
+      },
+      "alternatives": [
+        {
+          "name": "小西湖",
+          "address": "秦淮区",
+          "distanceM": 47,
+          "location": "118.786685,32.016034",
+          "nameScore": 3
+        },
+        {
+          "name": "安庆馄饨手擀小刀面(小西湖店)",
+          "address": "小西湖12-2号-2",
+          "distanceM": 25,
+          "location": "118.787401,32.015889",
+          "nameScore": 2
+        },
+        {
+          "name": "常乐发屋(小西湖小区店)",
+          "address": "小西湖12号",
+          "distanceM": 31,
+          "location": "118.787468,32.015870",
+          "nameScore": 2
+        }
+      ]
+    }
+  ]
+}

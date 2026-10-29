@@ -1,0 +1,807 @@
+{
+  "generatedAt": "2026-10-29T08:42:55.322Z",
+  "base": "http://127.0.0.1:3000",
+  "caseTotal": 24,
+  "run": 21,
+  "skipped": 3,
+  "pass": 21,
+  "remoteSuccess": 20,
+  "degraded": 0,
+  "schemaValid": 11,
+  "schemaChecked": 11,
+  "hard": {
+    "met": 36,
+    "partial": 0,
+    "violated": 13,
+    "unknown": 1,
+    "rate": 0.7346938775510204
+  },
+  "latencyMs": {
+    "p50": 3862,
+    "p90": 8547
+  },
+  "elapsedMs": 181211,
+  "mock": {
+    "pass": 21,
+    "run": 21,
+    "schemaValid": 11,
+    "schemaChecked": 11,
+    "hardRate": 0.8367346938775511,
+    "p50": 0.33,
+    "p90": 0.58
+  },
+  "results": [
+    {
+      "id": "C01",
+      "title": "信息完整的路线规划",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "时长不超 +5%",
+          "detail": "-17.5%"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 4283,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C02",
+      "title": "缺少城市",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回澄清"
+        },
+        {
+          "ok": true,
+          "name": "缺失项 city"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible"
+    },
+    {
+      "id": "C03",
+      "title": "未指定时长与结束时间",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回澄清"
+        },
+        {
+          "ok": true,
+          "name": "缺失项 durationMin"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible"
+    },
+    {
+      "id": "C04",
+      "title": "预算不足",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "冲突类型=budget",
+          "detail": "budget"
+        },
+        {
+          "ok": true,
+          "name": "冲突有选项"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 4919,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C05",
+      "title": "必去地点与时间冲突",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "冲突类型=time",
+          "detail": "time"
+        },
+        {
+          "ok": true,
+          "name": "冲突有选项"
+        },
+        {
+          "ok": true,
+          "name": "必去包含 颐和路民国公馆区"
+        },
+        {
+          "ok": true,
+          "name": "必去包含 先锋书店（五台山店）"
+        },
+        {
+          "ok": true,
+          "name": "必去包含 老门东历史文化街区"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 2335,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 1,
+        "partial": 0,
+        "violated": 2,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C06",
+      "title": "过短的路线时长",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "地点数 ≤ 2",
+          "detail": "1"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3235,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 2
+      }
+    },
+    {
+      "id": "C07",
+      "title": "极端步行限制",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "步行 ≤ 3km 或 walking 冲突",
+          "detail": "4.91km"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3691,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 1,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 2
+      }
+    },
+    {
+      "id": "C08",
+      "title": "亲子与无障碍",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "无障碍 unknown"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 4067,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "C09",
+      "title": "下雨天气偏好",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "室内点 ≥ 1",
+          "detail": "3"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3287,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 2
+      }
+    },
+    {
+      "id": "C10",
+      "title": "把咖啡馆换成书店（调整）",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (把咖啡馆换成书店)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "changed=true",
+          "detail": "true"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3862,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C11",
+      "title": "保留第一站和最后一站",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (保留第一站和最后一站，调整中间路线)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "首站保持"
+        },
+        {
+          "ok": true,
+          "name": "末站保持"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 9873,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 1,
+        "partial": 0,
+        "violated": 2,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C12",
+      "title": "不存在的地点",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "冲突类型=must_visit",
+          "detail": "must_visit"
+        },
+        {
+          "ok": true,
+          "name": "冲突有选项"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 3775,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C13",
+      "title": "重复的必去地点",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "地点不重复"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 2651,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 3,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C14",
+      "title": "没有数据的城市",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "无可选地点返回空状态/冲突"
+        }
+      ],
+      "error": null,
+      "status": 400,
+      "ms": 3,
+      "code": "INVALID_INPUT",
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": false
+    },
+    {
+      "id": "C15",
+      "title": "AI 服务超时",
+      "mode": "api",
+      "skipped": true,
+      "pass": false,
+      "checks": [],
+      "error": null,
+      "reason": "需要服务端故障注入，由 tests/api 覆盖，不在 core 评测中运行"
+    },
+    {
+      "id": "C16",
+      "title": "AI 返回无效 JSON",
+      "mode": "api",
+      "skipped": true,
+      "pass": false,
+      "checks": [],
+      "error": null,
+      "reason": "需要服务端故障注入，由 tests/api 覆盖，不在 core 评测中运行"
+    },
+    {
+      "id": "C17",
+      "title": "地图 API 失败",
+      "mode": "ui",
+      "skipped": true,
+      "pass": false,
+      "checks": [],
+      "error": null,
+      "reason": "需要 DOM/浏览器环境，由 tests/integration 与手工覆盖"
+    },
+    {
+      "id": "C18",
+      "title": "提示注入",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        }
+      ],
+      "error": null,
+      "note": "按本地解析后的 conditions 调远程；注入文本未直接发给模型",
+      "status": 200,
+      "ms": 5846,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 2
+      }
+    },
+    {
+      "id": "C19",
+      "title": "多轮修改后约束仍成立",
+      "mode": "refine_chain",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (少走一点路)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "Refine Schema (预算控制在 100 元以内)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "Refine Schema (多看一些历史建筑)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "时长不超 +5%",
+          "detail": "-33.8%"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 93807,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 3,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C20",
+      "title": "同一输入重复执行稳定",
+      "mode": "remote",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "返回路线对象"
+        },
+        {
+          "ok": true,
+          "name": "Route 通过 Schema",
+          "detail": ""
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 8359,
+      "code": 0,
+      "degraded": false,
+      "degradeReason": "",
+      "remoteSuccess": true,
+      "provider": "openai-compatible",
+      "schemaOk": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      },
+      "note": "远程 LLM 非确定性；未做两次一致性断言"
+    },
+    {
+      "id": "C21",
+      "title": "少走一点路（调整）",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (少走一点路)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "changed=true",
+          "detail": "true"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 5565,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C22",
+      "title": "预算控制（调整）",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (预算控制在 100 元以内)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "changed=true",
+          "detail": "true"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 7457,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 3,
+        "partial": 0,
+        "violated": 0,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C23",
+      "title": "下雨改室内（调整）",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (下雨了，尽量安排室内活动)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "changed=true",
+          "detail": "true"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 8547,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "C24",
+      "title": "无法识别的调整",
+      "mode": "refine",
+      "skipped": false,
+      "pass": true,
+      "checks": [
+        {
+          "ok": true,
+          "name": "Refine Schema (帮我写一首关于南京的诗)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "name": "changed=false",
+          "detail": "false"
+        }
+      ],
+      "error": null,
+      "status": 200,
+      "ms": 1865,
+      "degraded": false,
+      "remoteSuccess": true,
+      "constraints": {
+        "met": 2,
+        "partial": 0,
+        "violated": 1,
+        "unknown": 0,
+        "total": 3
+      }
+    }
+  ]
+}

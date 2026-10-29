@@ -34,6 +34,9 @@ const DEFAULTS = Object.freeze({
   logLevel: 'info',
   llm: { baseUrl: '', apiKey: '', model: '' },
   coze: { apiToken: '', botId: '', baseUrl: '' },
+  mapProvider: 'mock',
+  amapJsKey: '',
+  amapSecurityCode: '',
   version: PACKAGE_VERSION,
   staticRoot: ROOT,
   promptDir: path.join(ROOT, 'server', 'agent', 'prompts'),
@@ -195,6 +198,20 @@ function resolveConfig(input) {
   ).toLowerCase();
   const logLevel = LOG_LEVELS.indexOf(logLevelRaw) >= 0 ? logLevelRaw : DEFAULTS.logLevel;
 
+  const mapProviderRaw = toStringValue(
+    firstDefined(src.mapProvider, src.MAP_PROVIDER),
+    DEFAULTS.mapProvider
+  ).toLowerCase();
+  const mapProvider = mapProviderRaw === 'amap' ? 'amap' : 'mock';
+  const amapJsKey = toStringValue(
+    firstDefined(src.amapJsKey, src.AMAP_JS_KEY),
+    DEFAULTS.amapJsKey
+  );
+  const amapSecurityCode = toStringValue(
+    firstDefined(src.amapSecurityCode, src.AMAP_SECURITY_CODE),
+    DEFAULTS.amapSecurityCode
+  );
+
   const explicitProvider = toStringValue(
     firstDefined(src.remoteProvider, src.provider),
     ''
@@ -243,6 +260,9 @@ function resolveConfig(input) {
       DEFAULTS.telemetryEnabled
     ),
     logLevel,
+    mapProvider,
+    amapJsKey,
+    amapSecurityCode,
     llm,
     coze,
     version: toStringValue(src.version, DEFAULTS.version),
@@ -266,7 +286,8 @@ function loadConfig(env) {
     'PORT', 'NODE_ENV', 'AGENT_MODE', 'AGENT_TIMEOUT_MS', 'AGENT_FALLBACK',
     'RATE_LIMIT_PER_MIN', 'CORS_ORIGINS', 'TELEMETRY_ENABLED', 'LOG_LEVEL',
     'LLM_BASE_URL', 'LLM_API_KEY', 'LLM_MODEL',
-    'COZE_API_TOKEN', 'COZE_BOT_ID', 'COZE_BASE_URL'
+    'COZE_API_TOKEN', 'COZE_BOT_ID', 'COZE_BASE_URL',
+    'MAP_PROVIDER', 'AMAP_JS_KEY', 'AMAP_SECURITY_CODE'
   ].forEach(key => {
     if (envMap && envMap[key] !== undefined) merged[key] = envMap[key];
   });
@@ -281,6 +302,9 @@ function loadConfig(env) {
     corsOrigins: merged.CORS_ORIGINS,
     telemetryEnabled: merged.TELEMETRY_ENABLED,
     logLevel: merged.LOG_LEVEL,
+    mapProvider: merged.MAP_PROVIDER,
+    amapJsKey: merged.AMAP_JS_KEY,
+    amapSecurityCode: merged.AMAP_SECURITY_CODE,
     llm: {
       baseUrl: merged.LLM_BASE_URL,
       apiKey: merged.LLM_API_KEY,
@@ -295,12 +319,16 @@ function loadConfig(env) {
   });
 }
 
-/** 可以返回给浏览器的非敏感配置。绝不包含 baseUrl / key / token。 */
+/**
+ * 可以返回给浏览器的非敏感配置。
+ * LLM/Coze Key 不返回；Leaflet + 高德栅格瓦片不需要把 AMAP_JS_KEY /
+ * AMAP_SECURITY_CODE 暴露给浏览器。
+ */
 function publicConfig(config) {
   return {
     mode: config.agentMode,
     remoteConfigured: !!config.remoteConfigured,
-    mapProvider: 'mock',
+    mapProvider: config.mapProvider === 'amap' ? 'amap' : 'mock',
     telemetryEnabled: !!config.telemetryEnabled,
     version: config.version
   };

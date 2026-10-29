@@ -13,8 +13,10 @@ const http = require('node:http');
 
 const { createApp } = require('../../server/index.js');
 
-const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
-  + "img-src 'self' data: https:; connect-src 'self'; font-src 'self'; "
+const CSP = "default-src 'self'; script-src 'self' 'unsafe-inline' https://webapi.amap.com https://*.amap.com https://unpkg.com; "
+  + "style-src 'self' 'unsafe-inline' https://webapi.amap.com https://*.amap.com https://unpkg.com; "
+  + "img-src 'self' data: https:; connect-src 'self' https://restapi.amap.com https://*.amap.com https://*.autonavi.com; "
+  + "worker-src 'self' blob:; font-src 'self' https://webapi.amap.com; "
   + "object-src 'none'; base-uri 'self'; frame-ancestors 'none'";
 
 function baseConfig(overrides) {
@@ -112,7 +114,7 @@ test('安全响应头：CSP / nosniff / Referrer-Policy / Permissions-Policy / X
     assert.equal(response.status, 200, path);
     assert.equal(response.headers.get('content-security-policy'), CSP, path);
     assert.equal(response.headers.get('x-content-type-options'), 'nosniff', path);
-    assert.equal(response.headers.get('referrer-policy'), 'no-referrer', path);
+    assert.equal(response.headers.get('referrer-policy'), 'strict-origin-when-cross-origin', path);
     assert.ok(response.headers.get('permissions-policy'), path);
     assert.equal(response.headers.get('x-frame-options'), 'DENY', path);
   }

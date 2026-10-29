@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-26",
+  "version": "2026-10-29",
   "note": "固定评测集：24 条规划场景，覆盖 PRD 第 13 节的 20 类。全部为人工构造，不代表真实用户分布。",
   "cases": [
     {
@@ -9,10 +9,10 @@
       "mode": "plan",
       "conditions": {
         "city": "nanjing",
-        "durationMin": 240,
+        "durationMin": 300,
         "startTime": "14:00",
-        "interests": ["coffee", "history", "photo"],
-        "budgetMax": 150,
+        "interests": ["coffee", "book", "photo"],
+        "budgetMax": 200,
         "pace": "mid",
         "transport": "walk"
       },

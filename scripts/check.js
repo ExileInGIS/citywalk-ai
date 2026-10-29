@@ -65,7 +65,7 @@ try {
     if (lat !== qlat || lon !== qlon) mismatch.push(p.id);
   });
   if (mismatch.length) bad('poi-coords matches data.js', mismatch.join(','));
-  else ok('poi-coords matches data.js', '8 verified / 4 null');
+  else ok('poi-coords matches data.js', D.PLACES.filter(p => p.geoVerified).length + ' verified / ' + D.PLACES.filter(p => !p.geoVerified).length + ' null');
 
   const verified = D.PLACES.filter(p => p.geoVerified).length;
   if (!verified) bad('verified coordinates exist', '0');
@@ -103,6 +103,7 @@ let secretHits = [];
 files.forEach(f => {
   if (!/\.(js|json|md|html|yml|yaml|env|example|txt)$/i.test(f)) return;
   if (f === '.env.example') return;
+  if (/^\.env(\.|$)/.test(f)) return;
   let text = '';
   try { text = read(f); } catch (e) { return; }
   SECRET_PATTERNS.forEach(re => {

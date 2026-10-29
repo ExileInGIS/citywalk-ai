@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-27T05:22:56.354Z",
+  "generatedAt": "2026-10-29T12:58:16.854Z",
   "node": "v24.21.0",
   "platform": "win32",
-  "commit": "1128d8d",
-  "dataVersion": "2026-10-26",
+  "commit": "bdc3144",
+  "dataVersion": "2026-10-29",
   "commands": [
     "node scripts/eval.js"
   ],
@@ -23,17 +23,17 @@
         {
           "ok": true,
           "name": "时长不超过 +5%",
-          "detail": "over=-10.8%"
+          "detail": "over=0.0%"
         }
       ],
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_17fwapx",
+        "id": "r_1sfjb27",
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.292Z",
+        "createdAt": "2026-10-29T12:58:16.609Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -41,10 +41,10 @@
           "endTime": "",
           "interests": [
             "coffee",
-            "history",
+            "book",
             "photo"
           ],
-          "budgetMax": 150,
+          "budgetMax": 200,
           "budgetBasis": "total",
           "party": "solo",
           "walkingTolerance": "mid",
@@ -56,57 +56,77 @@
           "avoid": [],
           "mustVisit": [],
           "additionalRequirements": "",
-          "durationMin": 240
+          "durationMin": 300
         },
         "places": [
-          "p_xuanwu",
-          "p_yihe",
-          "p_cafe_sh",
-          "p_book_xf"
+          "p_nju",
+          "p_cafe_zw",
+          "p_book_xf",
+          "p_njnu",
+          "p_wulongtan",
+          "p_qingliangshan"
         ],
         "segments": [
           {
-            "placeId": "p_xuanwu",
-            "stayMin": 35,
+            "placeId": "p_nju",
+            "stayMin": 40,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:35",
+            "departAt": "14:40",
             "indoor": false
           },
           {
-            "placeId": "p_yihe",
-            "stayMin": 35,
-            "walkFromPrevMin": 56,
-            "distanceFromPrevKm": 4.21,
-            "arriveAt": "15:31",
-            "departAt": "16:06",
-            "indoor": false
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.6,
-            "arriveAt": "16:14",
-            "departAt": "16:49",
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 17,
+            "distanceFromPrevKm": 1.24,
+            "arriveAt": "14:57",
+            "departAt": "15:37",
             "indoor": true
           },
           {
             "placeId": "p_book_xf",
             "stayMin": 38,
-            "walkFromPrevMin": 7,
-            "distanceFromPrevKm": 0.54,
-            "arriveAt": "16:56",
-            "departAt": "17:34",
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.04,
+            "arriveAt": "15:51",
+            "departAt": "16:29",
             "indoor": true
+          },
+          {
+            "placeId": "p_njnu",
+            "stayMin": 40,
+            "walkFromPrevMin": 11,
+            "distanceFromPrevKm": 0.79,
+            "arriveAt": "16:40",
+            "departAt": "17:20",
+            "indoor": false
+          },
+          {
+            "placeId": "p_wulongtan",
+            "stayMin": 30,
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.02,
+            "arriveAt": "17:34",
+            "departAt": "18:04",
+            "indoor": false
+          },
+          {
+            "placeId": "p_qingliangshan",
+            "stayMin": 45,
+            "walkFromPrevMin": 11,
+            "distanceFromPrevKm": 0.85,
+            "arriveAt": "18:15",
+            "departAt": "19:00",
+            "indoor": false
           }
         ],
-        "durationMin": 240,
-        "actualMin": 214,
-        "stayTotalMin": 143,
-        "walkTotalMin": 71,
-        "distanceKm": 5.36,
+        "durationMin": 300,
+        "actualMin": 300,
+        "stayTotalMin": 233,
+        "walkTotalMin": 67,
+        "distanceKm": 4.94,
         "budget": {
           "min": 35,
           "max": 150,
@@ -116,18 +136,18 @@
         },
         "style": [
           "咖啡与甜品",
-          "历史文化",
+          "独立书店",
           "城市摄影",
           "适中",
           "含绿地休息"
         ],
         "scores": {
-          "overall": 0.71,
-          "interest": 0.417,
-          "timeFit": 0.968,
-          "efficiency": 0.668,
-          "budgetFit": 0.8,
-          "diversity": 1,
+          "overall": 0.705,
+          "interest": 0.389,
+          "timeFit": 1,
+          "efficiency": 0.777,
+          "budgetFit": 0.85,
+          "diversity": 0.833,
           "weights": {
             "interest": 0.35,
             "timeFit": 0.2,
@@ -143,17 +163,17 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 3 小时 34 分钟，在 4 小时 预算内（含 5% 缓冲）。",
-            "actual": 214,
-            "expected": 240
+            "detail": "实际安排约 5 小时，在 5 小时 预算内（含 5% 缓冲）。",
+            "actual": 300,
+            "expected": 300
           },
           {
             "id": "walking",
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 5.36 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 5.36,
+            "detail": "路线约 4.94 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 4.94,
             "expected": 6
           },
           {
@@ -161,9 +181,9 @@
             "label": "预算上限",
             "kind": "hard",
             "status": "met",
-            "detail": "预计 ¥35–¥150，在预算上限 ¥150（合计）内。",
+            "detail": "预计 ¥35–¥150，在预算上限 ¥200（合计）内。",
             "actual": 150,
-            "expected": 150
+            "expected": 200
           },
           {
             "id": "diversity",
@@ -171,48 +191,79 @@
             "kind": "soft",
             "status": "met",
             "detail": "地点类别分布较均衡。",
-            "actual": 0.25,
+            "actual": 0.33,
             "expected": 0.5
           }
         ],
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_xuanwu",
-            "why": "匹配你选择的「城市摄影」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_nju",
+            "why": "匹配你选择的「城市摄影」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 40 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/relation/2138994",
+                "url": "https://www.openstreetmap.org/way/88779953",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
             ]
           },
           {
-            "placeId": "p_yihe",
-            "why": "匹配你选择的「历史文化、城市摄影」偏好，从上一站步行约 56 分钟（估算），是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_cafe_zw",
+            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 17 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/89567586",
+                "url": "https://www.openstreetmap.org/node/5641064621",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
             ]
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
           },
           {
             "placeId": "p_book_xf",
-            "why": "匹配你选择的「城市摄影」偏好，从上一站步行约 7 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
+            "why": "匹配你选择的「独立书店、城市摄影」偏好，从上一站步行约 14 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
                 "url": "https://www.openstreetmap.org/node/6331495101",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_njnu",
+            "why": "匹配你选择的「城市摄影」偏好，从上一站步行约 11 分钟（估算），是室外点位，适合天气好时前往，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/89638729",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_wulongtan",
+            "why": "匹配你选择的「城市摄影」偏好，从上一站步行约 14 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/782612164",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_qingliangshan",
+            "why": "匹配你选择的「城市摄影」偏好，从上一站步行约 11 分钟（估算），是室外点位，适合天气好时前往，建议停留约 45 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/62114524",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -235,16 +286,15 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「上海路街角咖啡馆」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -329,11 +379,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_bijsgq",
+        "id": "r_z2uztp",
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.297Z",
+        "createdAt": "2026-10-29T12:58:16.615Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -358,37 +408,47 @@
           "durationMin": 240
         },
         "places": [
-          "p_cafe_sh",
-          "p_book_tg"
+          "p_hunan_road",
+          "p_nju",
+          "p_cafe_zw"
         ],
         "segments": [
           {
-            "placeId": "p_cafe_sh",
+            "placeId": "p_hunan_road",
             "stayMin": 35,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
             "departAt": "14:35",
-            "indoor": true
+            "indoor": false
           },
           {
-            "placeId": "p_book_tg",
-            "stayMin": 30,
-            "walkFromPrevMin": 10,
-            "distanceFromPrevKm": 0.78,
-            "arriveAt": "14:45",
-            "departAt": "15:15",
+            "placeId": "p_nju",
+            "stayMin": 40,
+            "walkFromPrevMin": 27,
+            "distanceFromPrevKm": 2.05,
+            "arriveAt": "15:02",
+            "departAt": "15:42",
+            "indoor": false
+          },
+          {
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 17,
+            "distanceFromPrevKm": 1.24,
+            "arriveAt": "15:59",
+            "departAt": "16:39",
             "indoor": true
           }
         ],
         "durationMin": 240,
-        "actualMin": 75,
-        "stayTotalMin": 65,
-        "walkTotalMin": 10,
-        "distanceKm": 0.78,
+        "actualMin": 159,
+        "stayTotalMin": 115,
+        "walkTotalMin": 44,
+        "distanceKm": 3.29,
         "budget": {
           "min": 35,
-          "max": 120,
+          "max": 70,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -399,10 +459,10 @@
           "适中"
         ],
         "scores": {
-          "overall": 0.614,
-          "interest": 0.5,
-          "timeFit": 0.794,
-          "efficiency": 0.867,
+          "overall": 0.555,
+          "interest": 0.333,
+          "timeFit": 0.899,
+          "efficiency": 0.723,
           "budgetFit": 0,
           "diversity": 1,
           "weights": {
@@ -420,8 +480,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 1 小时 15 分钟，在 4 小时 预算内（含 5% 缓冲）。",
-            "actual": 75,
+            "detail": "实际安排约 2 小时 39 分钟，在 4 小时 预算内（含 5% 缓冲）。",
+            "actual": 159,
             "expected": 240
           },
           {
@@ -429,8 +489,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 0.78 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 0.78,
+            "detail": "路线约 3.29 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 3.29,
             "expected": 6
           },
           {
@@ -438,36 +498,36 @@
             "label": "预算上限",
             "kind": "hard",
             "status": "violated",
-            "detail": "预计 ¥35–¥120，超过预算上限 ¥20（合计）。",
-            "actual": 120,
+            "detail": "预计 ¥35–¥70，超过预算上限 ¥20（合计）。",
+            "actual": 70,
             "expected": 20
           },
           {
             "id": "diversity",
             "label": "地点多样性",
             "kind": "soft",
-            "status": "partial",
-            "detail": "同类地点占比约 50%，已尽量保留多样性。",
-            "actual": 0.5,
+            "status": "met",
+            "detail": "地点类别分布较均衡。",
+            "actual": 0.33,
             "expected": 0.5
           }
         ],
         "conflict": {
           "type": "budget",
           "title": "预算可能超出",
-          "detail": "按示例消费区间估算，全程约 ¥35–¥120，高于设定上限 ¥20（合计）。",
+          "detail": "按示例消费区间估算，全程约 ¥35–¥70，高于设定上限 ¥20（合计）。",
           "options": [
             {
               "id": "raise_budget",
-              "label": "把预算上限提高到 ¥120",
+              "label": "把预算上限提高到 ¥70",
               "action": {
                 "op": "raise_budget",
-                "value": 120
+                "value": 70
               }
             },
             {
               "id": "drop_expensive",
-              "label": "去掉花费最高的一站「上海路街角咖啡馆」",
+              "label": "去掉花费最高的一站「南京植物咖啡馆」",
               "action": {
                 "op": "drop_expensive"
               }
@@ -476,14 +536,40 @@
         },
         "explanations": [
           {
-            "placeId": "p_cafe_sh",
-            "why": "匹配你选择的「咖啡与甜品」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
+            "placeId": "p_hunan_road",
+            "why": "匹配你选择的「本地特色」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/422957216",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           },
           {
-            "placeId": "p_book_tg",
-            "why": "匹配你选择的「本地特色」偏好，从上一站步行约 10 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 30 分钟。",
-            "evidence": []
+            "placeId": "p_nju",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 27 分钟（估算），是室外点位，适合天气好时前往，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/88779953",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_cafe_zw",
+            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 17 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/5641064621",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           }
         ],
         "sources": [
@@ -502,16 +588,16 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「上海路街角咖啡馆」、「陶谷新村旧书店」；仅参与示意路线，不参与真实地图定位。",
-          "示例地点库中符合条件的地点有限，实际安排约 1 小时 15 分钟，比预算少 2 小时 45 分钟。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
+          "示例地点库中符合条件的地点有限，实际安排约 2 小时 39 分钟，比预算少 1 小时 21 分钟。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -571,7 +657,7 @@
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.298Z",
+        "createdAt": "2026-10-29T12:58:16.617Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -788,15 +874,15 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -832,11 +918,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_1jnrb3c",
+        "id": "r_1fgnfq9",
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.299Z",
+        "createdAt": "2026-10-29T12:58:16.618Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -862,22 +948,22 @@
           "durationMin": 60
         },
         "places": [
-          "p_yihe"
+          "p_jinghaisi"
         ],
         "segments": [
           {
-            "placeId": "p_yihe",
-            "stayMin": 35,
+            "placeId": "p_jinghaisi",
+            "stayMin": 40,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:35",
-            "indoor": false
+            "departAt": "14:40",
+            "indoor": true
           }
         ],
         "durationMin": 60,
-        "actualMin": 35,
-        "stayTotalMin": 35,
+        "actualMin": 40,
+        "stayTotalMin": 40,
         "walkTotalMin": 0,
         "distanceKm": 0,
         "budget": {
@@ -894,9 +980,9 @@
           "适中"
         ],
         "scores": {
-          "overall": 0.798,
+          "overall": 0.803,
           "interest": 0.667,
-          "timeFit": 0.875,
+          "timeFit": 0.9,
           "efficiency": 1,
           "budgetFit": 0.6,
           "diversity": 1,
@@ -915,8 +1001,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 35 分钟，在 1 小时 预算内（含 5% 缓冲）。",
-            "actual": 35,
+            "detail": "实际安排约 40 分钟，在 1 小时 预算内（含 5% 缓冲）。",
+            "actual": 40,
             "expected": 60
           },
           {
@@ -941,12 +1027,12 @@
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_yihe",
-            "why": "匹配你选择的「历史文化、城市摄影」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_jinghaisi",
+            "why": "匹配你选择的「历史文化、城市摄影」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/89567586",
+                "url": "https://www.openstreetmap.org/way/461035548",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -969,16 +1055,16 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。",
-          "示例地点库中符合条件的地点有限，实际安排约 35 分钟，比预算少 25 分钟。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
+          "示例地点库中符合条件的地点有限，实际安排约 40 分钟，比预算少 20 分钟。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -1008,17 +1094,17 @@
         {
           "ok": true,
           "name": "步行 ≤ 3km 或给出 walking 冲突",
-          "detail": "2.81km"
+          "detail": "2.09km"
         }
       ],
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_sur6je",
+        "id": "r_d1ksc9",
         "city": "nanjing",
         "name": "南京绿道 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.300Z",
+        "createdAt": "2026-10-29T12:58:16.620Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1043,13 +1129,12 @@
           "durationMin": 300
         },
         "places": [
-          "p_xinjiekou",
-          "p_market",
-          "p_xuanwu"
+          "p_xiaotaoyuan",
+          "p_gulin_park"
         ],
         "segments": [
           {
-            "placeId": "p_xinjiekou",
+            "placeId": "p_xiaotaoyuan",
             "stayMin": 30,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
@@ -1058,32 +1143,23 @@
             "indoor": false
           },
           {
-            "placeId": "p_market",
-            "stayMin": 30,
-            "walkFromPrevMin": 12,
-            "distanceFromPrevKm": 0.87,
-            "arriveAt": "14:42",
-            "departAt": "15:12",
-            "indoor": false
-          },
-          {
-            "placeId": "p_xuanwu",
-            "stayMin": 35,
-            "walkFromPrevMin": 26,
-            "distanceFromPrevKm": 1.94,
-            "arriveAt": "15:38",
-            "departAt": "16:13",
+            "placeId": "p_gulin_park",
+            "stayMin": 45,
+            "walkFromPrevMin": 28,
+            "distanceFromPrevKm": 2.09,
+            "arriveAt": "14:58",
+            "departAt": "15:43",
             "indoor": false
           }
         ],
         "durationMin": 300,
-        "actualMin": 133,
-        "stayTotalMin": 95,
-        "walkTotalMin": 38,
-        "distanceKm": 2.81,
+        "actualMin": 103,
+        "stayTotalMin": 75,
+        "walkTotalMin": 28,
+        "distanceKm": 2.09,
         "budget": {
           "min": 0,
-          "max": 160,
+          "max": 0,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -1095,12 +1171,12 @@
           "含绿地休息"
         ],
         "scores": {
-          "overall": 0.747,
-          "interest": 0.667,
-          "timeFit": 0.833,
-          "efficiency": 0.714,
+          "overall": 0.785,
+          "interest": 1,
+          "timeFit": 0.803,
+          "efficiency": 0.728,
           "budgetFit": 0.6,
-          "diversity": 1,
+          "diversity": 0.5,
           "weights": {
             "interest": 0.35,
             "timeFit": 0.2,
@@ -1116,8 +1192,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 2 小时 13 分钟，在 5 小时 预算内（含 5% 缓冲）。",
-            "actual": 133,
+            "detail": "实际安排约 1 小时 43 分钟，在 5 小时 预算内（含 5% 缓冲）。",
+            "actual": 103,
             "expected": 300
           },
           {
@@ -1125,46 +1201,41 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 2.81 km，在你选择的 light 强度上限 3 km 内。",
-            "actual": 2.81,
+            "detail": "路线约 2.09 km，在你选择的 light 强度上限 3 km 内。",
+            "actual": 2.09,
             "expected": 3
           },
           {
             "id": "diversity",
             "label": "地点多样性",
             "kind": "soft",
-            "status": "met",
-            "detail": "地点类别分布较均衡。",
-            "actual": 0.33,
+            "status": "partial",
+            "detail": "同类地点占比约 100%，已尽量保留多样性。",
+            "actual": 1,
             "expected": 0.5
           }
         ],
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_xinjiekou",
-            "why": "匹配你选择的「城市摄影」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "placeId": "p_xiaotaoyuan",
+            "why": "匹配你选择的「公园与绿地、城市摄影」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 30 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/155883034",
+                "url": "https://www.openstreetmap.org/way/292442876",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
             ]
           },
           {
-            "placeId": "p_market",
-            "why": "匹配你选择的「城市摄影」偏好，从上一站步行约 12 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
-            "evidence": []
-          },
-          {
-            "placeId": "p_xuanwu",
-            "why": "匹配你选择的「公园与绿地、城市摄影」偏好，从上一站步行约 26 分钟（估算），是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_gulin_park",
+            "why": "匹配你选择的「公园与绿地、城市摄影」偏好，从上一站步行约 28 分钟（估算），是室外点位，适合天气好时前往，建议停留约 45 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/relation/2138994",
+                "url": "https://www.openstreetmap.org/way/89638712",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -1187,17 +1258,16 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「城市露台市集」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。",
-          "示例地点库中符合条件的地点有限，实际安排约 2 小时 13 分钟，比预算少 2 小时 47 分钟。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
+          "示例地点库中符合条件的地点有限，实际安排约 1 小时 43 分钟，比预算少 3 小时 17 分钟。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -1233,11 +1303,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_bxy30r",
+        "id": "r_1aq1svg",
         "city": "nanjing",
         "name": "南京绿道 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.301Z",
+        "createdAt": "2026-10-29T12:58:16.622Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1264,57 +1334,57 @@
           "durationMin": 180
         },
         "places": [
-          "p_market",
-          "p_laomendong",
-          "p_food_ld",
-          "p_bailuzhou"
+          "p_golden_eagle",
+          "p_hongmiao",
+          "p_deji_plaza",
+          "p_book_dz"
         ],
         "segments": [
           {
-            "placeId": "p_market",
-            "stayMin": 30,
+            "placeId": "p_golden_eagle",
+            "stayMin": 45,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:30",
-            "indoor": false
-          },
-          {
-            "placeId": "p_laomendong",
-            "stayMin": 38,
-            "walkFromPrevMin": 14,
-            "distanceFromPrevKm": 1.04,
-            "arriveAt": "14:44",
-            "departAt": "15:22",
-            "indoor": false
-          },
-          {
-            "placeId": "p_food_ld",
-            "stayMin": 35,
-            "walkFromPrevMin": 5,
-            "distanceFromPrevKm": 0.34,
-            "arriveAt": "15:27",
-            "departAt": "16:02",
+            "departAt": "14:45",
             "indoor": true
           },
           {
-            "placeId": "p_bailuzhou",
-            "stayMin": 35,
-            "walkFromPrevMin": 10,
-            "distanceFromPrevKm": 0.72,
-            "arriveAt": "16:12",
-            "departAt": "16:47",
+            "placeId": "p_hongmiao",
+            "stayMin": 30,
+            "walkFromPrevMin": 11,
+            "distanceFromPrevKm": 0.81,
+            "arriveAt": "14:56",
+            "departAt": "15:26",
             "indoor": false
+          },
+          {
+            "placeId": "p_deji_plaza",
+            "stayMin": 45,
+            "walkFromPrevMin": 12,
+            "distanceFromPrevKm": 0.9,
+            "arriveAt": "15:38",
+            "departAt": "16:23",
+            "indoor": true
+          },
+          {
+            "placeId": "p_book_dz",
+            "stayMin": 40,
+            "walkFromPrevMin": 6,
+            "distanceFromPrevKm": 0.42,
+            "arriveAt": "16:29",
+            "departAt": "17:09",
+            "indoor": true
           }
         ],
         "durationMin": 180,
-        "actualMin": 167,
-        "stayTotalMin": 138,
+        "actualMin": 189,
+        "stayTotalMin": 160,
         "walkTotalMin": 29,
-        "distanceKm": 2.1,
+        "distanceKm": 2.13,
         "budget": {
           "min": 90,
-          "max": 600,
+          "max": 1680,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 3
@@ -1323,16 +1393,15 @@
           "公园与绿地",
           "本地特色",
           "适中",
-          "亲子友好",
-          "含绿地休息"
+          "亲子友好"
         ],
         "scores": {
-          "overall": 0.734,
-          "interest": 0.5,
-          "timeFit": 0.978,
-          "efficiency": 0.826,
+          "overall": 0.573,
+          "interest": 0.375,
+          "timeFit": 0.75,
+          "efficiency": 0.847,
           "budgetFit": 0.6,
-          "diversity": 1,
+          "diversity": 0.5,
           "weights": {
             "interest": 0.35,
             "timeFit": 0.2,
@@ -1348,8 +1417,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 2 小时 47 分钟，在 3 小时 预算内（含 5% 缓冲）。",
-            "actual": 167,
+            "detail": "实际安排约 3 小时 9 分钟，在 3 小时 预算内（含 5% 缓冲）。",
+            "actual": 189,
             "expected": 180
           },
           {
@@ -1357,8 +1426,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 2.1 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 2.1,
+            "detail": "路线约 2.13 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 2.13,
             "expected": 6
           },
           {
@@ -1366,7 +1435,7 @@
             "label": "无障碍需求",
             "kind": "hard",
             "status": "unknown",
-            "detail": "已记录无障碍需求（婴儿车）。城市露台市集、老门东历史文化街区、老门东本地小馆、白鹭洲公园 的无障碍信息未验证，不能保证满足。",
+            "detail": "已记录无障碍需求（婴儿车）。金鹰国际购物中心、红庙、德基广场、大众书局 的无障碍信息未验证，不能保证满足。",
             "actual": "unknown",
             "expected": "met"
           },
@@ -1374,43 +1443,57 @@
             "id": "diversity",
             "label": "地点多样性",
             "kind": "soft",
-            "status": "met",
-            "detail": "地点类别分布较均衡。",
-            "actual": 0.25,
+            "status": "partial",
+            "detail": "同类地点占比约 75%，已尽量保留多样性。",
+            "actual": 0.75,
             "expected": 0.5
           }
         ],
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_market",
-            "why": "匹配你选择的「本地特色」偏好，作为路线起点，是室外点位，适合天气好时前往，建议停留约 30 分钟。",
-            "evidence": []
-          },
-          {
-            "placeId": "p_laomendong",
-            "why": "匹配你选择的「本地特色」偏好，从上一站步行约 14 分钟（估算），是室外点位，适合天气好时前往，建议停留约 38 分钟。",
+            "placeId": "p_golden_eagle",
+            "why": "匹配你选择的「本地特色」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 45 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/948332291",
+                "url": "https://www.openstreetmap.org/way/192105389",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
             ]
           },
           {
-            "placeId": "p_food_ld",
-            "why": "匹配你选择的「本地特色」偏好，从上一站步行约 5 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
-          },
-          {
-            "placeId": "p_bailuzhou",
-            "why": "匹配你选择的「公园与绿地」偏好，从上一站步行约 10 分钟（估算），是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_hongmiao",
+            "why": "匹配你选择的「本地特色」偏好，从上一站步行约 11 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/88807020",
+                "url": "https://www.openstreetmap.org/way/89637281",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_deji_plaza",
+            "why": "匹配你选择的「本地特色」偏好，从上一站步行约 12 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 45 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/147223223",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_book_dz",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 6 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/2706957988",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -1433,17 +1516,17 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「城市露台市集」、「老门东本地小馆」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。",
-          "预算按同行 3 人合计估算（family 人数系数 3）；budgetBasis=total。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
+          "预算按同行 3 人合计估算（family 人数系数 3）；budgetBasis=total。",
+          "实际安排约 3 小时 9 分钟，比预算多 9 分钟，仍在 5% 缓冲内。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -1479,11 +1562,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_1klpcr5",
+        "id": "r_1dtuyf",
         "city": "nanjing",
         "name": "南京咖啡 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.303Z",
+        "createdAt": "2026-10-29T12:58:16.625Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1508,57 +1591,57 @@
           "durationMin": 180
         },
         "places": [
-          "p_yihe",
-          "p_cafe_sh",
           "p_book_xf",
-          "p_book_tg"
+          "p_cafe_zw",
+          "p_book_dz",
+          "p_xinjiekou"
         ],
         "segments": [
           {
-            "placeId": "p_yihe",
-            "stayMin": 35,
+            "placeId": "p_book_xf",
+            "stayMin": 38,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:35",
-            "indoor": false
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.6,
-            "arriveAt": "14:43",
-            "departAt": "15:18",
+            "departAt": "14:38",
             "indoor": true
           },
           {
-            "placeId": "p_book_xf",
-            "stayMin": 38,
-            "walkFromPrevMin": 7,
-            "distanceFromPrevKm": 0.54,
-            "arriveAt": "15:25",
-            "departAt": "16:03",
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.04,
+            "arriveAt": "14:52",
+            "departAt": "15:32",
             "indoor": true
           },
           {
-            "placeId": "p_book_tg",
+            "placeId": "p_book_dz",
+            "stayMin": 40,
+            "walkFromPrevMin": 6,
+            "distanceFromPrevKm": 0.47,
+            "arriveAt": "15:38",
+            "departAt": "16:18",
+            "indoor": true
+          },
+          {
+            "placeId": "p_xinjiekou",
             "stayMin": 30,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.61,
-            "arriveAt": "16:11",
-            "departAt": "16:41",
-            "indoor": true
+            "walkFromPrevMin": 4,
+            "distanceFromPrevKm": 0.33,
+            "arriveAt": "16:22",
+            "departAt": "16:52",
+            "indoor": false
           }
         ],
         "durationMin": 180,
-        "actualMin": 161,
-        "stayTotalMin": 138,
-        "walkTotalMin": 23,
-        "distanceKm": 1.76,
+        "actualMin": 172,
+        "stayTotalMin": 148,
+        "walkTotalMin": 24,
+        "distanceKm": 1.84,
         "budget": {
           "min": 35,
-          "max": 200,
+          "max": 330,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -1570,10 +1653,10 @@
           "雨天室内优先"
         ],
         "scores": {
-          "overall": 0.656,
+          "overall": 0.66,
           "interest": 0.375,
-          "timeFit": 0.968,
-          "efficiency": 0.857,
+          "timeFit": 0.987,
+          "efficiency": 0.86,
           "budgetFit": 0.6,
           "diversity": 0.75,
           "weights": {
@@ -1591,8 +1674,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 2 小时 41 分钟，在 3 小时 预算内（含 5% 缓冲）。",
-            "actual": 161,
+            "detail": "实际安排约 2 小时 52 分钟，在 3 小时 预算内（含 5% 缓冲）。",
+            "actual": 172,
             "expected": 180
           },
           {
@@ -1600,8 +1683,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 1.76 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 1.76,
+            "detail": "路线约 1.84 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 1.84,
             "expected": 6
           },
           {
@@ -1626,25 +1709,8 @@
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_yihe",
-            "why": "按整体节奏与顺路程度纳入，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
-            "evidence": [
-              {
-                "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/89567586",
-                "accessedAt": "2026-10-26",
-                "license": "ODbL 1.0"
-              }
-            ]
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
-          },
-          {
             "placeId": "p_book_xf",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 7 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
+            "why": "匹配你选择的「独立书店」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
@@ -1655,9 +1721,40 @@
             ]
           },
           {
-            "placeId": "p_book_tg",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 30 分钟。",
-            "evidence": []
+            "placeId": "p_cafe_zw",
+            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 14 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/5641064621",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_book_dz",
+            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 6 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/2706957988",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_xinjiekou",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 4 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/155883034",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           }
         ],
         "sources": [
@@ -1676,17 +1773,16 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「上海路街角咖啡馆」、「陶谷新村旧书店」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。",
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
           "天气偏好为下雨：优先安排室内点，但不做硬过滤，未替换的点位请自备雨具。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -1728,9 +1824,9 @@
       "route": null,
       "skipped": false,
       "constraints": {
-        "met": 2,
+        "met": 3,
         "partial": 0,
-        "violated": 1,
+        "violated": 0,
         "unknown": 0,
         "total": 3
       }
@@ -1767,9 +1863,9 @@
       "route": null,
       "skipped": false,
       "constraints": {
-        "met": 3,
+        "met": 1,
         "partial": 0,
-        "violated": 0,
+        "violated": 2,
         "unknown": 0,
         "total": 3
       }
@@ -1800,11 +1896,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_gwasi3",
+        "id": "r_jc5w7l",
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.311Z",
+        "createdAt": "2026-10-29T12:58:16.642Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -1830,57 +1926,57 @@
           "durationMin": 180
         },
         "places": [
-          "p_yihe",
-          "p_cafe_sh",
           "p_book_xf",
-          "p_book_tg"
+          "p_cafe_zw",
+          "p_book_dz",
+          "p_xinjiekou"
         ],
         "segments": [
           {
-            "placeId": "p_yihe",
-            "stayMin": 35,
+            "placeId": "p_book_xf",
+            "stayMin": 38,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:35",
-            "indoor": false
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.6,
-            "arriveAt": "14:43",
-            "departAt": "15:18",
+            "departAt": "14:38",
             "indoor": true
           },
           {
-            "placeId": "p_book_xf",
-            "stayMin": 38,
-            "walkFromPrevMin": 7,
-            "distanceFromPrevKm": 0.54,
-            "arriveAt": "15:25",
-            "departAt": "16:03",
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.04,
+            "arriveAt": "14:52",
+            "departAt": "15:32",
             "indoor": true
           },
           {
-            "placeId": "p_book_tg",
+            "placeId": "p_book_dz",
+            "stayMin": 40,
+            "walkFromPrevMin": 6,
+            "distanceFromPrevKm": 0.47,
+            "arriveAt": "15:38",
+            "departAt": "16:18",
+            "indoor": true
+          },
+          {
+            "placeId": "p_xinjiekou",
             "stayMin": 30,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.61,
-            "arriveAt": "16:11",
-            "departAt": "16:41",
-            "indoor": true
+            "walkFromPrevMin": 4,
+            "distanceFromPrevKm": 0.33,
+            "arriveAt": "16:22",
+            "departAt": "16:52",
+            "indoor": false
           }
         ],
         "durationMin": 180,
-        "actualMin": 161,
-        "stayTotalMin": 138,
-        "walkTotalMin": 23,
-        "distanceKm": 1.76,
+        "actualMin": 172,
+        "stayTotalMin": 148,
+        "walkTotalMin": 24,
+        "distanceKm": 1.84,
         "budget": {
           "min": 35,
-          "max": 200,
+          "max": 330,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -1890,10 +1986,10 @@
           "适中"
         ],
         "scores": {
-          "overall": 0.7,
+          "overall": 0.704,
           "interest": 0.5,
-          "timeFit": 0.968,
-          "efficiency": 0.857,
+          "timeFit": 0.987,
+          "efficiency": 0.86,
           "budgetFit": 0.6,
           "diversity": 0.75,
           "weights": {
@@ -1911,8 +2007,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 2 小时 41 分钟，在 3 小时 预算内（含 5% 缓冲）。",
-            "actual": 161,
+            "detail": "实际安排约 2 小时 52 分钟，在 3 小时 预算内（含 5% 缓冲）。",
+            "actual": 172,
             "expected": 180
           },
           {
@@ -1920,8 +2016,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 1.76 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 1.76,
+            "detail": "路线约 1.84 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 1.84,
             "expected": 6
           },
           {
@@ -1971,25 +2067,8 @@
         },
         "explanations": [
           {
-            "placeId": "p_yihe",
-            "why": "按整体节奏与顺路程度纳入，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
-            "evidence": [
-              {
-                "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/89567586",
-                "accessedAt": "2026-10-26",
-                "license": "ODbL 1.0"
-              }
-            ]
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "why": "按整体节奏与顺路程度纳入，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
-          },
-          {
             "placeId": "p_book_xf",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 7 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
+            "why": "匹配你选择的「独立书店」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
@@ -2000,9 +2079,40 @@
             ]
           },
           {
-            "placeId": "p_book_tg",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 30 分钟。",
-            "evidence": []
+            "placeId": "p_cafe_zw",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 14 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/5641064621",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_book_dz",
+            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 6 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/2706957988",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_xinjiekou",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 4 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/155883034",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           }
         ],
         "sources": [
@@ -2021,16 +2131,15 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「上海路街角咖啡馆」、「陶谷新村旧书店」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -2066,11 +2175,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_18trypu",
+        "id": "r_ct7iif",
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.312Z",
+        "createdAt": "2026-10-29T12:58:16.644Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2096,67 +2205,67 @@
           "durationMin": 240
         },
         "places": [
-          "p_yihe",
-          "p_cafe_sh",
           "p_book_xf",
-          "p_book_tg",
-          "p_xinjiekou"
+          "p_cafe_zw",
+          "p_book_dz",
+          "p_xinjiekou",
+          "p_deji_plaza"
         ],
         "segments": [
           {
-            "placeId": "p_yihe",
-            "stayMin": 35,
+            "placeId": "p_book_xf",
+            "stayMin": 38,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:35",
-            "indoor": false
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.6,
-            "arriveAt": "14:43",
-            "departAt": "15:18",
+            "departAt": "14:38",
             "indoor": true
           },
           {
-            "placeId": "p_book_xf",
-            "stayMin": 38,
-            "walkFromPrevMin": 7,
-            "distanceFromPrevKm": 0.54,
-            "arriveAt": "15:25",
-            "departAt": "16:03",
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.04,
+            "arriveAt": "14:52",
+            "departAt": "15:32",
             "indoor": true
           },
           {
-            "placeId": "p_book_tg",
-            "stayMin": 30,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.61,
-            "arriveAt": "16:11",
-            "departAt": "16:41",
+            "placeId": "p_book_dz",
+            "stayMin": 40,
+            "walkFromPrevMin": 6,
+            "distanceFromPrevKm": 0.47,
+            "arriveAt": "15:38",
+            "departAt": "16:18",
             "indoor": true
           },
           {
             "placeId": "p_xinjiekou",
             "stayMin": 30,
-            "walkFromPrevMin": 21,
-            "distanceFromPrevKm": 1.54,
-            "arriveAt": "17:02",
-            "departAt": "17:32",
+            "walkFromPrevMin": 4,
+            "distanceFromPrevKm": 0.33,
+            "arriveAt": "16:22",
+            "departAt": "16:52",
             "indoor": false
+          },
+          {
+            "placeId": "p_deji_plaza",
+            "stayMin": 45,
+            "walkFromPrevMin": 3,
+            "distanceFromPrevKm": 0.2,
+            "arriveAt": "16:55",
+            "departAt": "17:40",
+            "indoor": true
           }
         ],
         "durationMin": 240,
-        "actualMin": 212,
-        "stayTotalMin": 168,
-        "walkTotalMin": 44,
-        "distanceKm": 3.3,
+        "actualMin": 220,
+        "stayTotalMin": 193,
+        "walkTotalMin": 27,
+        "distanceKm": 2.04,
         "budget": {
           "min": 35,
-          "max": 300,
+          "max": 530,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -2166,10 +2275,10 @@
           "适中"
         ],
         "scores": {
-          "overall": 0.662,
+          "overall": 0.677,
           "interest": 0.4,
-          "timeFit": 0.965,
-          "efficiency": 0.792,
+          "timeFit": 0.975,
+          "efficiency": 0.877,
           "budgetFit": 0.6,
           "diversity": 0.8,
           "weights": {
@@ -2187,8 +2296,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 3 小时 32 分钟，在 4 小时 预算内（含 5% 缓冲）。",
-            "actual": 212,
+            "detail": "实际安排约 3 小时 40 分钟，在 4 小时 预算内（含 5% 缓冲）。",
+            "actual": 220,
             "expected": 240
           },
           {
@@ -2196,8 +2305,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 3.3 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 3.3,
+            "detail": "路线约 2.04 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 2.04,
             "expected": 6
           },
           {
@@ -2222,25 +2331,8 @@
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_yihe",
-            "why": "按整体节奏与顺路程度纳入，作为路线起点，是室外点位，适合天气好时前往，建议停留约 35 分钟。",
-            "evidence": [
-              {
-                "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/89567586",
-                "accessedAt": "2026-10-26",
-                "license": "ODbL 1.0"
-              }
-            ]
-          },
-          {
-            "placeId": "p_cafe_sh",
-            "why": "按整体节奏与顺路程度纳入，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
-          },
-          {
             "placeId": "p_book_xf",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 7 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
+            "why": "匹配你选择的「独立书店」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
@@ -2251,17 +2343,48 @@
             ]
           },
           {
-            "placeId": "p_book_tg",
-            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 30 分钟。",
-            "evidence": []
+            "placeId": "p_cafe_zw",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 14 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/5641064621",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_book_dz",
+            "why": "匹配你选择的「独立书店」偏好，从上一站步行约 6 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/2706957988",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           },
           {
             "placeId": "p_xinjiekou",
-            "why": "按整体节奏与顺路程度纳入，从上一站步行约 21 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 4 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
                 "url": "https://www.openstreetmap.org/way/155883034",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_deji_plaza",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 3 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 45 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/147223223",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -2284,16 +2407,15 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「上海路街角咖啡馆」、「陶谷新村旧书店」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -2382,11 +2504,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_88xswt",
+        "id": "r_l2m29v",
         "city": "nanjing",
         "name": "南京老城 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.314Z",
+        "createdAt": "2026-10-29T12:58:16.649Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2410,72 +2532,63 @@
           "durationMin": 180
         },
         "places": [
-          "p_market",
-          "p_qinhuai",
-          "p_food_ld",
-          "p_laomendong"
+          "p_jinghaisi",
+          "p_yuejianglou",
+          "p_xiaotaoyuan"
         ],
         "segments": [
           {
-            "placeId": "p_market",
-            "stayMin": 30,
+            "placeId": "p_jinghaisi",
+            "stayMin": 40,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:30",
-            "indoor": false
-          },
-          {
-            "placeId": "p_qinhuai",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.56,
-            "arriveAt": "14:38",
-            "departAt": "15:13",
-            "indoor": false
-          },
-          {
-            "placeId": "p_food_ld",
-            "stayMin": 35,
-            "walkFromPrevMin": 8,
-            "distanceFromPrevKm": 0.62,
-            "arriveAt": "15:21",
-            "departAt": "15:56",
+            "departAt": "14:40",
             "indoor": true
           },
           {
-            "placeId": "p_laomendong",
-            "stayMin": 38,
+            "placeId": "p_yuejianglou",
+            "stayMin": 60,
             "walkFromPrevMin": 5,
-            "distanceFromPrevKm": 0.34,
-            "arriveAt": "16:01",
-            "departAt": "16:39",
+            "distanceFromPrevKm": 0.35,
+            "arriveAt": "14:45",
+            "departAt": "15:45",
+            "indoor": false
+          },
+          {
+            "placeId": "p_xiaotaoyuan",
+            "stayMin": 30,
+            "walkFromPrevMin": 25,
+            "distanceFromPrevKm": 1.88,
+            "arriveAt": "16:10",
+            "departAt": "16:40",
             "indoor": false
           }
         ],
         "durationMin": 180,
-        "actualMin": 159,
-        "stayTotalMin": 138,
-        "walkTotalMin": 21,
-        "distanceKm": 1.52,
+        "actualMin": 160,
+        "stayTotalMin": 130,
+        "walkTotalMin": 30,
+        "distanceKm": 2.24,
         "budget": {
-          "min": 30,
-          "max": 300,
+          "min": 40,
+          "max": 40,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
         },
         "style": [
           "历史文化",
-          "适中"
+          "适中",
+          "含绿地休息"
         ],
         "scores": {
-          "overall": 0.701,
-          "interest": 0.5,
-          "timeFit": 0.965,
-          "efficiency": 0.868,
+          "overall": 0.789,
+          "interest": 0.667,
+          "timeFit": 0.967,
+          "efficiency": 0.813,
           "budgetFit": 0.6,
-          "diversity": 0.75,
+          "diversity": 1,
           "weights": {
             "interest": 0.35,
             "timeFit": 0.2,
@@ -2491,8 +2604,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 2 小时 39 分钟，在 3 小时 预算内（含 5% 缓冲）。",
-            "actual": 159,
+            "detail": "实际安排约 2 小时 40 分钟，在 3 小时 预算内（含 5% 缓冲）。",
+            "actual": 160,
             "expected": 180
           },
           {
@@ -2500,51 +2613,53 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 1.52 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 1.52,
+            "detail": "路线约 2.24 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 2.24,
             "expected": 6
           },
           {
             "id": "diversity",
             "label": "地点多样性",
             "kind": "soft",
-            "status": "partial",
-            "detail": "同类地点占比约 50%，已尽量保留多样性。",
-            "actual": 0.5,
+            "status": "met",
+            "detail": "地点类别分布较均衡。",
+            "actual": 0.33,
             "expected": 0.5
           }
         ],
         "conflict": null,
         "explanations": [
           {
-            "placeId": "p_market",
-            "why": "按整体节奏与顺路程度纳入，作为路线起点，是室外点位，适合天气好时前往，建议停留约 30 分钟。",
-            "evidence": []
-          },
-          {
-            "placeId": "p_qinhuai",
-            "why": "匹配你选择的「历史文化」偏好，从上一站步行约 8 分钟（估算），是室外点位，适合天气好时前往，建议停留约 35 分钟。",
+            "placeId": "p_jinghaisi",
+            "why": "匹配你选择的「历史文化」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/590937998",
+                "url": "https://www.openstreetmap.org/way/461035548",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
             ]
           },
           {
-            "placeId": "p_food_ld",
-            "why": "按整体节奏与顺路程度纳入，从上一站步行约 8 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
-          },
-          {
-            "placeId": "p_laomendong",
-            "why": "匹配你选择的「历史文化」偏好，从上一站步行约 5 分钟（估算），是室外点位，适合天气好时前往，建议停留约 38 分钟。",
+            "placeId": "p_yuejianglou",
+            "why": "匹配你选择的「历史文化」偏好，从上一站步行约 5 分钟（估算），是室外点位，适合天气好时前往，建议停留约 60 分钟。",
             "evidence": [
               {
                 "title": "OpenStreetMap 坐标",
-                "url": "https://www.openstreetmap.org/way/948332291",
+                "url": "https://www.openstreetmap.org/way/461035531",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
+          },
+          {
+            "placeId": "p_xiaotaoyuan",
+            "why": "按整体节奏与顺路程度纳入，从上一站步行约 25 分钟（估算），是室外点位，适合天气好时前往，建议停留约 30 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/way/292442876",
                 "accessedAt": "2026-10-26",
                 "license": "ODbL 1.0"
               }
@@ -2567,16 +2682,15 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「城市露台市集」、「老门东本地小馆」；仅参与示意路线，不参与真实地图定位。",
-          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；部分坐标为区域中心点，非入口坐标。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -2631,7 +2745,7 @@
         {
           "ok": true,
           "name": "多轮后时长不超 +5%",
-          "detail": "-36.7%"
+          "detail": "-19.7%"
         }
       ],
       "error": null,
@@ -2666,11 +2780,11 @@
       "error": null,
       "route": {
         "schemaVersion": "route.v1",
-        "id": "r_ownmqy",
+        "id": "r_tcbwj",
         "city": "nanjing",
         "name": "南京书店 · 均衡漫步",
         "source": "mock",
-        "createdAt": "2026-10-27T05:22:56.317Z",
+        "createdAt": "2026-10-29T12:58:16.657Z",
         "conditions": {
           "city": "nanjing",
           "startLocation": "",
@@ -2695,37 +2809,37 @@
           "durationMin": 180
         },
         "places": [
-          "p_book_tg",
-          "p_cafe_sh"
+          "p_book_xf",
+          "p_cafe_zw"
         ],
         "segments": [
           {
-            "placeId": "p_book_tg",
-            "stayMin": 30,
+            "placeId": "p_book_xf",
+            "stayMin": 38,
             "walkFromPrevMin": 0,
             "distanceFromPrevKm": 0,
             "arriveAt": "14:00",
-            "departAt": "14:30",
+            "departAt": "14:38",
             "indoor": true
           },
           {
-            "placeId": "p_cafe_sh",
-            "stayMin": 35,
-            "walkFromPrevMin": 10,
-            "distanceFromPrevKm": 0.78,
-            "arriveAt": "14:40",
-            "departAt": "15:15",
+            "placeId": "p_cafe_zw",
+            "stayMin": 40,
+            "walkFromPrevMin": 14,
+            "distanceFromPrevKm": 1.04,
+            "arriveAt": "14:52",
+            "departAt": "15:32",
             "indoor": true
           }
         ],
         "durationMin": 180,
-        "actualMin": 75,
-        "stayTotalMin": 65,
-        "walkTotalMin": 10,
-        "distanceKm": 0.78,
+        "actualMin": 92,
+        "stayTotalMin": 78,
+        "walkTotalMin": 14,
+        "distanceKm": 1.04,
         "budget": {
           "min": 35,
-          "max": 120,
+          "max": 150,
           "currency": "CNY",
           "basis": "total",
           "partyMultiplier": 1
@@ -2736,11 +2850,11 @@
           "适中"
         ],
         "scores": {
-          "overall": 0.695,
+          "overall": 0.63,
           "interest": 0.5,
-          "timeFit": 0.825,
-          "efficiency": 0.867,
-          "budgetFit": 0.5,
+          "timeFit": 0.853,
+          "efficiency": 0.848,
+          "budgetFit": 0.05,
           "diversity": 1,
           "weights": {
             "interest": 0.35,
@@ -2757,8 +2871,8 @@
             "label": "时长上限",
             "kind": "hard",
             "status": "met",
-            "detail": "实际安排约 1 小时 15 分钟，在 3 小时 预算内（含 5% 缓冲）。",
-            "actual": 75,
+            "detail": "实际安排约 1 小时 32 分钟，在 3 小时 预算内（含 5% 缓冲）。",
+            "actual": 92,
             "expected": 180
           },
           {
@@ -2766,8 +2880,8 @@
             "label": "步行上限",
             "kind": "hard",
             "status": "met",
-            "detail": "路线约 0.78 km，在你选择的 mid 强度上限 6 km 内。",
-            "actual": 0.78,
+            "detail": "路线约 1.04 km，在你选择的 mid 强度上限 6 km 内。",
+            "actual": 1.04,
             "expected": 6
           },
           {
@@ -2775,8 +2889,8 @@
             "label": "预算上限",
             "kind": "hard",
             "status": "violated",
-            "detail": "预计 ¥35–¥120，超过预算上限 ¥100（合计）。",
-            "actual": 120,
+            "detail": "预计 ¥35–¥150，超过预算上限 ¥100（合计）。",
+            "actual": 150,
             "expected": 100
           },
           {
@@ -2792,19 +2906,19 @@
         "conflict": {
           "type": "budget",
           "title": "预算可能超出",
-          "detail": "按示例消费区间估算，全程约 ¥35–¥120，高于设定上限 ¥100（合计）。",
+          "detail": "按示例消费区间估算，全程约 ¥35–¥150，高于设定上限 ¥100（合计）。",
           "options": [
             {
               "id": "raise_budget",
-              "label": "把预算上限提高到 ¥120",
+              "label": "把预算上限提高到 ¥150",
               "action": {
                 "op": "raise_budget",
-                "value": 120
+                "value": 150
               }
             },
             {
               "id": "drop_expensive",
-              "label": "去掉花费最高的一站「上海路街角咖啡馆」",
+              "label": "去掉花费最高的一站「先锋书店（五台山店）」",
               "action": {
                 "op": "drop_expensive"
               }
@@ -2813,14 +2927,28 @@
         },
         "explanations": [
           {
-            "placeId": "p_book_tg",
-            "why": "匹配你选择的「独立书店」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 30 分钟。",
-            "evidence": []
+            "placeId": "p_book_xf",
+            "why": "匹配你选择的「独立书店」偏好，作为路线起点，属于室内场所，下雨或休息时更从容，建议停留约 38 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/6331495101",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           },
           {
-            "placeId": "p_cafe_sh",
-            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 10 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 35 分钟。",
-            "evidence": []
+            "placeId": "p_cafe_zw",
+            "why": "匹配你选择的「咖啡与甜品」偏好，从上一站步行约 14 分钟（估算），属于室内场所，下雨或休息时更从容，建议停留约 40 分钟。",
+            "evidence": [
+              {
+                "title": "OpenStreetMap 坐标",
+                "url": "https://www.openstreetmap.org/node/5641064621",
+                "accessedAt": "2026-10-26",
+                "license": "ODbL 1.0"
+              }
+            ]
           }
         ],
         "sources": [
@@ -2839,16 +2967,16 @@
           }
         ],
         "notes": [
-          "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
-          "示例地点，无真实坐标：「陶谷新村旧书店」、「上海路街角咖啡馆」；仅参与示意路线，不参与真实地图定位。",
-          "示例地点库中符合条件的地点有限，实际安排约 1 小时 15 分钟，比预算少 1 小时 45 分钟。"
+          "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认",
+          "坐标来源：OpenStreetMap contributors（ODbL 1.0）；照片部分来自高德 POI，非商业自用；部分坐标为区域中心点，非入口坐标。",
+          "示例地点库中符合条件的地点有限，实际安排约 1 小时 32 分钟，比预算少 1 小时 28 分钟。"
         ],
         "dataQuality": {
-          "placesTotal": 12,
-          "placesWithCoords": 8,
-          "placesWithHours": 0,
-          "placesVerified": 8,
-          "disclaimer": "示例数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径 · 示例/泛化地点 · 无单一实体 · 不参与真实地图定位"
+          "placesTotal": 67,
+          "placesWithCoords": 67,
+          "placesWithHours": 22,
+          "placesVerified": 67,
+          "disclaimer": "地点数据 · 非真实导航结果 · 时长、距离与费用均为估算值 · 营业信息待确认 · 真实地图 · 坐标来自 OpenStreetMap，路线为示意连线，非导航路径"
         },
         "orderDirty": false,
         "stayDeltaMin": 0
@@ -2958,9 +3086,9 @@
       "route": null,
       "skipped": false,
       "constraints": {
-        "met": 1,
+        "met": 0,
         "partial": 0,
-        "violated": 2,
+        "violated": 3,
         "unknown": 0,
         "total": 3
       }
@@ -3008,28 +3136,28 @@
     "schemaValid": 11,
     "schemaChecked": 11,
     "hardConstraints": {
-      "met": 41,
+      "met": 39,
       "partial": 0,
-      "violated": 8,
+      "violated": 10,
       "unknown": 1
     },
-    "hardSatisfactionRate": 0.8367346938775511,
+    "hardSatisfactionRate": 0.7959183673469388,
     "refineTotal": 12,
     "refinePass": 12,
     "refineChanged": 9,
     "refineExplainedNoop": 2,
     "refineUnknownNoop": 1,
-    "p50Ms": 0.33,
-    "p90Ms": 0.58,
-    "poiVerified": 8,
-    "poiTotal": 12,
+    "p50Ms": 2.61,
+    "p90Ms": 3.08,
+    "poiVerified": 67,
+    "poiTotal": 67,
     "baseline": [
       {
         "id": "C01",
         "b0": {
-          "met": 0,
+          "met": 1,
           "partial": 0,
-          "violated": 3,
+          "violated": 2,
           "unknown": 0,
           "total": 3
         },
@@ -3040,7 +3168,7 @@
           "unknown": 0,
           "total": 3
         },
-        "b0Rate": 0,
+        "b0Rate": 0.3333333333333333,
         "b2Rate": 1
       },
       {
@@ -3103,9 +3231,9 @@
       {
         "id": "C09",
         "b0": {
-          "met": 2,
+          "met": 0,
           "partial": 0,
-          "violated": 0,
+          "violated": 2,
           "unknown": 0,
           "total": 2
         },
@@ -3116,7 +3244,7 @@
           "unknown": 0,
           "total": 2
         },
-        "b0Rate": 1,
+        "b0Rate": 0,
         "b2Rate": 1
       },
       {
@@ -3141,9 +3269,9 @@
       {
         "id": "C20",
         "b0": {
-          "met": 2,
+          "met": 0,
           "partial": 0,
-          "violated": 1,
+          "violated": 3,
           "unknown": 0,
           "total": 3
         },
@@ -3154,7 +3282,7 @@
           "unknown": 0,
           "total": 3
         },
-        "b0Rate": 0.6666666666666666,
+        "b0Rate": 0,
         "b2Rate": 0.6666666666666666
       }
     ]
@@ -3168,7 +3296,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已把绕路最多的「颐和路民国公馆区」从路线里拿掉，步行距离会相应减少。",
+      "reply": "已把绕路最多的「南京植物咖啡馆」从路线里拿掉，步行距离会相应减少。",
       "errors": null
     },
     {
@@ -3179,7 +3307,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已把「上海路街角咖啡馆」替换为「陶谷新村旧书店」，其余站点顺序保持不变。 注意：步行距离超出上限——当前路线约 6.08 km，步行上限为 6 km（mid）。已先尝试移除绕路最大的非必去点。 请从冲突选项里选择一个处理方式。",
+      "reply": "已把「南京植物咖啡馆」替换为「大众书局」，其余站点顺序保持不变。",
       "errors": null
     },
     {
@@ -3223,7 +3351,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已锁定第一站「玄武湖环湖步道」和最后一站「先锋书店（五台山店）」，中间按最近邻重排，步行更顺。",
+      "reply": "已锁定第一站「南京大学（鼓楼校区）」和最后一站「清凉山公园」，中间按最近邻重排，步行更顺。 注意：时间预算不足——按当前安排约需 5 小时 23 分钟，超出你给的 5 小时（含 5% 缓冲的上限为 5 小时 15 分钟）。 请从冲突选项里选择一个处理方式。",
       "errors": null
     },
     {
@@ -3234,7 +3362,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已按下雨偏好把 2 个室外点换成室内点；未替换的点位请自备雨具。 注意：预算可能超出——按示例消费区间估算，全程约 ¥65–¥280，高于设定上限 ¥150（合计）。 请从冲突选项里选择一个处理方式。",
+      "reply": "已按下雨偏好把 4 个室外点换成室内点；未替换的点位请自备雨具。 注意：时间预算不足——按当前安排约需 7 小时 2 分钟，超出你给的 5 小时（含 5% 缓冲的上限为 5 小时 15 分钟）。 请从冲突选项里选择一个处理方式。",
       "errors": null
     },
     {
@@ -3267,7 +3395,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已把节奏调整为「轻松」：每站停留会更长，地点数量可能相应减少。",
+      "reply": "已把节奏调整为「轻松」：每站停留会更长，地点数量可能相应减少。 注意：时间预算不足——按当前安排约需 5 小时 59 分钟，超出你给的 5 小时（含 5% 缓冲的上限为 5 小时 15 分钟）。 请从冲突选项里选择一个处理方式。",
       "errors": null
     },
     {
@@ -3278,7 +3406,7 @@
       "changed": true,
       "explainedNoop": false,
       "schemaOk": true,
-      "reply": "已把可用时长改为 3 小时，其余条件不变。 注意：时间预算不足——按当前安排约需 3 小时 34 分钟，超出你给的 3 小时（含 5% 缓冲的上限为 3 小时 9 分钟）。 请从冲突选项里选择一个处理方式。",
+      "reply": "已把可用时长改为 3 小时，其余条件不变。 注意：时间预算不足——按当前安排约需 5 小时，超出你给的 3 小时（含 5% 缓冲的上限为 3 小时 9 分钟）。 请从冲突选项里选择一个处理方式。",
       "errors": null
     },
     {
