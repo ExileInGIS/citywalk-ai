@@ -291,3 +291,34 @@ test('静态资源白名单：允许 css/js/shared/assets，拒绝其它目录',
   const missing = await fetch(app.base + '/css/not-exist.css');
   assert.equal(missing.status, 404);
 });
+
+test('访问密码：保护页面和 API，健康检查保持公开', async t => {
+  const auth = 'Basic ' + Buffer.from('citywalk:secret-pass').toString('base64');
+  const app = await startServer({ siteUser: 'citywalk', sitePassword: 'secret-pass' });
+  t.after(() => app.close());
+
+  const root = await fetch(app.base + '/');
+  assert.equal(root.status, 401);
+  assert.match(String(root.headers.get('www-authenticate')), /^Basic /);
+
+  const health = await fetch(app.base + '/api/health');
+  assert.equal(health.status, 200);
+
+  const configDenied = await fetch(app.base + '/api/config');
+  assert.equal(configDenied.status, 401);
+  const deniedJson = await readJson(configDenied);
+  assert.equal(deniedJson.code, 'UNAUTHORIZED');
+
+  const configOk = await fetch(app.base + '/api/config', {
+    headers: { Authorization: auth }
+  });
+  assert.equal(configOk.status, 200);
+
+  const pageOk = await fetch(app.base + '/', { headers: { Authorization: auth } });
+  assert.equal(pageOk.status, 200);
+
+  const wrong = await fetch(app.base + '/api/config', {
+    headers: { Authorization: 'Basic ' + Buffer.from('citywalk:wrong').toString('base64') }
+  });
+  assert.equal(wrong.status, 401);
+});

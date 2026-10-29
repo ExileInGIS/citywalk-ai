@@ -5,7 +5,71 @@
 
 **一句话**：用自然语言说清「什么时候、和谁、有多少时间、多少钱、想逛什么」，得到一条满足硬约束、顺序可执行、理由可解释、可继续用自然语言修改的城市漫步路线。
 
-> 当前状态：本地可运行 MVP。**未部署到公网；真实地图为 Leaflet + 高德栅格瓦片（非商用/自用），真实 LLM 已做远程评测**；生产部署仍需按 `docs/DEPLOYMENT.md` 与 `docs/EVALUATION-REPORT.md` 核验。
+> 当前状态：**已部署到 Render**：<https://citywalk-ai-m01d.onrender.com>。线上默认 Mock 模式（不调用付费 LLM）；地图为 Leaflet + 高德栅格瓦片（非商用/自用）。真实 DeepSeek 的线上开启方法见第四节。
+
+---
+
+## 在线使用（Render）
+
+**线上地址：** <https://citywalk-ai-m01d.onrender.com>
+
+这是 Render 的免费 Web Service，第一次打开或长时间没人访问后，可能需要 **30–60 秒冷启动**；等页面出现即可，不需要刷新。
+
+### 第一次使用
+
+1. 打开线上地址；
+2. 在首页输入兴趣、时间、预算、同行人，或点「填入示例需求」；
+3. 点「生成我的 CityWalk 路线」；
+4. 等待四步加载，进入结果页；
+5. 在地图、时间线、约束清单之间切换查看；
+6. 在 AI 助手输入调整指令，例如：
+   - 「少走一点路」
+   - 「把咖啡馆换成书店」
+   - 「下雨了，尽量安排室内活动」
+   - 「保留第一站和最后一站」
+7. 点「收藏」保存到当前浏览器；点「导出」下载 Markdown 或 JSON。
+
+线上版当前：
+
+- 规划由本地确定性规则完成，不调用真实大模型；
+- 地图会加载真实高德栅格底图，显示 67 个有坐标地点；
+- 收藏只存在你的浏览器 `localStorage`，换浏览器/设备不会同步；
+- 不需要注册账号。
+
+健康检查：
+
+```text
+https://citywalk-ai-m01d.onrender.com/api/health
+```
+
+正常返回：
+
+```json
+{"status":"ok","mode":"mock","provider":"mock-rules"}
+```
+
+### 设置访问密码（可选，推荐）
+
+线上默认没有登录限制。要加一个全站访问密码，在 Render 的 `Environment` 中添加：
+
+```text
+SITE_USER=citywalk
+SITE_PASSWORD=你自己设置的密码
+```
+
+保存后 Render 自动重新部署。再次打开网站时，浏览器会弹出登录框：
+
+- 用户名：`citywalk`，或你设置的 `SITE_USER`
+- 密码：你设置的 `SITE_PASSWORD`
+
+说明：
+
+- `SITE_PASSWORD` 留空 = 不启用密码；
+- 除 `/api/health` 外，页面、静态资源、API 都需要密码；
+- `/api/health` 保持公开，供 Render 健康检查；
+- 这是 HTTP Basic Auth，必须配合 HTTPS 使用（Render 默认提供 HTTPS）；
+- 密码只放在 Render 环境变量里，不要提交到 Git 或 README；
+- 这是共享密码，不是正式账号体系；如果要多人独立账号，需要另做登录系统。
 
 ---
 
@@ -22,8 +86,8 @@
 | 调整前后差异 | 已实现 | 增/删/换/顺序/时长/预算 + 未解决项 |
 | 保存 / 导出 / 复制 | 已实现 | localStorage 持久化；Markdown / JSON 导出 |
 | 统一 Agent 接口 | 已实现 | `POST /api/agent/run`，Mock/Remote、超时、Schema 校验、降级 |
-| 地图 Provider | 已实现 | 默认 SVG 示意；Leaflet 适配器（真实坐标，需网络） |
-| 真实 AI 服务 | 适配器就绪，未联调 | OpenAI 兼容 + Coze 骨架；无密钥，标注未验证 |
+| 地图 Provider | 已实现 | 线上为 Leaflet + 高德栅格底图；离线/加载失败自动回退 SVG 示意 |
+| 真实 AI 服务 | 适配器就绪；线上默认 Mock | OpenAI 兼容接口已做远程评测；Render 线上开启 DeepSeek 见第四节 |
 | 测试与评测 | 已实现 | `pnpm test`、`pnpm eval`、`pnpm check` |
 
 ---
@@ -67,30 +131,75 @@ Mock 模式下所有规划由 `shared/core.js` 确定性完成；界面明确标
 
 ---
 
-## 四、接入真实 AI 服务
+## 四、接入真实 AI（DeepSeek）
+
+线上默认是 `AGENT_MODE=mock`，不会产生模型费用。要启用 DeepSeek，需要把 API Key 配到 **Render 的环境变量**里，不要写进 README 或提交到 Git。
+
+### 方式 A：本地 `.env`
 
 复制 `.env.example` 为 `.env`（已被 gitignore）：
 
 ```bash
 AGENT_MODE=remote
-LLM_BASE_URL=https://api.deepseek.com/v1   # 任意 OpenAI 兼容服务
+LLM_BASE_URL=https://api.deepseek.com/v1
 LLM_API_KEY=你的服务端密钥
 LLM_MODEL=deepseek-chat
+AGENT_TIMEOUT_MS=60000
 AGENT_FALLBACK=mock
 ```
 
-重启 `pnpm start` 后：
+重启：
 
 ```bash
-curl -s -X POST http://localhost:3000/api/agent/run \
+pnpm start
+```
+
+### 方式 B：Render 线上开启 DeepSeek
+
+1. 打开 Render Dashboard，进入 `citywalk-ai` 服务；
+2. 点 **Environment**；
+3. 新增或修改以下变量：
+
+```text
+AGENT_MODE=remote
+LLM_BASE_URL=https://api.deepseek.com/v1
+LLM_API_KEY=sk-你的DeepSeekKey
+LLM_MODEL=deepseek-chat
+AGENT_TIMEOUT_MS=60000
+AGENT_FALLBACK=mock
+```
+
+4. 点 **Save Changes**，Render 会自动重新部署；等部署完成；
+5. 打开：
+
+```text
+https://citywalk-ai-m01d.onrender.com/api/config
+```
+
+成功时应该看到：
+
+```json
+{"mode":"remote","remoteConfigured":true}
+```
+
+健康检查中的 `mode` 也会从 `mock` 变成 `remote`。
+
+### 线上测试
+
+```bash
+curl -s -X POST https://citywalk-ai-m01d.onrender.com/api/agent/run \
   -H 'Content-Type: application/json' \
   -d '{"task":"plan","payload":{"conditions":{"city":"nanjing","durationMin":240,"interests":["coffee","history"],"budgetMax":150}}}'
 ```
 
-- 密钥只存在于服务端；前端通过 `/api/config` 只能看到是否已配置；
-- 模型只提供候选与解释，时间/预算/距离由服务端重算并过 Schema；
-- 失败按 `AGENT_FALLBACK` 降级，界面显示「已切换本地模拟」+ 原因；
-- **未提供真实密钥，因此本仓库没有“真实 LLM 已跑通”的记录**；接入步骤见 `docs/API-INTEGRATION.md`。
+注意：
+
+- `LLM_API_KEY` 只在服务端使用，前端永远看不到；
+- 每次生成/调整都可能调用 DeepSeek，**会产生 API 费用**；
+- `AGENT_FALLBACK=mock` 表示 DeepSeek 失败/超时时自动回退本地规则；
+- 线上服务没有登录体系，公开的 `/api/agent/run` 可能被他人调用；请观察 Render 用量和 DeepSeek 账单，必要时关闭远程模式；
+- 先保持 `AGENT_MODE=mock` 验证网站，再开启 `remote`，这样出问题容易判断是部署还是模型；
+- 仓库不保存任何真实密钥；不要把 Key 写进 README、代码或聊天记录。
 
 Coze：`server/agent/providers/coze.js` 为最小适配器，**未联调**，接入前必须按官方最新文档核对。
 
@@ -129,7 +238,7 @@ pnpm check      # 文档/数据/密钥/脚本一致性自检
 
 本机若 PATH 没有 node，可用 DSH 内置 Node 的绝对路径运行同一命令；测试报告会写明实际环境。
 
-评测只跑 Mock；**远程 LLM、真实地图、公网部署均未验证**，报告不会把 Mock 成绩写成真实服务成绩。
+评测只跑 Mock；**线上部署和真实高德底图已人工验证，远程 LLM 未在线上开启**；报告不会把 Mock 成绩写成真实服务成绩。
 
 ---
 
@@ -171,16 +280,16 @@ citywalk-ai/
 - 4 个泛化地点已替换为具体地点；没有单一实体的泛化点不再出现在数据中；
 - 营业时间：22 个来自高德 POI 字段，其余为 `null` → 界面显示「信息待确认」；不虚构实时状态；
 - 图片：29 个使用高德 POI 图片，其余为本地类别图；版权与平台条款仍需上线前核对；
-- 真实 LLM/地图 Key 只放在本地 `.env`，未提交；生产环境需要代理/授权与域名白名单；
+- 真实 LLM Key 只放在本地 `.env` 或 Render 环境变量，不提交；高德栅格底图不需要 JS Key；生产环境仍建议代理/授权与条款核对；
 - 没有真实用户数据：不报告转化率、留存率或增长；所有用户偏好结论均为待验证假设；
-- **未部署公网**：README 不写“已上线”。
+- **已部署公网**：线上地址 <https://citywalk-ai-m01d.onrender.com>；免费实例会休眠，首次访问可能较慢。
 
 ---
 
 ## 九、已知限制
 
-- 真实 LLM 质量、Coze 兼容性未验证；
-- 真实地图需要网络与 CDN/CSP 配置，本次未在自动化中加载瓦片；
+- 真实 LLM 质量在线上尚未启用（本地远程评测已跑）；Coze 兼容性未验证；
+- 真实高德底图已在线上 Chrome 人工验证；自动化测试本身不加载外部瓦片，仍可能受 CDN/网络影响；
 - 路线不是导航路径，距离为直线 × 1.25 的估算；
 - 仅南京有完整示例数据；其他城市会返回空状态；
 - 无账号体系、无云端同步；收藏只在本浏览器；
