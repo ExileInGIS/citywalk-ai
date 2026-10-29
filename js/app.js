@@ -537,6 +537,14 @@
     state.storageEnabled = storageAvailable();
     render();
     booted = true;
+    /* 先以 mock 地图启动；服务端配置为真实地图时，拿到配置后重新渲染。
+       Leaflet CDN/瓦片失败时，MapEngine 会回退 mock 并显示提示，不阻塞页面。 */
+    if (CW.mapBootstrap && typeof CW.mapBootstrap.ready === 'function') {
+      CW.mapBootstrap.ready().then(function (result) {
+        const map = (CW_CONFIG.MAP || CW_CONFIG.map || {});
+        if (map.provider === 'leaflet' || map.provider === 'amap') render();
+      }).catch(function () { /* 保留已渲染的 mock */ });
+    }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();

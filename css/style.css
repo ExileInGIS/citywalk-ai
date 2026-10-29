@@ -405,6 +405,8 @@ img{display:block;max-width:100%}
 }
 .real-map .cw-marker.start span{background:#1F3D2B;border-color:#fff}
 .real-map .cw-marker.end span{background:var(--amber)}
+.real-map .cw-marker.dot{width:8px;height:8px;border-radius:50%;background:#6B6E9A;border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.25);opacity:.8}
+.real-map .cw-marker.dot span{display:none}
 .map-ctrl{position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:6px}
 .map-ctrl button{
   width:32px;height:32px;border-radius:var(--r-sm);background:#fff;border:1px solid var(--line);

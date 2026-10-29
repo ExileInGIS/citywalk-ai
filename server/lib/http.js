@@ -39,11 +39,12 @@ class ApiError extends Error {
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self'",
-  "style-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline' https://webapi.amap.com https://*.amap.com https://unpkg.com",
+  "style-src 'self' 'unsafe-inline' https://webapi.amap.com https://*.amap.com https://unpkg.com",
   "img-src 'self' data: https:",
-  "connect-src 'self'",
-  "font-src 'self'",
+  "connect-src 'self' https://restapi.amap.com https://*.amap.com https://*.autonavi.com",
+  "worker-src 'self' blob:",
+  "font-src 'self' https://webapi.amap.com",
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'none'"
@@ -53,7 +54,7 @@ const CSP = [
 function applySecurityHeaders(res) {
   res.setHeader('Content-Security-Policy', CSP);
   res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('Referrer-Policy', 'no-referrer');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=()');
   res.setHeader('X-Frame-Options', 'DENY');
 }

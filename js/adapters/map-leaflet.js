@@ -26,8 +26,9 @@
     return (root.CW_CONFIG && (root.CW_CONFIG.MAP || root.CW_CONFIG.map)) || {};
   }
 
-  /* 只在用户明确选择 leaflet、且 SDK 已加载时注册 */
-  if (!CW.MapEngine || !root.L || readMapConfig().provider !== 'leaflet') return;
+  /* 先注册 Provider；运行时会由 MapEngine 按 MAP.provider 选择是否使用。
+     不能在加载时判断 provider，因为 map-bootstrap 可能在脚本加载后才切到 leaflet。 */
+  if (!CW.MapEngine || !root.L) return;
 
   function esc(value) {
     if (CW.ui && typeof CW.ui.esc === 'function') return CW.ui.esc(value);
@@ -48,6 +49,40 @@
     return [place.lat, place.lng];
   }
 
+  /* 高德栅格瓦片使用 GCJ-02；数据层仍是 WGS84，只在显示时转换。 */
+  const PI = Math.PI;
+  const GCJ_A = 6378245.0;
+  const GCJ_EE = 0.00669342162296594323;
+  function outOfChina(lat, lng) {
+    return lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271;
+  }
+  function transformLat(x, y) {
+    let ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
+    ret += (20.0 * Math.sin(6.0 * x * PI) + 20.0 * Math.sin(2.0 * x * PI)) * 2.0 / 3.0;
+    ret += (20.0 * Math.sin(y * PI) + 40.0 * Math.sin(y / 3.0 * PI)) * 2.0 / 3.0;
+    ret += (160.0 * Math.sin(y / 12.0 * PI) + 320 * Math.sin(y * PI / 30.0)) * 2.0 / 3.0;
+    return ret;
+  }
+  function transformLng(x, y) {
+    let ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.sqrt(Math.abs(x));
+    ret += (20.0 * Math.sin(6.0 * x * PI) + 20.0 * Math.sin(2.0 * x * PI)) * 2.0 / 3.0;
+    ret += (20.0 * Math.sin(x * PI) + 40.0 * Math.sin(x / 3.0 * PI)) * 2.0 / 3.0;
+    ret += (150.0 * Math.sin(x / 12.0 * PI) + 300.0 * Math.sin(x / 30.0 * PI)) * 2.0 / 3.0;
+    return ret;
+  }
+  function wgs84ToGcj02(lat, lng) {
+    if (outOfChina(lat, lng)) return [lat, lng];
+    let dLat = transformLat(lng - 105.0, lat - 35.0);
+    let dLng = transformLng(lng - 105.0, lat - 35.0);
+    const radLat = lat / 180.0 * PI;
+    let magic = Math.sin(radLat);
+    magic = 1 - GCJ_EE * magic * magic;
+    const sqrtMagic = Math.sqrt(magic);
+    dLat = (dLat * 180.0) / ((GCJ_A * (1 - GCJ_EE)) / (magic * sqrtMagic) * PI);
+    dLng = (dLng * 180.0) / (GCJ_A / sqrtMagic * Math.cos(radLat) * PI);
+    return [lat + dLat, lng + dLng];
+  }
+
   function initLeaflet(host, route, opts) {
     opts = opts || {};
     if (!CW.data || typeof CW.data.place !== 'function') {
@@ -62,11 +97,23 @@
     const parsedMaxZoom = Number(conf.maxZoom);
     const maxZoom = Number.isFinite(parsedMaxZoom) && parsedMaxZoom > 0
       ? Math.round(parsedMaxZoom) : 19;
+    const isGcj = conf.coordSystem === 'gcj02' || /autonavi\.com|amap\.com/i.test(tileUrl);
+    const subdomains = (typeof conf.subdomains === 'string' && conf.subdomains.trim())
+      ? conf.subdomains.trim() : 'abc';
+
+    function displayCoord(place) {
+      const c = validCoord(place);
+      if (!c) return null;
+      return isGcj ? wgs84ToGcj02(c[0], c[1]) : c;
+    }
+    function displayCenter() {
+      return isGcj ? wgs84ToGcj02(DEFAULT_CENTER[0], DEFAULT_CENTER[1]) : DEFAULT_CENTER.slice();
+    }
 
     host.innerHTML =
       '<div class="real-map" id="leafletMap"></div>' +
       '<div class="map-note">' + icon('info') +
-      '<span>' + esc(attribution) + ' · 路线为直线连接，示意图，非导航路径；点位为示例数据</span></div>' +
+      '<span>' + esc(attribution) + ' · 路线为直线连接，示意图，非导航路径；点位来自 OSM 数据</span></div>' +
       '<div class="leaflet-notices"></div>';
 
     const mapEl = host.querySelector('.real-map');
@@ -75,6 +122,7 @@
     const map = L.map(mapEl, { zoomControl: true, attributionControl: true });
     const tiles = L.tileLayer(tileUrl, {
       maxZoom: maxZoom,
+      subdomains: subdomains,
       attribution: attribution + ' · Leaflet'
     });
     tiles.addTo(map);
@@ -132,28 +180,39 @@
       clearOverlays();
 
       const routeIds = (r && Array.isArray(r.places)) ? r.places : [];
+      const routeSet = Object.create(null);
+      routeIds.forEach(id => { routeSet[id] = true; });
+      const routePositions = [];
       coords = [];
       missingCount = 0;
 
-      routeIds.forEach((id, index) => {
-        const place = CW.data.place(id);
-        const ll = validCoord(place);
+      /* 全部有坐标地点；路线点用数字/起终样式，其余用圆点。 */
+      const allPlaces = (CW.data.placesOfCity && CW.data.placesOfCity('nanjing')) || [];
+      allPlaces.forEach(place => {
+        const ll = displayCoord(place);
         if (!ll) { missingCount += 1; return; }
-
         coords.push(ll);
-        const isStart = index === 0;
-        const isEnd = index === routeIds.length - 1 && routeIds.length > 1;
-        const num = isStart ? '起' : (isEnd ? '终' : String(index + 1));
+        const routeIndex = routeIds.indexOf(place.id);
+        const onRoute = routeIndex >= 0;
+        if (onRoute) routePositions.push(ll);
+        const isStart = onRoute && routeIndex === 0;
+        const isEnd = onRoute && routeIndex === routeIds.length - 1 && routeIds.length > 1;
+        const num = isStart ? '起' : (isEnd ? '终' : String(routeIndex + 1));
         const marker = L.marker(ll, {
           title: place.name,
-          icon: L.divIcon({
+          icon: L.divIcon(onRoute ? {
             className: 'cw-marker' + (isStart ? ' start' : isEnd ? ' end' : ''),
             html: '<span>' + esc(num) + '</span>',
             iconSize: [24, 24],
             iconAnchor: [12, 12]
+          } : {
+            className: 'cw-marker dot',
+            html: '<span></span>',
+            iconSize: [8, 8],
+            iconAnchor: [4, 4]
           })
         });
-        marker.bindTooltip(place.name, { direction: 'top', offset: [0, -12] });
+        marker.bindTooltip(place.name, { direction: 'top', offset: [0, -8] });
         marker.on('click', function () {
           if (opts.onSelect) opts.onSelect(place.id);
         });
@@ -161,9 +220,9 @@
         pinLayer.addLayer(marker);
       });
 
-      if (coords.length > 1) {
+      if (routePositions.length > 1) {
         // 直线连接：不是路径规划结果，不能标成导航
-        routeLine = L.polyline(coords, { color: '#1F3D2B', weight: 3, dashArray: '6 6' });
+        routeLine = L.polyline(routePositions, { color: '#1F3D2B', weight: 3, dashArray: '6 6' });
       }
 
       if (layers.pins) pinLayer.addTo(map); else map.removeLayer(pinLayer);
@@ -177,7 +236,7 @@
     function fit() {
       if (destroyed) return;
       if (!coords.length) {
-        map.setView(DEFAULT_CENTER, 12);
+        map.setView(displayCenter(), 12);
         return;
       }
       if (coords.length === 1) {
