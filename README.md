@@ -48,6 +48,29 @@ https://citywalk-ai-m01d.onrender.com/api/health
 {"status":"ok","mode":"mock","provider":"mock-rules"}
 ```
 
+### 设置访问密码（可选，推荐）
+
+线上默认没有登录限制。要加一个全站访问密码，在 Render 的 `Environment` 中添加：
+
+```text
+SITE_USER=citywalk
+SITE_PASSWORD=你自己设置的密码
+```
+
+保存后 Render 自动重新部署。再次打开网站时，浏览器会弹出登录框：
+
+- 用户名：`citywalk`，或你设置的 `SITE_USER`
+- 密码：你设置的 `SITE_PASSWORD`
+
+说明：
+
+- `SITE_PASSWORD` 留空 = 不启用密码；
+- 除 `/api/health` 外，页面、静态资源、API 都需要密码；
+- `/api/health` 保持公开，供 Render 健康检查；
+- 这是 HTTP Basic Auth，必须配合 HTTPS 使用（Render 默认提供 HTTPS）；
+- 密码只放在 Render 环境变量里，不要提交到 Git 或 README；
+- 这是共享密码，不是正式账号体系；如果要多人独立账号，需要另做登录系统。
+
 ---
 
 ## 一、现在能做什么

@@ -14,6 +14,7 @@
 'use strict';
 
 const http = require('node:http');
+const crypto = require('node:crypto');
 
 const { loadConfig, resolveConfig, publicConfig } = require('./config');
 const { createLogger } = require('./lib/logger');
@@ -57,6 +58,41 @@ function requestPath(req) {
   } catch (_) {
     return raw.split('?')[0].slice(0, 200);
   }
+}
+
+/* 常量时间比较，避免用字符串 === 比较密码时泄露长度/内容。 */
+function safeEqualText(a, b) {
+  const left = Buffer.from(String(a == null ? '' : a), 'utf8');
+  const right = Buffer.from(String(b == null ? '' : b), 'utf8');
+  if (left.length !== right.length) return false;
+  try {
+    return crypto.timingSafeEqual(left, right);
+  } catch (_) {
+    return false;
+  }
+}
+
+function readBasicAuth(req) {
+  const header = req && req.headers && req.headers.authorization;
+  if (typeof header !== 'string' || !/^Basic\s+/i.test(header)) return null;
+  let decoded;
+  try {
+    decoded = Buffer.from(header.replace(/^Basic\s+/i, '').trim(), 'base64').toString('utf8');
+  } catch (_) {
+    return null;
+  }
+  const colon = decoded.indexOf(':');
+  if (colon < 0) return null;
+  return { user: decoded.slice(0, colon), password: decoded.slice(colon + 1) };
+}
+
+function hasSiteAccess(req, config) {
+  if (!config.sitePassword) return true;
+  const credentials = readBasicAuth(req);
+  if (!credentials) return false;
+  const userOk = safeEqualText(credentials.user, config.siteUser);
+  const passwordOk = safeEqualText(credentials.password, config.sitePassword);
+  return userOk && passwordOk;
 }
 
 function applyIdHeaders(ctx) {
@@ -354,6 +390,24 @@ function createApp(options) {
         throw new ApiError('INVALID_INPUT', '非法请求路径', { status: 400 });
       }
       const pathname = url.pathname;
+
+      /* 全站访问密码：健康检查保持公开，供 Render/负载均衡探活。 */
+      if (pathname !== '/api/health' && !hasSiteAccess(req, config)) {
+        ctx.errorCode = 'AUTH_REQUIRED';
+        res.setHeader('WWW-Authenticate', 'Basic realm="CityWalk AI", charset="UTF-8"');
+        res.setHeader('Cache-Control', 'no-store');
+        if (pathname === '/api' || pathname.startsWith('/api/')) {
+          sendJson(res, 401, {
+            code: 'UNAUTHORIZED',
+            message: '需要访问密码',
+            requestId: ctx.requestId,
+            traceId: ctx.traceId
+          });
+        } else {
+          sendText(res, 401, '需要访问密码');
+        }
+        return;
+      }
 
       if (pathname === '/api/health') {
         await handleHealth(ctx);

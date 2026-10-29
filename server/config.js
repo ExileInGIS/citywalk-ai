@@ -31,6 +31,8 @@ const DEFAULTS = Object.freeze({
   rateLimitPerMin: 30,
   corsOrigins: [],
   telemetryEnabled: true,
+  siteUser: 'citywalk',
+  sitePassword: '',
   logLevel: 'info',
   llm: { baseUrl: '', apiKey: '', model: '' },
   coze: { apiToken: '', botId: '', baseUrl: '' },
@@ -259,6 +261,8 @@ function resolveConfig(input) {
       firstDefined(src.telemetryEnabled, src.telemetry, src.TELEMETRY_ENABLED),
       DEFAULTS.telemetryEnabled
     ),
+    siteUser: toStringValue(firstDefined(src.siteUser, src.SITE_USER), DEFAULTS.siteUser) || DEFAULTS.siteUser,
+    sitePassword: toStringValue(firstDefined(src.sitePassword, src.SITE_PASSWORD), DEFAULTS.sitePassword),
     logLevel,
     mapProvider,
     amapJsKey,
@@ -285,6 +289,7 @@ function loadConfig(env) {
   [
     'PORT', 'NODE_ENV', 'AGENT_MODE', 'AGENT_TIMEOUT_MS', 'AGENT_FALLBACK',
     'RATE_LIMIT_PER_MIN', 'CORS_ORIGINS', 'TELEMETRY_ENABLED', 'LOG_LEVEL',
+    'SITE_USER', 'SITE_PASSWORD',
     'LLM_BASE_URL', 'LLM_API_KEY', 'LLM_MODEL',
     'COZE_API_TOKEN', 'COZE_BOT_ID', 'COZE_BASE_URL',
     'MAP_PROVIDER', 'AMAP_JS_KEY', 'AMAP_SECURITY_CODE'
@@ -301,6 +306,8 @@ function loadConfig(env) {
     rateLimitPerMin: merged.RATE_LIMIT_PER_MIN,
     corsOrigins: merged.CORS_ORIGINS,
     telemetryEnabled: merged.TELEMETRY_ENABLED,
+    siteUser: merged.SITE_USER,
+    sitePassword: merged.SITE_PASSWORD,
     logLevel: merged.LOG_LEVEL,
     mapProvider: merged.MAP_PROVIDER,
     amapJsKey: merged.AMAP_JS_KEY,
