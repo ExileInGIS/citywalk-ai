@@ -1,0 +1,2181 @@
+{
+  "version": "2026-10-29",
+  "city": "nanjing",
+  "status": "pending-review",
+  "note": "候选清单，尚未写入 js/data.js 或 server/data/poi-coords.json；确认后再落地。",
+  "estimatePolicy": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。",
+  "hoursPolicy": "营业时间一律 null（未核验）；不得编造。",
+  "sourcePolicy": "名称/坐标来自 OpenStreetMap 对象；许可 ODbL 1.0；核验日期见每条。",
+  "imagePolicy": "图片尚未下载；现有 8 个沿用上游图片，新增地点的真实图片待确认后补齐。",
+  "counts": {
+    "total": 67,
+    "existing": 8,
+    "replacements": 4,
+    "new": 55
+  },
+  "places": [
+    {
+      "id": "p_yihe",
+      "name": "颐和路民国公馆区",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "鼓楼区 · 颐和路",
+      "lat": 32.0652918,
+      "lon": 118.7614006,
+      "stay": 35,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "photo",
+        "history"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89567586",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/yihc.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_book_xf",
+      "name": "先锋书店（五台山店）",
+      "cat": "book",
+      "catName": "书店",
+      "area": "鼓楼区 · 五台山",
+      "lat": 32.0527745,
+      "lon": 118.7682621,
+      "stay": 38,
+      "cost": [
+        0,
+        80
+      ],
+      "interests": [
+        "book",
+        "photo"
+      ],
+      "themes": [
+        "art",
+        "photo"
+      ],
+      "reason": "书店，适合停留、选书与室内休息。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/6331495101",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/book1.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_xinjiekou",
+      "name": "新街口商圈",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 新街口",
+      "lat": 32.0438303,
+      "lon": 118.7788612,
+      "stay": 30,
+      "cost": [
+        0,
+        100
+      ],
+      "interests": [
+        "photo",
+        "local"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/155883034",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/xinjiekou.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_changjiang",
+      "name": "长江路 · 1912 街区",
+      "cat": "photo",
+      "catName": "摄影",
+      "area": "玄武区 · 长江路",
+      "lat": 32.0467613,
+      "lon": 118.7905898,
+      "stay": 38,
+      "cost": [
+        0,
+        120
+      ],
+      "interests": [
+        "photo",
+        "history"
+      ],
+      "themes": [
+        "photo",
+        "arch"
+      ],
+      "reason": "城市观景点，适合拍照与看城市天际线。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/857492847",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/night.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_xuanwu",
+      "name": "玄武湖环湖步道",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 玄武湖",
+      "lat": 32.0744113,
+      "lon": 118.795514,
+      "stay": 35,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park",
+        "photo"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/2138994",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/park2.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_qinhuai",
+      "name": "夫子庙 · 秦淮河",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 夫子庙",
+      "lat": 32.0204106,
+      "lon": 118.7827931,
+      "stay": 35,
+      "cost": [
+        0,
+        100
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history",
+        "photo"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/590937998",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/qinhuai.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_laomendong",
+      "name": "老门东历史文化街区",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 老门东",
+      "lat": 32.013464,
+      "lon": 118.7822575,
+      "stay": 38,
+      "cost": [
+        0,
+        60
+      ],
+      "interests": [
+        "history",
+        "local"
+      ],
+      "themes": [
+        "history",
+        "art"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/948332291",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/laomd.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_bailuzhou",
+      "name": "白鹭洲公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "秦淮区 · 白鹭洲",
+      "lat": 32.0194287,
+      "lon": 118.7897433,
+      "stay": 35,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/88807020",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-26",
+      "status": "keep",
+      "replaces": null,
+      "image": "assets/img/park1.jpg",
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_cafe_zw",
+      "name": "南京植物咖啡馆",
+      "cat": "cafe",
+      "catName": "咖啡",
+      "area": "鼓楼区 · 慈悲社",
+      "lat": 32.0477103,
+      "lon": 118.7747492,
+      "stay": 40,
+      "cost": [
+        35,
+        70
+      ],
+      "interests": [
+        "coffee"
+      ],
+      "themes": [
+        "coffee"
+      ],
+      "reason": "咖啡馆，适合中途休息与观察街景。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/5641064621",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "replace",
+      "replaces": "p_cafe_sh",
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_book_dz",
+      "name": "大众书局",
+      "cat": "book",
+      "catName": "书店",
+      "area": "秦淮区 · 新街口",
+      "lat": 32.04455,
+      "lon": 118.77617,
+      "stay": 40,
+      "cost": [
+        0,
+        80
+      ],
+      "interests": [
+        "book"
+      ],
+      "themes": [
+        "art"
+      ],
+      "reason": "书店，适合停留、选书与室内休息。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/2706957988",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "replace",
+      "replaces": "p_book_tg",
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_food_wl",
+      "name": "问柳菜馆",
+      "cat": "food",
+      "catName": "餐饮",
+      "area": "秦淮区 · 老门东",
+      "lat": 32.013581,
+      "lon": 118.7822306,
+      "stay": 55,
+      "cost": [
+        60,
+        120
+      ],
+      "interests": [
+        "local"
+      ],
+      "themes": [
+        "art"
+      ],
+      "reason": "本地餐饮，适合安排正餐或小吃。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/8794529019",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "replace",
+      "replaces": "p_food_ld",
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_nanjing_eye",
+      "name": "南京眼步行桥",
+      "cat": "photo",
+      "catName": "摄影",
+      "area": "建邺区 · 河西",
+      "lat": 31.998311,
+      "lon": 118.696873,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "photo"
+      ],
+      "themes": [
+        "photo"
+      ],
+      "reason": "城市观景点，适合拍照与看城市天际线。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/321392362",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "replace",
+      "replaces": "p_market",
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_zhongshanling",
+      "name": "中山陵",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.06018,
+      "lon": 118.848543,
+      "stay": 90,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/18303735",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_mingxiaoling",
+      "name": "明孝陵",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.062314,
+      "lon": 118.834704,
+      "stay": 90,
+      "cost": [
+        60,
+        90
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/380923041",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_nanjing_museum",
+      "name": "南京博物院",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 中山东路",
+      "lat": 32.042299,
+      "lon": 118.819887,
+      "stay": 120,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/319998727",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_presidential_palace",
+      "name": "总统府",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 长江路",
+      "lat": 32.04609,
+      "lon": 118.792206,
+      "stay": 90,
+      "cost": [
+        35,
+        40
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62353727",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_six_dynasties",
+      "name": "六朝博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 长江路",
+      "lat": 32.044784,
+      "lon": 118.794282,
+      "stay": 60,
+      "cost": [
+        30,
+        30
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/1061577687",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jiangning_weaving",
+      "name": "江宁织造博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 长江路",
+      "lat": 32.044648,
+      "lon": 118.788981,
+      "stay": 60,
+      "cost": [
+        30,
+        30
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/205421877",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_folk_museum",
+      "name": "南京市民俗博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 南捕厅",
+      "lat": 32.027691,
+      "lon": 118.776544,
+      "stay": 60,
+      "cost": [
+        20,
+        30
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/13745109131",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_zhanyuan",
+      "name": "瞻园",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 瞻园路",
+      "lat": 32.0231,
+      "lon": 118.780054,
+      "stay": 60,
+      "cost": [
+        30,
+        40
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/91997298",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jiangnan_exam",
+      "name": "江南贡院",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 夫子庙",
+      "lat": 32.023086,
+      "lon": 118.785483,
+      "stay": 60,
+      "cost": [
+        50,
+        50
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/1608062767",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_wuyi_lane",
+      "name": "乌衣巷",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 夫子庙",
+      "lat": 32.019864,
+      "lon": 118.785976,
+      "stay": 25,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/91997683",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_city_wall_museum",
+      "name": "南京城墙博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 中华门",
+      "lat": 32.014595,
+      "lon": 118.777701,
+      "stay": 60,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/1183607105",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_zhonghuamen",
+      "name": "中华门",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 中华门",
+      "lat": 32.0145171,
+      "lon": 118.7763911,
+      "stay": 50,
+      "cost": [
+        50,
+        50
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/11308636",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_yuhuatai",
+      "name": "雨花台风景名胜区",
+      "cat": "history",
+      "catName": "历史",
+      "area": "雨花台区 · 雨花台",
+      "lat": 32.0006529,
+      "lon": 118.7780548,
+      "stay": 90,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62381499",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_dabaoensi",
+      "name": "大报恩寺遗址博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 雨花路",
+      "lat": 32.0112465,
+      "lon": 118.7782558,
+      "stay": 60,
+      "cost": [
+        80,
+        120
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/19786016",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jiming_temple",
+      "name": "鸡鸣寺",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 鸡鸣寺",
+      "lat": 32.062962,
+      "lon": 118.789928,
+      "stay": 45,
+      "cost": [
+        10,
+        10
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/319055520",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_taicheng",
+      "name": "台城",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 玄武湖",
+      "lat": 32.0637819,
+      "lon": 118.7902212,
+      "stay": 40,
+      "cost": [
+        15,
+        30
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89637327",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_yuejianglou",
+      "name": "阅江楼",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "鼓楼区 · 下关",
+      "lat": 32.096168,
+      "lon": 118.741324,
+      "stay": 60,
+      "cost": [
+        40,
+        40
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/461035531",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jinghaisi",
+      "name": "静海寺",
+      "cat": "history",
+      "catName": "历史",
+      "area": "鼓楼区 · 下关",
+      "lat": 32.094035,
+      "lon": 118.739672,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/461035548",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_tianfeigong",
+      "name": "天妃宫",
+      "cat": "history",
+      "catName": "历史",
+      "area": "鼓楼区 · 下关",
+      "lat": 32.09433,
+      "lon": 118.741091,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/606914250",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_chaotiangong",
+      "name": "朝天宫",
+      "cat": "history",
+      "catName": "历史",
+      "area": "秦淮区 · 朝天宫",
+      "lat": 32.036581,
+      "lon": 118.770333,
+      "stay": 60,
+      "cost": [
+        25,
+        25
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/446638070",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_nju",
+      "name": "南京大学（鼓楼校区）",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "鼓楼区 · 鼓楼",
+      "lat": 32.056596,
+      "lon": 118.774088,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/88779953",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_seu",
+      "name": "东南大学（四牌楼校区）",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "玄武区 · 四牌楼",
+      "lat": 32.057648,
+      "lon": 118.788282,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/16272607",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_njnu",
+      "name": "南京师范大学（随园校区）",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "鼓楼区 · 随园",
+      "lat": 32.055056,
+      "lon": 118.762101,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89638729",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_nanjing_library",
+      "name": "南京图书馆",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "玄武区 · 大行宫",
+      "lat": 32.044111,
+      "lon": 118.790488,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/94327966",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jiangsu_art_museum",
+      "name": "江苏省美术馆",
+      "cat": "arch",
+      "catName": "建筑",
+      "area": "玄武区 · 长江路",
+      "lat": 32.043494,
+      "lon": 118.7936,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "建筑与街区观察点位，适合拍照与步行。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/318198215",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_yunjin_museum",
+      "name": "南京云锦博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "建邺区 · 茶亭",
+      "lat": 32.038434,
+      "lon": 118.73957,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/1036715454",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_paleontology_museum",
+      "name": "南京古生物博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 鸡鸣寺",
+      "lat": 32.06167,
+      "lon": 118.79011,
+      "stay": 60,
+      "cost": [
+        20,
+        30
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/439252888",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_geology_museum",
+      "name": "南京地质博物馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 珠江路",
+      "lat": 32.04671,
+      "lon": 118.802057,
+      "stay": 45,
+      "cost": [
+        0,
+        20
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/1086342490",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_crossing_memorial",
+      "name": "渡江胜利纪念馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "鼓楼区 · 三汊河",
+      "lat": 32.0757,
+      "lon": 118.726512,
+      "stay": 60,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/3637368211",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_meiyuan",
+      "name": "梅园新村纪念馆",
+      "cat": "history",
+      "catName": "历史",
+      "area": "玄武区 · 梅园新村",
+      "lat": 32.045077,
+      "lon": 118.7964813,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "history",
+        "photo"
+      ],
+      "themes": [
+        "history"
+      ],
+      "reason": "南京历史文化点位，适合步行参观与城市观察。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/1231581899",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_mochou_lake",
+      "name": "莫愁湖公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "建邺区 · 莫愁湖",
+      "lat": 32.03717,
+      "lon": 118.756725,
+      "stay": 60,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62688789",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_qingliangshan",
+      "name": "清凉山公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 清凉山",
+      "lat": 32.05215,
+      "lon": 118.755493,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62114524",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_gulin_park",
+      "name": "古林公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 古林",
+      "lat": 32.0687,
+      "lon": 118.748217,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89638712",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_guofang_park",
+      "name": "国防园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 清凉门",
+      "lat": 32.052783,
+      "lon": 118.749655,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89638713",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_jiuhuashan",
+      "name": "九华山公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 九华山",
+      "lat": 32.0616,
+      "lon": 118.803314,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/91828656",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_qinglv_park",
+      "name": "情侣园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 玄武湖",
+      "lat": 32.072127,
+      "lon": 118.805193,
+      "stay": 45,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/9738902024",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_baima_park",
+      "name": "白马公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 太平门",
+      "lat": 32.06321,
+      "lon": 118.811667,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/92361437",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_botanical_garden",
+      "name": "中山植物园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.057734,
+      "lon": 118.828279,
+      "stay": 60,
+      "cost": [
+        15,
+        45
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/18303734",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_yueya_lake",
+      "name": "月牙湖",
+      "cat": "park",
+      "catName": "公园",
+      "area": "秦淮区 · 月牙湖",
+      "lat": 32.031306,
+      "lon": 118.822766,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/61857785",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_wulongtan",
+      "name": "乌龙潭公园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 乌龙潭",
+      "lat": 32.047835,
+      "lon": 118.76059,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/782612164",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_xiaotaoyuan",
+      "name": "小桃园",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 小桃园",
+      "lat": 32.082627,
+      "lon": 118.741601,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/292442876",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_pipa_lake",
+      "name": "琵琶湖",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.055545,
+      "lon": 118.817194,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62700582",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_qianhu",
+      "name": "前湖",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.050321,
+      "lon": 118.825424,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/62700589",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_meihua_mountain",
+      "name": "梅花山",
+      "cat": "park",
+      "catName": "公园",
+      "area": "玄武区 · 紫金山",
+      "lat": 32.055763,
+      "lon": 118.835155,
+      "stay": 45,
+      "cost": [
+        0,
+        70
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/791617219",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_stone_city",
+      "name": "石头城",
+      "cat": "park",
+      "catName": "公园",
+      "area": "鼓楼区 · 石头城",
+      "lat": 32.052524,
+      "lon": 118.747671,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "park",
+        "photo"
+      ],
+      "themes": [
+        "park"
+      ],
+      "reason": "城市公园/绿地，适合散步、休息与拍照。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/node/5524053921",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_hunan_road",
+      "name": "湖南路",
+      "cat": "street",
+      "catName": "街区",
+      "area": "鼓楼区 · 湖南路",
+      "lat": 32.071289,
+      "lon": 118.775647,
+      "stay": 35,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/422957216",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_shiziqiao",
+      "name": "狮子桥步行街",
+      "cat": "street",
+      "catName": "街区",
+      "area": "鼓楼区 · 湖南路",
+      "lat": 32.069691,
+      "lon": 118.772625,
+      "stay": 45,
+      "cost": [
+        30,
+        80
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89566369",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_sanqiba_lane",
+      "name": "三七八巷",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 三七八巷",
+      "lat": 32.01743,
+      "lon": 118.785867,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/91997678",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_kexiang",
+      "name": "科巷",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 科巷",
+      "lat": 32.041183,
+      "lon": 118.791213,
+      "stay": 35,
+      "cost": [
+        30,
+        80
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89637244",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_pingshi_street",
+      "name": "评事街",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 评事街",
+      "lat": 32.032604,
+      "lon": 118.775236,
+      "stay": 25,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/779232501",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_xinanli",
+      "name": "熙南里文化街区",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 熙南里",
+      "lat": 32.026888,
+      "lon": 118.776148,
+      "stay": 40,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/relation/14290821",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_deji_plaza",
+      "name": "德基广场",
+      "cat": "street",
+      "catName": "街区",
+      "area": "玄武区 · 新街口",
+      "lat": 32.045086,
+      "lon": 118.779713,
+      "stay": 45,
+      "cost": [
+        0,
+        200
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/147223223",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_golden_eagle",
+      "name": "金鹰国际购物中心",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 新街口",
+      "lat": 32.052995,
+      "lon": 118.779434,
+      "stay": 45,
+      "cost": [
+        0,
+        200
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/192105389",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_hongmiao",
+      "name": "红庙",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 红庙",
+      "lat": 32.049661,
+      "lon": 118.785094,
+      "stay": 30,
+      "cost": [
+        30,
+        80
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/89637281",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    },
+    {
+      "id": "p_xiaoxihu",
+      "name": "小西湖",
+      "cat": "street",
+      "catName": "街区",
+      "area": "秦淮区 · 小西湖",
+      "lat": 32.017907,
+      "lon": 118.781937,
+      "stay": 30,
+      "cost": [
+        0,
+        0
+      ],
+      "interests": [
+        "local",
+        "photo"
+      ],
+      "themes": [
+        "arch",
+        "photo"
+      ],
+      "reason": "街区/商业街，适合边走边看与本地体验。",
+      "tip": "开放时间、门票/菜单以现场或官方公告为准；本条目为示例数据。",
+      "hours": null,
+      "sourceTitle": "OpenStreetMap",
+      "sourceUrl": "https://www.openstreetmap.org/way/91997674",
+      "license": "ODbL 1.0",
+      "verifiedAt": "2026-10-29",
+      "status": "new",
+      "replaces": null,
+      "image": null,
+      "estimateNote": "停留时长与人均消费为产品估算；门票、菜单、营业时间以现场或官方为准。"
+    }
+  ]
+}

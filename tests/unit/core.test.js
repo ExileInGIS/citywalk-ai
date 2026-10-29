@@ -111,7 +111,7 @@ test('plan: 同一输入两次结果一致（除 id/createdAt）', () => {
 });
 
 test('refine: 把咖啡馆换成书店', () => {
-  const base = C.plan(cond());
+  const base = C.plan(cond({ durationMin: 300, interests: ['coffee', 'book', 'photo'], budgetMax: 200 }));
   const hasCafe = base.places.some(id => D.place(id).cat === 'cafe');
   assert.ok(hasCafe, '基础路线应含咖啡馆，实际：' + base.places.join(','));
   const res = C.refine('把咖啡馆换成书店', base);
@@ -122,7 +122,7 @@ test('refine: 把咖啡馆换成书店', () => {
 });
 
 test('refine: 保留第一站和最后一站', () => {
-  const base = C.plan(cond({ durationMin: 300 }));
+  const base = C.plan(cond({ durationMin: 300, interests: ['coffee', 'book', 'photo'], budgetMax: 200 }));
   const before = base.places.slice();
   const res = C.refine('保留第一站和最后一站，调整中间路线', base);
   assert.equal(S.validateRefine(res).ok, true);
